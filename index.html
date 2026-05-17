@@ -387,7 +387,7 @@
             line-height: 1.1;
             letter-spacing: -0.02em;
             margin-bottom: 20px;
-            color: #a5a7ab
+            color: #ffffff
         }
         
         .hero-h1 em {
@@ -537,7 +537,7 @@
             font-size: clamp(1.7rem, 3.5vw, 2.8rem);
             font-weight: 700;
             letter-spacing: -0.025em;
-            color: #bbbcbf
+            color: #0f1f3d
         }
         
         .sec-sub {
@@ -551,31 +551,18 @@
             text-align: center;
             margin-bottom: 3.5rem
         }
+        /* ── PRODUCT STAGE ── */
         
         .prod-stage {
             position: relative;
-            padding: clamp(60px, 8vw, 100px) 0;
-            background: linear-gradient(180deg, #f0f6ff 0%, #e0edff 100%);
+            padding: clamp(40px, 6vw, 72px) 0 clamp(36px, 5vw, 60px);
+            background: linear-gradient(180deg, #f0f7ff 0%, #e4efff 100%);
             overflow: hidden
-        }
-        
-        .prod-stage::before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: min(600px, 80vw);
-            height: min(600px, 80vw);
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(200, 121, 65, 0.1) 0%, transparent 65%);
-            pointer-events: none;
-            z-index: 0
         }
         
         .prod-stage-header {
             text-align: center;
-            margin-bottom: clamp(2rem, 5vw, 4rem);
+            margin-bottom: clamp(1.25rem, 2.5vw, 2rem);
             position: relative;
             z-index: 2
         }
@@ -583,201 +570,169 @@
         .prod-stage-icon {
             display: inline-flex;
             align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 0.75rem
+            gap: 0.6rem;
+            margin-bottom: 0.4rem
         }
         
         .prod-stage-icon svg {
-            width: clamp(28px, 4vw, 42px);
-            height: clamp(28px, 4vw, 42px);
+            width: 26px;
+            height: 26px;
             flex-shrink: 0
         }
+        /* ── Horizontal card grid ── */
         
-        .prod-carousel {
+        .prod-scroll-wrap {
             position: relative;
             z-index: 2;
+            padding: 0 clamp(1rem, 4vw, 3rem)
+        }
+        
+        .prod-scroll-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+            gap: clamp(0.75rem, 1.5vw, 1.1rem);
+            max-width: 1320px;
+            margin: 0 auto
+        }
+        /* ── Stage product card ── */
+        
+        .stg-card {
+            background: #fff;
+            border-radius: 14px;
+            border: 1.5px solid rgba(37, 99, 235, 0.13);
+            box-shadow: 0 2px 12px rgba(37, 99, 235, 0.07);
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.22s;
+            display: flex;
+            flex-direction: column
+        }
+        
+        .stg-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 32px rgba(37, 99, 235, 0.15);
+            border-color: rgba(37, 99, 235, 0.28)
+        }
+        
+        .stg-card-img {
+            background: linear-gradient(160deg, #dbeafe 0%, #eff6ff 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 0;
-            overflow: hidden;
-            width: 100%;
-            padding-bottom: clamp(1rem, 3vw, 2rem)
+            padding: 1.25rem 1rem 0.75rem;
+            position: relative;
+            min-height: 155px
         }
         
-        .prod-carousel-nav {
+        .stg-card-img img {
+            width: clamp(75px, 9vw, 110px);
+            height: clamp(75px, 9vw, 110px);
+            object-fit: contain;
+            filter: drop-shadow(0 6px 16px rgba(37, 99, 235, 0.18));
+            transition: transform 0.3s
+        }
+        
+        .stg-card:hover .stg-card-img img {
+            transform: translateY(-4px) scale(1.04)
+        }
+        
+        .stg-card-badge {
             position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: clamp(36px, 5vw, 52px);
-            height: clamp(36px, 5vw, 52px);
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.22);
-            border: 1.5px solid rgba(255, 255, 255, 0.22);
+            top: 9px;
+            left: 9px;
+            background: linear-gradient(90deg, #1a3a8f, #2563b8);
             color: #fff;
-            display: grid;
-            place-items: center;
+            font-size: 0.58rem;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 2px 7px;
+            border-radius: 4px
+        }
+        
+        .stg-card-body {
+            padding: 0.75rem 0.875rem 0.875rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1
+        }
+        
+        .stg-card-cat {
+            font-size: 0.62rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #2563b8;
+            margin-bottom: 3px
+        }
+        
+        .stg-card-name {
+            font-family: var(--font-d);
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: #0f1f3d;
+            line-height: 1.25;
+            margin-bottom: 5px
+        }
+        
+        .stg-card-price {
+            font-size: 1rem;
+            font-weight: 800;
+            color: #1a3a8f;
+            margin-bottom: 0.625rem
+        }
+        
+        .stg-card-btn {
+            display: block;
+            width: 100%;
+            padding: 7px;
+            border-radius: 7px;
+            background: linear-gradient(90deg, #1a3a8f, #2563b8);
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            border: none;
             cursor: pointer;
-            z-index: 20;
+            transition: all 0.18s;
+            text-align: center
+        }
+        
+        .stg-card-btn:hover {
+            background: linear-gradient(90deg, #0f2560, #1a4fa0);
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3)
+        }
+        
+        .prod-stage-footer {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            margin-top: clamp(1.25rem, 2.5vw, 2rem)
+        }
+        
+        .shop-all-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px clamp(20px, 3.5vw, 32px);
+            border-radius: 999px;
+            border: 1.5px solid #2563b8;
+            background: #fff;
+            color: #1a3a8f;
+            font-size: 0.875rem;
+            font-weight: 700;
             transition: all 0.22s
         }
         
-        .prod-carousel-nav:hover {
-            background: var(--green-sub);
-            border-color: var(--green-bdr);
-            box-shadow: var(--glow-g)
+        .shop-all-btn:hover {
+            background: #1a3a8f;
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(37, 99, 235, 0.25)
         }
         
-        .prod-carousel-nav.p-prev {
-            left: clamp(8px, 3vw, 40px)
-        }
-        
-        .prod-carousel-nav.p-next {
-            right: clamp(8px, 3vw, 40px)
-        }
-        
-        .prod-track-clip {
-            overflow: hidden;
-            width: 100%
-        }
-        
-        .prod-track {
-            display: flex;
-            transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            height: clamp(460px, 55vw, 680px)
-        }
-        
-        .prod-item {
-            position: absolute;
-            top: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: all 0.55s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer
-        }
-        
-        .prod-item.pos-center {
-            left: 50%;
-            transform: translateX(-50%) scale(1);
-            z-index: 10;
-            opacity: 1
-        }
-        
-        .prod-item.pos-left {
-            left: clamp(2%, 10vw, 14%);
-            transform: translateX(0) scale(0.72);
-            z-index: 5;
-            opacity: 0.6;
-            transform-origin: right center
-        }
-        
-        .prod-item.pos-right {
-            right: clamp(2%, 10vw, 14%);
-            transform: translateX(0) scale(0.72);
-            z-index: 5;
-            opacity: 0.6;
-            transform-origin: left center
-        }
-        
-        .prod-item.pos-far-left {
-            left: -20%;
-            transform: scale(0.55);
-            z-index: 1;
-            opacity: 0
-        }
-        
-        .prod-item.pos-far-right {
-            right: -20%;
-            transform: scale(0.55);
-            z-index: 1;
-            opacity: 0
-        }
-        
-        .prod-img-wrap {
-            position: relative;
-            width: clamp(180px, 22vw, 300px);
-            height: clamp(220px, 28vw, 380px);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0
-        }
-        
-        .prod-img-wrap img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.7));
-            transition: transform 0.4s
-        }
-        
-        .prod-item.pos-center .prod-img-wrap img {
-            filter: drop-shadow(0 24px 60px rgba(82, 201, 168, 0.22)) drop-shadow(0 12px 30px rgba(37, 99, 235, 0.2))
-        }
-        
-        .prod-item:hover .prod-img-wrap img {
-            transform: translateY(-8px)
-        }
-        /* prod-center-label */
-        
-        .prod-center-label {
-            position: absolute;
-            bottom: 8%;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(37, 99, 235, 0.12);
-            border: 1px solid rgba(37, 99, 235, 0.25);
-            padding: 5px 16px;
-            border-radius: 4px;
-            font-size: 0.72rem;
-            font-weight: 700;
-            color: #1a4fa0;
-            white-space: nowrap;
-            backdrop-filter: blur(8px);
-            opacity: 0;
-            transition: opacity 0.3s
-        }
-        
-        .prod-item.pos-center
-        /* prod-center-label */
-        
-        .prod-center-label {
-            opacity: 1
-        }
-        
-        .prod-info {
-            text-align: center;
-            margin-top: clamp(12px, 2vw, 24px);
-            padding: 0 clamp(8px, 2vw, 20px);
-            max-width: clamp(200px, 24vw, 320px)
-        }
-        
-        .prod-name {
-            font-family: var(--font-d);
-            font-size: clamp(0.95rem, 1.8vw, 1.25rem);
-            font-weight: 700;
-            color: #1a2e5a;
-            margin-bottom: 6px;
-            line-height: 1.25
-        }
-        
-        .prod-price {
-            font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-            font-weight: 700;
-            color: #667085;
-            margin-bottom: clamp(10px, 2vw, 18px)
-        }
-        
-        .prod-item.pos-center .prod-name {
-            font-size: clamp(1.1rem, 2.2vw, 1.5rem);
-            color: #1a2e5a
-        }
-        
-        .prod-item.pos-center .prod-price {
-            color: var(--green);
-            font-size: clamp(1rem, 1.8vw, 1.25rem)
+        .prod-dots {
+            display: none
         }
         
         .btn-atc {
@@ -798,78 +753,6 @@
             background: var(--green);
             color: #fff;
             box-shadow: var(--glow-g)
-        }
-        
-        .prod-item.pos-center .btn-atc {
-            background: var(--green);
-            color: #fff;
-            padding: 11px clamp(20px, 4vw, 36px);
-            font-size: 0.875rem;
-            box-shadow: var(--glow-g)
-        }
-        
-        .prod-item.pos-center .btn-atc:hover {
-            background: #fff;
-            color: #0d1428
-        }
-        
-        .prod-dots {
-            display: flex;
-            gap: 8px;
-            justify-content: center;
-            margin-top: clamp(1.5rem, 3vw, 2.5rem);
-            position: relative;
-            z-index: 2
-        }
-        
-        .prod-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: rgba(16, 24, 40, 0.18);
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s;
-            padding: 0
-        }
-        
-        .prod-dot.active {
-            background: var(--green);
-            width: 26px;
-            border-radius: 4px
-        }
-        
-        .shop-all-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: clamp(1.5rem, 3vw, 2.5rem);
-            padding: 12px clamp(24px, 4vw, 40px);
-            border-radius: 999px;
-            border: 1.5px solid var(--green-bdr);
-            background: var(--green-sub);
-            color: var(--green);
-            font-size: 0.9rem;
-            font-weight: 700;
-            transition: all 0.22s
-        }
-        
-        .shop-all-btn:hover {
-            background: var(--green);
-            color: #fff;
-            box-shadow: var(--glow-g)
-        }
-        
-        .prod-stage-footer {
-            text-align: center;
-            position: relative;
-            z-index: 2
-        }
-        
-        .prod-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
-            gap: clamp(1rem, 2vw, 1.5rem)
         }
         
         .pc {
@@ -1210,7 +1093,7 @@
             letter-spacing: -0.02em;
             line-height: 1.1;
             margin-bottom: 18px;
-            color: #101828
+            color: #0f1f3d
         }
         
         .about-p {
@@ -1244,7 +1127,7 @@
             font-family: var(--font-d);
             font-size: clamp(2rem, 4vw, 3rem);
             font-weight: 700;
-            color: #101828;
+            color: #0f1f3d;
             line-height: 1.05;
             margin-bottom: 1rem
         }
@@ -1274,6 +1157,7 @@
             gap: 1rem;
             font-size: 0.9625rem;
             font-weight: 600;
+            color: #1a2e5a;
             color: #101828;
             transition: color 0.15s;
             user-select: none
@@ -1347,7 +1231,7 @@
             font-size: clamp(2rem, 5vw, 3.5rem);
             font-weight: 700;
             letter-spacing: -0.025em;
-            color: #dfe5f2
+            color: #ffffff
         }
         
         .pg-hero-inner p {
@@ -1361,7 +1245,7 @@
             display: inline-flex;
             align-items: center;
             gap: 5px;
-            color: #adadad;
+            color: #4b6496;
             font-size: 0.8rem;
             font-weight: 600;
             margin-bottom: 14px;
@@ -1434,7 +1318,7 @@
             font-family: var(--font-d);
             font-size: clamp(1.5rem, 3vw, 2rem);
             font-weight: 700;
-            color: #101828;
+            color: #0f1f3d;
             margin-bottom: 1.5rem
         }
         
@@ -1562,7 +1446,7 @@
             font-family: var(--font-d);
             font-size: 1.05rem;
             font-weight: 700;
-            color: #101828;
+            color: #0f1f3d;
             margin-bottom: 7px;
             line-height: 1.35
         }
@@ -1896,7 +1780,7 @@
         
         .chip:not(.on):hover {
             border-color: var(--green-bdr);
-            color: #fff
+            color: var(--green)
         }
         
         .offer-banner {
@@ -2249,7 +2133,7 @@
             font-family: var(--font-d);
             font-size: 0.975rem;
             font-weight: 700;
-            color: #101828
+            color: #0f1f3d
         }
         
         .cart-cat {
@@ -2328,7 +2212,7 @@
         }
         
         .os-lbl {
-            color: #667085
+            color: #4b6496
         }
         
         .os-row span:last-child {
@@ -2344,7 +2228,7 @@
             font-family: var(--font-d);
             font-size: 1.05rem;
             font-weight: 700;
-            color: #101828
+            color: #0f1f3d
         }
         
         .os-total span:last-child {
@@ -2408,7 +2292,7 @@
         
         .acct-nm {
             font-weight: 700;
-            color: #fff;
+            color: #0f1f3d;
             font-size: 0.9375rem
         }
         
@@ -2425,14 +2309,14 @@
             padding: 11px 1.5rem;
             font-size: 0.855rem;
             font-weight: 500;
-            color: #667085;
+            color: #344054;
             transition: all 0.15s;
             border-left: 3px solid transparent
         }
         
         .acct-menu a:hover,
         .acct-menu a.on {
-            color: #fff;
+            color: var(--green);
             background: var(--green-sub);
             border-left-color: var(--green)
         }
@@ -2455,17 +2339,17 @@
             font-family: var(--font-d);
             font-size: 1.5rem;
             font-weight: 700;
-            color: #fff;
+            color: #0f1f3d;
             margin-bottom: 1.5rem
         }
         
         .ord-card {
             border-radius: 12px;
             border: 1px solid rgba(16, 24, 40, 0.08);
-            background: #e8f2ff;
+            background: #ffffff;
             padding: 1.25rem;
             margin-bottom: 1rem;
-            box-shadow: 0 4px 20px rgba(16, 24, 40, 0.08)
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.08)
         }
         
         .ord-head {
@@ -2481,7 +2365,7 @@
         
         .ord-id {
             font-weight: 700;
-            color: #fff;
+            color: #0f1f3d;
             font-size: 0.9375rem
         }
         
@@ -2540,7 +2424,7 @@
         .ord-item-nm {
             font-size: 0.84rem;
             font-weight: 600;
-            color: #fff
+            color: #0f1f3d
         }
         
         .ord-item-qt {
@@ -2588,7 +2472,7 @@
         
         .prof-sec-ttl {
             font-weight: 700;
-            color: #fff;
+            color: #0f1f3d;
             margin-bottom: 1rem;
             font-size: 0.9375rem;
             padding-bottom: 0.5rem;
@@ -2615,8 +2499,8 @@
             padding: 10px 13px;
             border-radius: 8px;
             border: 1.5px solid rgba(16, 24, 40, 0.1);
-            background: #dbeafe;
-            color: #fff;
+            background: #f0f6ff;
+            color: #1a2e5a;
             font-size: 0.875rem;
             outline: none;
             transition: border-color 0.15s
@@ -2697,7 +2581,7 @@
         .t-lbl {
             font-weight: 700;
             font-size: 0.855rem;
-            color: #fff
+            color: #0f1f3d
         }
         
         .track-step:not(.done):not(.active) .t-lbl {
@@ -2730,7 +2614,7 @@
             font-family: var(--font-d);
             font-size: 1.05rem;
             font-weight: 700;
-            color: #fff;
+            color: #0f1f3d;
             margin-bottom: 1.25rem;
             padding-bottom: 0.75rem;
             border-bottom: 1px solid rgba(16, 24, 40, 0.08)
@@ -2772,13 +2656,13 @@
         .pay-opt svg {
             margin: 0 auto 5px;
             display: block;
-            color: #fff
+            color: #344054
         }
         
         .pay-opt span {
             font-size: 0.7rem;
             font-weight: 700;
-            color: #fff
+            color: #344054
         }
         
         .co-sum-row {
@@ -2789,11 +2673,11 @@
         }
         
         .co-sum-row span:first-child {
-            color: #667085
+            color: #4b6496
         }
         
         .co-sum-row span:last-child {
-            color: #fff
+            color: #0f1f3d
         }
         
         .co-sum-row.tot {
@@ -2875,7 +2759,7 @@
             font-family: var(--font-d);
             font-size: 1.75rem;
             font-weight: 700;
-            color: #fff;
+            color: #0f1f3d;
             margin-bottom: 0.5rem
         }
         
@@ -3222,32 +3106,21 @@
         <!-- PRODUCT STAGE -->
         <section class="prod-stage">
             <div class="prod-stage-header wrap">
-                <div class="sec-label">PRODUCTS</div>
+                <div class="sec-label" style="color:#2563b8">PRODUCTS</div>
                 <div class="prod-stage-icon">
-                    <svg viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M21 4L38 13.5V28.5L21 38L4 28.5V13.5L21 4Z" stroke="#52c9a8" stroke-width="1.8" fill="rgba(82,201,168,.12)"/>
-          <path d="M21 4L21 38M4 13.5L38 28.5M38 13.5L4 28.5" stroke="#52c9a8" stroke-width="1" opacity=".4"/>
-        </svg>
-                    <h2 class="sec-h2" style="margin:0">Highest Quality RUO Peptides</h2>
+
+                    <h2 class="sec-h2" style="margin:0;color:#0f1f3d">Highest Quality RUO Peptides</h2>
                 </div>
+                <p style="color:#4b6496;font-size:0.875rem;margin-top:6px">Discover high-purity research peptides — tested, verified and lab-certified.</p>
             </div>
-            <div class="prod-carousel" id="prodCarousel">
-                <button class="prod-carousel-nav p-prev" onclick="prodMove(-1)" aria-label="Previous">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-                <button class="prod-carousel-nav p-next" onclick="prodMove(1)" aria-label="Next">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
-                <div class="prod-track-clip" style="position:relative">
-                    <div class="prod-track" id="prodTrack"></div>
-                </div>
+            <div class="prod-scroll-wrap">
+                <div class="prod-scroll-row" id="prodTrack"></div>
             </div>
-            <div class="prod-dots" id="prodDots"></div>
             <div class="prod-stage-footer">
                 <a href="#" class="shop-all-btn" onclick="nav('products');return false;">
-        Shop All
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 8 16 12 12 16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-      </a>
+                    Shop All Peptides
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
             </div>
         </section>
 
@@ -3952,7 +3825,7 @@
             tag: "Quality",
             date: "Apr 15, 2026",
             excerpt: "Breaking down what cGMP compliance actually means and how it translates to more reliable research outcomes.",
-            img: "https://images.unsplash.com/photo-1614308458028-4d578bb45b01?w=800&q=80"
+            img: "https://images.unsplash.com/photo-1563213126-a4273aed2016?w=800&q=80"
         }, {
             title: "Growth Peptides in Laboratory Settings: A Research Overview",
             tag: "Research",
@@ -4023,7 +3896,7 @@
         let prodIdx = 0;
 
         /* ─── NAVIGATION ─── */
-        function nav(page) {
+        function nav(page, pushState = true) {
             document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
             const pg = document.getElementById("pg-" + page);
             if (pg) pg.classList.add("active");
@@ -4038,7 +3911,19 @@
             }
             if (page === "company") buildFAQIn("faqListCo");
             if (page === "checkout") renderCheckout();
+            if (pushState) {
+                try {
+                    history.pushState({
+                        page
+                    }, "", "#" + page);
+                } catch (e) {}
+            }
         }
+
+        window.addEventListener("popstate", (e) => {
+            const page = (e.state && e.state.page) ? e.state.page : "home";
+            nav(page, false);
+        });
 
         function toggleMenu() {
             menuOpen = !menuOpen;
@@ -4105,72 +3990,26 @@
             hTimer = setInterval(() => goHero(hIdx + 1), 3000);
         }
 
-        /* ─── PRODUCT CAROUSEL ─── */
-        const POSITIONS = ["pos-far-left", "pos-left", "pos-center", "pos-right", "pos-far-right"];
 
-        function wrapIdx(i) {
-            return ((i % PRODS.length) + PRODS.length) % PRODS.length;
-        }
-
+        /* ─── PRODUCT STAGE CARDS ─── */
         function buildProdStage() {
             const track = document.getElementById("prodTrack");
-            track.innerHTML = PRODS.map((p, i) => `
-    <div class="prod-item" id="pi-${i}" onclick="stageClick(${i})">
-      <div class="prod-img-wrap">
-        <img src="${p.img}" alt="${p.name}" loading="lazy"
-             onerror="this.src='https://images.unsplash.com/photo-1576671081837-49000212a370?w=300&q=80'"/>
-        <div class="prod-center-label">Research Grade · 99% Purity</div>
-      </div>
-      <div class="prod-info">
-        <div class="prod-name">${p.name} Research Peptide</div>
-        <div class="prod-price">$${p.price.toFixed(2)}</div>
-        <button class="btn-atc" onclick="event.stopPropagation();addCart('${p.id}')">ADD TO CART</button>
-      </div>
-    </div>`).join("");
-            renderProdPositions();
-            buildProdDots();
+            track.innerHTML = PRODS.map(p => `
+                <div class="stg-card" onclick="openDetail('${p.slug}')">
+                    <div class="stg-card-img">
+                        <span class="stg-card-badge">99% Purity</span>
+                        <img src="${p.img}" alt="${p.name}" loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1576671081837-49000212a370?w=300&q=80'"/>
+                    </div>
+                    <div class="stg-card-body">
+                        <div class="stg-card-cat">${p.cat}</div>
+                        <div class="stg-card-name">${p.name}</div>
+                        <div class="stg-card-price">$${p.price.toFixed(2)}</div>
+                        <button class="stg-card-btn" onclick="event.stopPropagation();addCart('${p.id}')">Add to Cart</button>
+                    </div>
+                </div>`).join("");
         }
 
-        function renderProdPositions() {
-            const n = PRODS.length;
-            PRODS.forEach((_, i) => {
-                const el = document.getElementById("pi-" + i);
-                if (!el) return;
-                POSITIONS.forEach(c => el.classList.remove(c));
-                const offset = (i - prodIdx + n) % n;
-                let rel;
-                if (offset === 0) rel = "pos-center";
-                else if (offset === 1) rel = "pos-right";
-                else if (offset === n - 1) rel = "pos-left";
-                else if (offset === 2) rel = "pos-far-right";
-                else if (offset === n - 2) rel = "pos-far-left";
-                else rel = offset < n / 2 ? "pos-far-right" : "pos-far-left";
-                el.classList.add(rel);
-            });
-            document.querySelectorAll(".prod-dot").forEach((d, i) => d.classList.toggle("active", i === prodIdx));
-        }
-
-        function prodMove(dir) {
-            prodIdx = wrapIdx(prodIdx + dir);
-            renderProdPositions();
-        }
-
-        function stageClick(i) {
-            if (i === prodIdx) {
-                openDetail(PRODS[i].slug);
-                return;
-            }
-            prodIdx = i;
-            renderProdPositions();
-        }
-
-        function buildProdDots() {
-            document.getElementById("prodDots").innerHTML = PRODS
-                .map((_, i) => `<button class="prod-dot ${i === 0 ? "active" : ""}" onclick="stageClick(${i})"></button>`)
-                .join("");
-        }
-
-        setInterval(() => prodMove(1), 4000);
 
         /* ─── PRODUCT CARD ─── */
         function prodCard(p) {
@@ -4616,7 +4455,7 @@ function buildTrackHTML(orderId, status, tracking) {
     <div style="border-radius:12px;border:1px solid rgba(37,99,235,0.2);padding:1.25rem;background:#f0f6ff">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid rgba(37,99,235,0.15)">
         <div>
-          <div style="font-weight:700;color:#1a2e5a;font-size:.875rem">${orderId}</div>
+          <div style="font-weight:700;color:#0f1f3d;font-size:.875rem">${orderId}</div>
           <div style="font-size:.73rem;color:#556070">Tracking: ${tracking}</div>
         </div>
         <span class="ord-st ${status === "delivered" ? "st-delivered" : status === "shipped" ? "st-shipped" : "st-processing"}">
@@ -4697,6 +4536,8 @@ function init() {
     if (el) el.innerHTML = footerHTML();
   });
   updateBadge();
+  // Set initial history state so back button works from first page
+  try { history.replaceState({ page: "home" }, "", "#home"); } catch(e) {}
 }
 
 init();
