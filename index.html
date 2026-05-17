@@ -53,12 +53,12 @@
             --bg3: #eef4f9;
             --card: #ffffff;
             --card2: #f9fcff;
-            --green: #26b38a;
-            --green2: #1d9f79;
-            --green3: #168363;
-            --green-glow: rgba(38, 179, 138, 0.18);
-            --green-sub: rgba(38, 179, 138, 0.08);
-            --green-bdr: rgba(38, 179, 138, 0.18);
+            --green: #2563b8;
+            --green2: #1a3a8f;
+            --green3: #0f2560;
+            --green-glow: rgba(37, 99, 235, 0.18);
+            --green-sub: rgba(37, 99, 235, 0.08);
+            --green-bdr: rgba(37, 99, 235, 0.22);
             --blue: #4f8fbc;
             --blue2: #3778a5;
             --blue-sub: rgba(79, 143, 188, 0.08);
@@ -70,11 +70,11 @@
             --muted2: #98a2b3;
             --bdr: rgba(16, 24, 40, 0.08);
             --bdr2: rgba(16, 24, 40, 0.14);
-            --bdr-g: rgba(38, 179, 138, 0.18);
+            --bdr-g: rgba(37, 99, 235, 0.22);
             --shadow: 0 4px 20px rgba(16, 24, 40, 0.06);
             --shadow-lg: 0 12px 40px rgba(16, 24, 40, 0.1);
             --shadow-xl: 0 24px 70px rgba(16, 24, 40, 0.12);
-            --glow-g: 0 0 20px rgba(38, 179, 138, 0.16);
+            --glow-g: 0 0 20px rgba(37, 99, 235, 0.2);
             --font-d: "Fraunces", Georgia, serif;
             --font-s: "DM Sans", system-ui, sans-serif;
         }
@@ -127,7 +127,7 @@
         
         .logo-wrap img {
             height: 110px;
-            padding-top: 6px;
+            padding-top: 7px;
             width: auto;
             object-fit: contain
         }
@@ -159,13 +159,13 @@
         }
         
         .nav a:hover {
-            color: var(--green)
+            color: #2563b8
         }
         
         .nav a.active {
-            color: var(--green);
+            color: #2563b8;
             text-decoration: underline;
-            text-decoration-color: var(--green);
+            text-decoration-color: #2563b8;
             text-underline-offset: 4px
         }
         
@@ -173,7 +173,7 @@
             padding: 9px 22px;
             border-radius: 6px;
             background: var(--green);
-            color: #101828;
+            color: #ffffff;
             font-size: 0.8rem;
             font-weight: 800;
             letter-spacing: 0.06em;
@@ -184,7 +184,7 @@
         }
         
         .btn-peptides:hover {
-            background: #1d9f79;
+            background: #2a3a6c;
             transform: translateY(-1px);
             box-shadow: 0 0 28px rgba(38, 179, 138, 0.4)
         }
@@ -210,17 +210,17 @@
         }
         
         .nav-icon:hover {
-            background: var(--green-sub);
-            border-color: var(--green-bdr);
-            color: var(--green)
+            background: rgba(37, 99, 235, 0.08);
+            border-color: rgba(37, 99, 235, 0.22);
+            color: #2563b8
         }
         
         .cart-bdg {
             position: absolute;
             top: -6px;
             right: -6px;
-            background: var(--green);
-            color: #101828;
+            background: #2563b8;
+            color: #fff;
             border-radius: 999px;
             font-size: 0.6rem;
             font-weight: 800;
@@ -332,7 +332,7 @@
         }
         
         .hero-dot.active {
-            background: var(--green);
+            background: #2563b8;
             width: 26px;
             border-radius: 4px
         }
@@ -370,7 +370,7 @@
         .hero-badge {
             display: inline-block;
             border: 1px solid var(--green-bdr);
-            background: var(--green-sub);
+            background: rgba(37, 99, 235, 0.12);
             padding: 5px 16px;
             border-radius: 4px;
             font-size: 0.7rem;
@@ -378,7 +378,7 @@
             letter-spacing: 0.1em;
             text-transform: uppercase;
             margin-bottom: 22px;
-            color: var(--green)
+            color: #93c5fd
         }
         
         .hero-h1 {
@@ -393,7 +393,7 @@
         
         .hero-h1 em {
             font-style: normal;
-            color: var(--green)
+            color: #60a5fa
         }
         
         .hero-p {
@@ -423,7 +423,7 @@
         }
         
         .btn-p:hover {
-            background: #1d9f79;
+            background: #1a3a8f;
             transform: translateY(-2px);
             box-shadow: 0 0 32px rgba(38, 179, 138, 0.4)
         }
@@ -440,8 +440,8 @@
         }
         
         .btn-o:hover {
-            border-color: var(--green-bdr);
-            background: var(--green-sub);
+            border-color: rgba(37, 99, 235, 0.3);
+            background: rgba(37, 99, 235, 0.08);
             transform: translateY(-2px)
         }
         
@@ -508,7 +508,7 @@
         }
         
         .tick-item svg {
-            color: var(--green);
+            color: #2563b8;
             width: 15px;
             height: 15px;
             flex-shrink: 0
@@ -679,7 +679,7 @@
         .stg-card-price {
             font-size: 1rem;
             font-weight: 800;
-            color: #1a3a8f;
+            color: var(--green);
             margin-bottom: 0.625rem
         }
         
@@ -688,8 +688,8 @@
             width: 100%;
             padding: 7px;
             border-radius: 7px;
-            background: linear-gradient(90deg, #1a3a8f, #2563b8);
-            color: #fff;
+            background: var(--green);
+            color: #101828;
             font-size: 0.72rem;
             font-weight: 800;
             letter-spacing: 0.04em;
@@ -701,8 +701,9 @@
         }
         
         .stg-card-btn:hover {
-            background: linear-gradient(90deg, #0f2560, #1a4fa0);
-            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3)
+            background: var(--green2);
+            box-shadow: var(--glow-g);
+            transform: translateY(-1px)
         }
         
         .prod-stage-footer {
@@ -718,18 +719,18 @@
             gap: 8px;
             padding: 10px clamp(20px, 3.5vw, 32px);
             border-radius: 999px;
-            border: 1.5px solid #2563b8;
+            border: 1.5px solid var(--green-bdr);
             background: #fff;
-            color: #1a3a8f;
+            color: var(--green);
             font-size: 0.875rem;
             font-weight: 700;
             transition: all 0.22s
         }
         
         .shop-all-btn:hover {
-            background: #1a3a8f;
-            color: #fff;
-            box-shadow: 0 4px 16px rgba(37, 99, 235, 0.25)
+            background: var(--green);
+            color: #101828;
+            box-shadow: var(--glow-g)
         }
         
         .prod-dots {
@@ -811,8 +812,8 @@
             top: 10px;
             left: 10px;
             z-index: 2;
-            background: var(--green-sub);
-            color: var(--green);
+            background: rgba(37, 99, 235, 0.1);
+            color: #2563b8;
             border: 1px solid var(--green-bdr);
             padding: 3px 10px;
             border-radius: 4px;
@@ -839,7 +840,7 @@
         }
         
         .pc-rating .star {
-            color: var(--green)
+            color: #2563b8
         }
         
         .pc-name {
@@ -862,7 +863,7 @@
             font-family: var(--font-d);
             font-size: 1.3rem;
             font-weight: 700;
-            color: var(--green);
+            color: #1a3a8f;
             margin-bottom: 12px
         }
         
@@ -875,7 +876,7 @@
             flex: 1;
             padding: 9px 12px;
             border-radius: 7px;
-            background: var(--green);
+            background: #2563b8;
             color: #fff;
             font-size: 0.8rem;
             font-weight: 800;
@@ -884,8 +885,8 @@
         }
         
         .btn-add:hover {
-            background: #fff;
-            color: #0d1428;
+            background: #1a3a8f;
+            color: #fff;
             transform: translateY(-1px);
             box-shadow: 0 4px 16px var(--green-glow)
         }
@@ -902,8 +903,8 @@
         }
         
         .btn-det:hover {
-            border-color: var(--green-bdr);
-            color: var(--green);
+            border-color: rgba(37, 99, 235, 0.3);
+            color: #2563b8;
             background: var(--green-sub);
             transform: translateY(-1px)
         }
@@ -934,15 +935,15 @@
             left: 0;
             right: 0;
             height: 2px;
-            background: linear-gradient(90deg, transparent, var(--green), transparent);
+            background: linear-gradient(90deg, transparent, #2563b8, transparent);
             opacity: 0;
             transition: opacity 0.25s
         }
         
         .why-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 50px rgba(37, 99, 235, 0.22), 0 0 0 1px var(--green-bdr);
-            border-color: var(--green-bdr)
+            box-shadow: 0 20px 50px rgba(37, 99, 235, 0.22), 0 0 0 1px rgba(37, 99, 235, 0.3);
+            border-color: rgba(37, 99, 235, 0.3)
         }
         
         .why-card:hover::before {
@@ -953,7 +954,7 @@
             width: 64px;
             height: 64px;
             border-radius: 14px;
-            background: linear-gradient(135deg, var(--green-sub), rgba(82, 201, 168, 0.04));
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(37, 99, 235, 0.03));
             border: 1px solid var(--green-bdr);
             display: grid;
             place-items: center;
@@ -963,7 +964,7 @@
         }
         
         .why-card:hover .why-icon {
-            background: rgba(82, 201, 168, 0.18);
+            background: rgba(37, 99, 235, 0.15);
             box-shadow: var(--glow-g)
         }
         
@@ -997,7 +998,7 @@
             width: min(520px, 60vw);
             height: min(520px, 60vw);
             border-radius: 50%;
-            background: radial-gradient(circle, var(--green-sub), transparent 70%);
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.06), transparent 70%);
             pointer-events: none
         }
         
@@ -1043,7 +1044,7 @@
             text-transform: uppercase;
             letter-spacing: 0.07em;
             margin-bottom: 3px;
-            color: var(--green)
+            color: #2563b8
         }
         
         .ab-chip-txt {
@@ -1083,7 +1084,7 @@
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 0.12em;
-            color: var(--green);
+            color: #2563b8;
             margin-bottom: 13px
         }
         
@@ -1178,9 +1179,9 @@
         
         .faq-item.open .faq-ic {
             transform: rotate(45deg);
-            border-color: var(--green);
-            background: var(--green);
-            color: #101828
+            border-color: #2563b8;
+            background: #2563b8;
+            color: #fff
         }
         
         .faq-a {
@@ -1217,7 +1218,8 @@
         .pg-hero-ov {
             position: absolute;
             inset: 0;
-            z-index: 1
+            z-index: 1;
+            background: linear-gradient(105deg, rgba(10, 18, 40, 0.82) 0%, rgba(10, 18, 40, 0.55) 60%, rgba(10, 18, 40, 0.30) 100%)
         }
         
         .pg-hero-inner {
@@ -1254,7 +1256,7 @@
         }
         
         .back-link:hover {
-            color: var(--green)
+            color: #2563b8
         }
         
         .back-link svg {
@@ -1283,7 +1285,8 @@
         .company-hero-ov {
             position: absolute;
             inset: 0;
-            z-index: 1
+            z-index: 1;
+            background: linear-gradient(105deg, rgba(10, 18, 40, 0.85) 0%, rgba(10, 18, 40, 0.65) 60%, rgba(10, 18, 40, 0.35) 100%)
         }
         
         .company-hero-inner {
@@ -1349,8 +1352,8 @@
             padding: 12px 28px;
             border-radius: 8px;
             margin-top: 1.5rem;
-            background: var(--green);
-            color: #101828;
+            background: #2563b8;
+            color: #fff;
             font-weight: 800;
             font-size: 0.875rem;
             letter-spacing: 0.02em;
@@ -1358,8 +1361,8 @@
         }
         
         .company-btn:hover {
-            background: #fff;
-            color: #0d1428;
+            background: #1a3a8f;
+            color: #fff;
             transform: translateY(-2px);
             box-shadow: var(--glow-g)
         }
@@ -1387,7 +1390,7 @@
         
         .blog-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 50px rgba(111, 167, 111, 0.777), 0 0 0 1px var(--green-bdr);
+            box-shadow: 0 20px 50px rgba(37, 99, 235, 0.18), 0 0 0 1px rgba(37, 99, 235, 0.3);
             border-color: var(--green-bdr)
         }
         
@@ -1422,8 +1425,8 @@
             bottom: 12px;
             left: 12px;
             z-index: 1;
-            background: var(--green-sub);
-            color: var(--green);
+            background: rgba(37, 99, 235, 0.1);
+            color: #2563b8;
             border: 1px solid var(--green-bdr);
             padding: 3px 10px;
             border-radius: 4px;
@@ -1462,7 +1465,7 @@
         .blog-rm {
             font-size: 0.8rem;
             font-weight: 700;
-            color: var(--green);
+            color: #2563b8;
             display: flex;
             align-items: center;
             gap: 5px;
@@ -1533,7 +1536,7 @@
         }
         
         .ci-card svg {
-            color: var(--green);
+            color: #2563b8;
             width: 18px;
             height: 18px
         }
@@ -1556,16 +1559,16 @@
         .btn-send {
             padding: 11px 26px;
             border-radius: 8px;
-            background: var(--green);
-            color: #101828;
+            background: #2563b8;
+            color: #fff;
             font-size: 0.875rem;
             font-weight: 800;
             transition: all 0.2s
         }
         
         .btn-send:hover {
-            background: #fff;
-            color: #0d1428;
+            background: #1a3a8f;
+            color: #fff;
             transform: translateY(-1px);
             box-shadow: var(--glow-g)
         }
@@ -1590,11 +1593,11 @@
             width: 64px;
             height: 64px;
             border-radius: 50%;
-            background: var(--green-sub);
-            border: 1px solid var(--green-bdr);
+            background: rgba(37, 99, 235, 0.1);
+            border: 1px solid rgba(37, 99, 235, 0.22);
             display: grid;
             place-items: center;
-            color: var(--green);
+            color: #2563b8;
             flex-shrink: 0
         }
         
@@ -1650,8 +1653,8 @@
         .sub-btn {
             padding: 10px 22px;
             border-radius: 8px;
-            background: var(--green);
-            color: #101828;
+            background: #2563b8;
+            color: #fff;
             font-size: 0.875rem;
             font-weight: 800;
             white-space: nowrap;
@@ -1660,8 +1663,8 @@
         }
         
         .sub-btn:hover {
-            background: #fff;
-            color: #0d1428;
+            background: #1a3a8f;
+            color: #fff;
             transform: translateY(-1px);
             box-shadow: var(--glow-g)
         }
@@ -1774,21 +1777,21 @@
         }
         
         .chip.on {
-            border-color: var(--green-bdr);
-            background: var(--green-sub);
-            color: var(--green)
+            border-color: rgba(37, 99, 235, 0.3);
+            background: rgba(37, 99, 235, 0.08);
+            color: #2563b8
         }
         
         .chip:not(.on):hover {
-            border-color: var(--green-bdr);
-            color: var(--green)
+            border-color: rgba(37, 99, 235, 0.3);
+            color: #2563b8
         }
         
         .offer-banner {
             margin-top: 2.5rem;
             border-radius: 16px;
             overflow: hidden;
-            background: linear-gradient(135deg, #1a3a8f 0%, #2563b8 100%);
+            background: linear-gradient(135deg, var(--green3) 0%, var(--green) 100%);
             border: 1px solid var(--green-bdr);
             padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1.25rem, 3vw, 2rem);
             display: flex;
@@ -1861,7 +1864,7 @@
         }
         
         .usage-warn strong {
-            color: var(--green)
+            color: #2563b8
         }
         
         .det-eye {
@@ -1869,7 +1872,7 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            color: var(--green)
+            color: #2563b8
         }
         
         .det-name {
@@ -1885,7 +1888,7 @@
             font-family: var(--font-d);
             font-size: clamp(1.5rem, 3vw, 2rem);
             font-weight: 700;
-            color: var(--green);
+            color: #1a3a8f;
             margin-top: 12px
         }
         
@@ -2009,8 +2012,8 @@
             width: 100%;
             padding: 14px;
             border-radius: 8px;
-            background: var(--green);
-            color: #101828;
+            background: #2563b8;
+            color: #fff;
             font-weight: 800;
             font-size: 1rem;
             letter-spacing: 0.02em;
@@ -2019,8 +2022,8 @@
         }
         
         .det-add:hover {
-            background: #fff;
-            color: #0d1428;
+            background: #1a3a8f;
+            color: #fff;
             transform: translateY(-2px);
             box-shadow: 0 0 32px rgba(82, 201, 168, 0.35)
         }
@@ -2045,8 +2048,8 @@
         }
         
         .det-tab.on {
-            color: var(--green);
-            border-bottom-color: var(--green)
+            color: #2563b8;
+            border-bottom-color: #2563b8
         }
         
         .det-panel {
@@ -2073,7 +2076,7 @@
         }
         
         .det-ck svg {
-            color: var(--green);
+            color: #2563b8;
             flex-shrink: 0;
             width: 15px;
             height: 15px
@@ -2144,7 +2147,7 @@
         
         .cart-pr {
             font-weight: 600;
-            color: var(--green);
+            color: #2563b8;
             margin-top: 4px;
             font-size: 0.875rem
         }
@@ -2233,7 +2236,7 @@
         }
         
         .os-total span:last-child {
-            color: var(--green)
+            color: #2563b8
         }
         
         .btn-co {
@@ -2241,8 +2244,8 @@
             margin-top: 1.25rem;
             padding: 12px;
             border-radius: 8px;
-            background: var(--green);
-            color: #101828;
+            background: #2563b8;
+            color: #fff;
             font-weight: 800;
             font-size: 0.9rem;
             transition: all 0.2s;
@@ -2250,8 +2253,8 @@
         }
         
         .btn-co:hover {
-            background: #fff;
-            color: #0d1428;
+            background: #1a3a8f;
+            color: #fff;
             transform: translateY(-1px)
         }
         
@@ -2282,8 +2285,8 @@
             width: 64px;
             height: 64px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--green), var(--green3));
-            color: #101828;
+            background: linear-gradient(135deg, #2563b8, #1a3a8f);
+            color: #fff;
             display: grid;
             place-items: center;
             font-size: 1.5rem;
@@ -2317,9 +2320,9 @@
         
         .acct-menu a:hover,
         .acct-menu a.on {
-            color: var(--green);
-            background: var(--green-sub);
-            border-left-color: var(--green)
+            color: #2563b8;
+            background: rgba(37, 99, 235, 0.08);
+            border-left-color: #2563b8
         }
         
         .acct-menu a svg {
@@ -2443,23 +2446,23 @@
         
         .ord-total {
             font-weight: 700;
-            color: var(--green);
+            color: #2563b8;
             font-size: 0.875rem
         }
         
         .btn-track {
             padding: 6px 14px;
             border-radius: 7px;
-            border: 1px solid var(--green-bdr);
-            color: var(--green);
+            border: 1px solid rgba(37, 99, 235, 0.3);
+            color: #2563b8;
             font-size: 0.76rem;
             font-weight: 700;
             transition: all 0.15s
         }
         
         .btn-track:hover {
-            background: var(--green-sub);
-            border-color: var(--green)
+            background: rgba(37, 99, 235, 0.08);
+            border-color: #2563b8
         }
         
         .prof-card {
@@ -2514,16 +2517,16 @@
         .btn-save {
             padding: 9px 22px;
             border-radius: 8px;
-            background: var(--green);
-            color: #101828;
+            background: #2563b8;
+            color: #fff;
             font-weight: 800;
             font-size: 0.855rem;
             transition: all 0.2s
         }
         
         .btn-save:hover {
-            background: #fff;
-            color: #0d1428;
+            background: #1a3a8f;
+            color: #fff;
             transform: translateY(-1px)
         }
         
@@ -2549,7 +2552,7 @@
         }
         
         .track-step.done::after {
-            background: var(--green)
+            background: #2563b8
         }
         
         .t-dot {
@@ -2565,14 +2568,14 @@
         }
         
         .track-step.done .t-dot {
-            background: var(--green);
-            border-color: var(--green);
-            color: #101828
+            background: #2563b8;
+            border-color: #2563b8;
+            color: #fff
         }
         
         .track-step.active .t-dot {
-            border-color: var(--green);
-            color: var(--green)
+            border-color: #2563b8;
+            color: #2563b8
         }
         
         .t-info {
@@ -2691,7 +2694,7 @@
         }
         
         .co-sum-row.tot span:last-child {
-            color: var(--green)
+            color: #1a3a8f
         }
         
         .btn-place {
@@ -2699,8 +2702,8 @@
             margin-top: 1.25rem;
             padding: 14px;
             border-radius: 10px;
-            background: var(--green);
-            color: #101828;
+            background: #2563b8;
+            color: #fff;
             font-weight: 800;
             font-size: 1rem;
             transition: all 0.2s;
@@ -2708,8 +2711,8 @@
         }
         
         .btn-place:hover {
-            background: #fff;
-            color: #0d1428;
+            background: #1a3a8f;
+            color: #fff;
             transform: translateY(-1px)
         }
         
@@ -2743,8 +2746,8 @@
             width: 72px;
             height: 72px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--green), var(--green3));
-            color: #101828;
+            background: linear-gradient(135deg, #2563b8, #1a3a8f);
+            color: #fff;
             display: grid;
             place-items: center;
             margin: 0 auto 1.5rem;
@@ -2784,20 +2787,20 @@
             width: 54px;
             height: 54px;
             border-radius: 50%;
-            background: var(--green-sub);
-            border: 1px solid var(--green-bdr);
+            background: rgba(37, 99, 235, 0.1);
+            border: 1px solid rgba(37, 99, 235, 0.22);
             display: grid;
             place-items: center;
             margin: 0 auto 11px;
-            color: var(--green)
+            color: #2563b8
         }
         
         .btn-signin {
             width: 100%;
             padding: 13px;
             border-radius: 9px;
-            background: var(--green);
-            color: #101828;
+            background: #2563b8;
+            color: #fff;
             font-weight: 800;
             font-size: 1rem;
             transition: all 0.2s;
@@ -2805,8 +2808,8 @@
         }
         
         .btn-signin:hover {
-            background: #fff;
-            color: #0d1428;
+            background: #1a3a8f;
+            color: #fff;
             transform: translateY(-1px)
         }
         
@@ -2826,13 +2829,14 @@
         
         .ft-logo {
             display: flex;
-            align-items: center;
-            margin-bottom: 11px
+            align-items: flex-start;
+            margin-bottom: 14px
         }
         
         .ft-logo img {
-            height: 36px;
-            width: auto
+            height: 150px;
+            width: auto;
+            object-fit: contain
         }
         
         .ft-logo-txt {
@@ -2874,9 +2878,9 @@
         }
         
         .soc-btn:hover {
-            background: var(--green-sub);
-            border-color: var(--green-bdr);
-            color: var(--green)
+            background: rgba(37, 99, 235, 0.1);
+            border-color: rgba(37, 99, 235, 0.25);
+            color: #2563b8
         }
         
         .soc-btn svg {
@@ -2902,7 +2906,7 @@
         }
         
         .ft-col a:hover {
-            color: var(--green)
+            color: #2563b8
         }
         
         .ft-ci {
@@ -2913,7 +2917,7 @@
         }
         
         .ft-ci svg {
-            color: var(--green);
+            color: #2563b8;
             width: 14px;
             height: 14px;
             flex-shrink: 0;
@@ -2945,7 +2949,7 @@
             z-index: 9999;
             background: #ffffff;
             color: #101828;
-            border: 1px solid var(--green-bdr);
+            border: 1px solid rgba(37, 99, 235, 0.25);
             padding: 12px 20px;
             border-radius: 10px;
             box-shadow: 0 24px 70px rgba(0, 0, 0, 0.4);
@@ -3416,7 +3420,7 @@
         <section class="sec">
             <div class="wrap">
                 <a href="#" class="back-btn" onclick="nav('products');return false;"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>Continue Shopping</a>
-                <h1 style="font-family:var(--font-d);font-size:clamp(1.75rem,3vw,2.5rem);font-weight:700;letter-spacing:-0.025em;color:#1a2e5a;margin-bottom:2rem">Your Cart</h1>
+                <h1 style="font-family:var(--font-d);font-size:clamp(1.75rem,3vw,2.5rem);font-weight:700;letter-spacing:-0.025em;color:#0f1f3d;margin-bottom:2rem">Your Cart</h1>
                 <div id="cartContent"></div>
             </div>
         </section>
@@ -3435,7 +3439,7 @@
                 <a href="#" class="back-btn" onclick="nav('products');return false;"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>Back to Peptides</a>
                 <div class="detail-grid" id="detailContent"></div>
                 <div style="margin-top:4rem">
-                    <h2 style="font-family:var(--font-d);font-size:1.75rem;font-weight:700;color:#1a2e5a;margin-bottom:2rem">More Peptides:</h2>
+                    <h2 style="font-family:var(--font-d);font-size:1.75rem;font-weight:700;color:#0f1f3d;margin-bottom:2rem">More Peptides:</h2>
                     <div class="prod-grid" id="moreGrid"></div>
                 </div>
             </div>
@@ -3916,7 +3920,7 @@
                 try {
                     history.pushState({
                         page
-                    }, "", "#" + page);
+                    }, "", page === "home" ? "/" : "/" + page);
                 } catch (e) {}
             }
         }
@@ -4064,9 +4068,9 @@
     <div class="footer-inner">
       <div>
         <div class="ft-logo">
-          <img src="logo.png" alt="TOPeptides" style="height:34px;width:auto"
+          <img src="logo.png" alt="TOPeptides" style="height:90px;width:auto;object-fit:contain;margin-bottom:4px"
                onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-          <span class="ft-logo-txt" style="display:none">TOP<em>eptides</em></span>
+          <span class="ft-logo-txt" style="display:none;font-size:1.6rem;font-weight:800;letter-spacing:-0.03em">TOP<em>eptides</em></span>
         </div>
         <p class="ft-tag">Premium research peptides delivered with quality, transparency, and trust. For laboratory research use only.</p>
         <div class="soc-row">
@@ -4097,11 +4101,11 @@
         <h4>Need Support?</h4>
         <div class="ft-ci">
           <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <span><a href="mailto:support@topeptides.com" style="color:#667085;text-decoration:none" onmouseover="this.style.color='#26b38a'" onmouseout="this.style.color='#667085'">support@topeptides.com</a></span>
+          <span><a href="mailto:support@topeptides.com" style="color:#667085;text-decoration:none" onmouseover="this.style.color='#2563b8'" onmouseout="this.style.color='#667085'">support@topeptides.com</a></span>
         </div>
         <div class="ft-ci">
           <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <span><a href="tel:+18005550199" style="color:#667085;text-decoration:none" onmouseover="this.style.color='#26b38a'" onmouseout="this.style.color='#667085'">+1 (800) 555-0199</a></span>
+          <span><a href="tel:+18005550199" style="color:#667085;text-decoration:none" onmouseover="this.style.color='#2563b8'" onmouseout="this.style.color='#667085'">+1 (800) 555-0199</a></span>
         </div>
       </div>
     </div>
@@ -4491,7 +4495,7 @@ function renderCheckout() {
            src="${it.p.img}" alt="${it.p.name}"
            onerror="this.src='https://images.unsplash.com/photo-1576671081837-49000212a370?w=80&q=80'"/>
       <div style="flex:1">
-        <div style="font-size:.84rem;font-weight:600;color:#fff">${it.p.name}</div>
+        <div style="font-size:.84rem;font-weight:600;color:#0f1f3d">${it.p.name}</div>
         <div style="font-size:.73rem;color:#556070">Qty: ${it.qty}</div>
       </div>
       <span style="font-weight:700;font-size:.855rem;color:var(--green)">$${(it.p.price * it.qty).toFixed(2)}</span>
@@ -4524,10 +4528,16 @@ function placeOrder() {
 
 /* ─── INIT ─── */
 function init() {
+  // Read path on load (handles direct URL visits and refreshes)
+  const initPage = (() => {
+    const path = window.location.pathname.replace(/^\//, '').replace(/\/$/, '') || 'home';
+    const valid = ["home","products","company","blog","contact","cart","detail","account","checkout"];
+    return valid.includes(path) ? path : 'home';
+  })();
   buildTicker();
   buildFAQIn("faqList");
   buildHeroDots();
-  hTimer = setInterval(() => goHero(hIdx + 1), 3000);
+  hTimer = setInterval(() => goHero(hIdx + 1), 5500);
   buildProdStage();
   buildBlog();
   document.getElementById("prodsGrid").innerHTML = PRODS.map(p => prodCard(p)).join("");
@@ -4538,7 +4548,8 @@ function init() {
   });
   updateBadge();
   // Set initial history state so back button works from first page
-  try { history.replaceState({ page: "home" }, "", "#home"); } catch(e) {}
+  if (initPage !== 'home') nav(initPage, false);
+  try { history.replaceState({ page: initPage }, "", initPage === 'home' ? '/' : '/' + initPage); } catch(e) {}
 }
 
 init();
