@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>TOPeptides &mdash; Premium Peptides</title>
-    <link rel="icon" type="image/png" href="logo.png" />
-    <link rel="apple-touch-icon" href="logo.png" />
+    <link rel="icon" type="image/png" href="logo-light.png" />
+    <link rel="apple-touch-icon" href="logo-light.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <style>
@@ -164,10 +164,9 @@
         }
         
         .logo-wrap img {
-            height: 110px;
-            padding-top: 7px;
+            height: 70px;
             width: auto;
-            object-fit: contain
+            object-fit: contain;
         }
         
         .logo-fallback {
@@ -4325,8 +4324,8 @@
         <header class="header">
             <div class="header-inner">
                 <div class="logo-wrap" onclick="nav('home')">
-                    <img src="logo.png" alt="TOPeptides" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-                    <span class="logo-fallback" style="display:none">TOP<span>eptides</span></span>
+                    <img src="logo-light-1.png" alt="TOPeptides" id="headerLogo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+                    <!-- <span class="logo-fallback" style="display:none">TOP<span>eptides</span></span> -->
                 </div>
                 <nav class="nav" id="deskNav">
                     <a href="#" onclick="nav('company');return false;" data-p="company">About Us</a>
@@ -4825,8 +4824,8 @@
           <option>Research Chemicals</option>
         </select>
                             <div class="range-row">
-                                <span id="priceLabel">Max $200</span>
-                                <input type="range" id="priceRange" min="50" max="200" value="200" oninput="document.getElementById('priceLabel').textContent='Max $'+this.value;filterProds()" />
+                                <span id="priceLabel">Max $500</span>
+                                <input type="range" id="priceRange" min="45" max="500" value="500" oninput="document.getElementById('priceLabel').textContent='Max $'+this.value;filterProds()" />
                             </div>
                             <select class="fil-sel" id="sortFilter" onchange="filterProds()">
           <option value="pop">Popular</option>
@@ -4845,143 +4844,52 @@
 
             <!-- OUR COMPANY PAGE -->
             <div id="pg-company" class="page">
-                <!-- Company Hero -->
-                <div class="company-hero" style="background-image:url('hero-vials.jpg');background-size:cover;background-position:center;min-height:420px;display:flex;align-items:center;position:relative;overflow:hidden">
-                    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(8,16,40,.92) 0%,rgba(10,22,50,.78) 60%,rgba(16,192,208,.15) 100%)"></div>
-                    <div style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(16,192,208,.15),transparent 65%);pointer-events:none"></div>
-                    <div class="company-hero-inner" style="position:relative;z-index:2">
-                        <a href="#" class="back-link" onclick="nav('home');return false;" style="color:rgba(255,255,255,.65)"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>Home</a>
-                        <div style="display:inline-block;background:rgba(16,192,208,.15);border:1px solid rgba(16,192,208,.4);color:#10C0D0;padding:4px 16px;border-radius:999px;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px">About TOPeptides</div>
-                        <h1 style="color:#fff;font-size:clamp(2rem,5vw,3.5rem);font-family:var(--font-d);font-weight:700;line-height:1.1;margin-bottom:16px">Quality You Can <span style="color:#10C0D0">Verify.</span><br>Service You Can <span style="color:#10C0D0">Trust.</span></h1>
-                        <p style="color:rgba(255,255,255,.72);font-size:clamp(.9rem,1.5vw,1.05rem);max-width:38rem;line-height:1.7">Premium peptides manufactured to pharmaceutical standards, independently lab-tested, and delivered to your door — fast.</p>
-                        <div style="display:flex;gap:12px;margin-top:1.75rem;flex-wrap:wrap">
-                            <button class="btn-p" onclick="nav('products')" style="padding:12px 28px">Shop Our Products &rarr;</button>
-                            <button class="btn-o" onclick="nav('contact')" style="padding:12px 28px">Get in Touch</button>
-                        </div>
+
+                <!-- About Hero -->
+                <div style="background:linear-gradient(135deg,#0a1628 0%,#0f2050 60%,#0a1628 100%);padding:clamp(60px,8vw,100px) clamp(1rem,4vw,2rem) clamp(50px,7vw,90px);text-align:center;position:relative;overflow:hidden">
+                    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(16,192,208,.08),transparent 65%);pointer-events:none"></div>
+                    <div style="position:relative;z-index:1;max-width:680px;margin:0 auto">
+                        <div style="display:inline-block;background:rgba(16,192,208,.12);border:1px solid rgba(16,192,208,.35);color:#10C0D0;padding:5px 18px;border-radius:999px;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;margin-bottom:22px">About Us</div>
+                        <h1 style="color:#fff;font-size:clamp(2rem,5vw,3rem);font-family:var(--font-d);font-weight:700;line-height:1.15;margin-bottom:20px">Welcome to <span style="color:#10C0D0">TOPeptides.</span></h1>
+                        <p style="color:rgba(255,255,255,.68);font-size:clamp(.92rem,1.5vw,1.05rem);line-height:1.8;margin-bottom:14px">We are a leading provider of high-quality peptides for laboratories, researchers, and academic institutions across the globe. All our products are synthesized and lyophilized in the United States, with purity levels exceeding 99%+.</p>
+                        <p style="color:rgba(255,255,255,.55);font-size:.95rem;line-height:1.75;margin-bottom:32px">Our mission is to support the scientific community with reliable, research-grade materials that advance discovery and innovation.</p>
+                        <button class="btn-p" onclick="nav('products')" style="padding:13px 34px;font-size:.92rem">Shop Peptides</button>
                     </div>
                 </div>
 
-                <!-- Who We Are — Image + Text -->
-                <section style="background:#fff;padding:clamp(60px,8vw,100px) clamp(1rem,4vw,2rem)">
-                    <div style="max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem);align-items:center">
-                        <div>
-                            <div style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:1rem">
-                                <div style="grid-column:1/-1;border-radius:22px;overflow:hidden;aspect-ratio:16/9;box-shadow:0 20px 60px rgba(16,192,208,.2)">
-                                    <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=900&q=85" alt="Our lab facility" style="width:100%;height:100%;object-fit:cover;transition:transform .6s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"
-                                    />
-                                </div>
-                                <div style="border-radius:16px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 10px 30px rgba(0,0,0,.1)">
-                                    <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=500&q=85" alt="Quality vials" style="width:100%;height:100%;object-fit:cover;transition:transform .6s ease" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"
-                                    />
-                                </div>
-                                <div style="border-radius:16px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 10px 30px rgba(0,0,0,.1)">
-                                    <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=500&q=85" alt="Lab testing" style="width:100%;height:100%;object-fit:cover;transition:transform .6s ease" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div style="font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:#10C0D0;margin-bottom:14px">Who We Are</div>
-                            <h2 style="font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:700;color:#0f1f3d;line-height:1.15;margin-bottom:1.1rem">We Are <em style="font-style:normal;color:#10C0D0">TOPeptides</em></h2>
-                            <p style="color:#4b6496;line-height:1.82;font-size:.9375rem;margin-bottom:1rem">At TOPeptides, we specialize in <strong>premium-grade peptides</strong> manufactured to the highest standards. Our focus is on giving every customer a product they can trust — independently verified, clearly documented, and
-                                delivered fast.</p>
-                            <p style="color:#4b6496;line-height:1.82;font-size:.9375rem;margin-bottom:1rem">Our team is made up of <strong>experienced manufacturing and quality control professionals</strong> with deep expertise. Every product is made in our US cGMP facility, independently tested, and shipped with full documentation.</p>
-                            <p style="color:#4b6496;line-height:1.82;font-size:.9375rem;margin-bottom:1.75rem">We are committed to <strong>quality, transparency and your satisfaction</strong> at every stage — from sourcing premium raw materials to the final lab verification and fast delivery to your door.</p>
-                            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-bottom:1.75rem">
-                                <div style="display:flex;align-items:center;gap:9px;font-size:.83rem;font-weight:600;color:#344054;background:#f0f8fa;border-radius:10px;border:1px solid rgba(16,192,208,.18);padding:10px 13px"><svg width="14" height="14" fill="none" stroke="#10C0D0" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>US cGMP Manufactured</div>
-                                <div style="display:flex;align-items:center;gap:9px;font-size:.83rem;font-weight:600;color:#344054;background:#f0f8fa;border-radius:10px;border:1px solid rgba(16,192,208,.18);padding:10px 13px"><svg width="14" height="14" fill="none" stroke="#10C0D0" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>99%+ Purity Verified</div>
-                                <div style="display:flex;align-items:center;gap:9px;font-size:.83rem;font-weight:600;color:#344054;background:#f0f8fa;border-radius:10px;border:1px solid rgba(16,192,208,.18);padding:10px 13px"><svg width="14" height="14" fill="none" stroke="#10C0D0" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>COA With Every Order</div>
-                                <div style="display:flex;align-items:center;gap:9px;font-size:.83rem;font-weight:600;color:#344054;background:#f0f8fa;border-radius:10px;border:1px solid rgba(16,192,208,.18);padding:10px 13px"><svg width="14" height="14" fill="none" stroke="#10C0D0" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Same-Day Shipping</div>
-                            </div>
-                            <button class="btn-p" onclick="nav('products')" style="padding:12px 28px">Shop Our Products &rarr;</button>
-                        </div>
-                    </div>
-                </section>
+                <!-- Testing & Manufacturing -->
+                <div style="background:linear-gradient(160deg,#e8f4f8 0%,#f0f8fa 100%);padding:clamp(60px,8vw,100px) clamp(1rem,4vw,2rem)">
+                    <div style="max-width:760px;margin:0 auto;text-align:center">
+                        <div style="display:inline-block;background:rgba(16,192,208,.1);border:1px solid rgba(16,192,208,.3);color:#10C0D0;padding:5px 18px;border-radius:999px;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;margin-bottom:22px">Quality Assurance</div>
+                        <h2 style="font-family:var(--font-d);font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:700;color:#0f1f3d;margin-bottom:clamp(40px,5vw,64px)">Testing &amp; Manufacturing</h2>
 
-                <!-- Our Values — 4 image cards -->
-                <section style="background:linear-gradient(135deg,#f0f8fa,#e8f4f8);padding:clamp(60px,8vw,100px) clamp(1rem,4vw,2rem);border-top:1px solid rgba(16,192,208,.1)">
-                    <div style="max-width:1320px;margin:0 auto">
-                        <div style="text-align:center;margin-bottom:3rem">
-                            <div style="display:inline-block;background:rgba(16,192,208,.1);border:1px solid rgba(16,192,208,.3);color:#10C0D0;padding:4px 16px;border-radius:999px;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px">Our Standards</div>
-                            <h2 style="font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:700;color:#0f1f3d">Built on Quality. Delivered with Care.</h2>
-                            <p style="color:#667085;font-size:.9375rem;margin-top:.75rem;max-width:36rem;margin-left:auto;margin-right:auto">Every promise we make is backed by independent verification, pharmaceutical-grade manufacturing, and a team that genuinely cares.</p>
+                        <!-- Analytical Verification -->
+                        <div style="background:#fff;border-radius:20px;padding:clamp(28px,4vw,44px);margin-bottom:20px;text-align:left;border:1px solid rgba(16,192,208,.12);box-shadow:0 4px 24px rgba(16,192,208,.07)">
+                            <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px">
+                                <div style="width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,rgba(16,192,208,.15),rgba(16,192,208,.05));display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                                    <svg width="20" height="20" fill="none" stroke="#10C0D0" stroke-width="2" viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v11m0 0a3 3 0 1 0 6 0M9 14h6"/></svg>
+                                </div>
+                                <h3 style="font-family:var(--font-d);font-size:1.15rem;font-weight:700;color:#0f1f3d;margin:0">Analytical Verification</h3>
+                            </div>
+                            <p style="color:#4b6496;line-height:1.8;font-size:.9375rem;margin:0">Each lot is qualified at 99%+ purity by high-performance liquid chromatography; identity is confirmed by mass spectrometry; and independent third-party laboratories corroborate in-house analytics to maintain traceable quality
+                                metrics appropriate for research use.</p>
                         </div>
-                        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem">
-                            <div class="co-val-card">
-                                <div class="co-val-img"><img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=400&q=85" alt="Quality testing" loading="lazy" /></div>
-                                <div class="co-val-body">
-                                    <div class="co-val-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-                                    <div class="co-val-ttl">Pharmaceutical Grade</div>
-                                    <div class="co-val-dsc">cGMP-compliant US facility — the same standard used by leading pharmaceutical companies.</div>
-                                </div>
-                            </div>
-                            <div class="co-val-card">
-                                <div class="co-val-img"><img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=400&q=85" alt="Lab testing" loading="lazy" /></div>
-                                <div class="co-val-body">
-                                    <div class="co-val-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v11m0 0a3 3 0 1 0 6 0M9 14h6"/></svg></div>
-                                    <div class="co-val-ttl">Independent Testing</div>
-                                    <div class="co-val-dsc">Every batch tested by accredited US labs. Results published. No exceptions.</div>
-                                </div>
-                            </div>
-                            <div class="co-val-card">
-                                <div class="co-val-img"><img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=400&q=85" alt="Discreet shipping" loading="lazy" /></div>
-                                <div class="co-val-body">
-                                    <div class="co-val-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-                                    <div class="co-val-ttl">Fast &amp; Discreet Delivery</div>
-                                    <div class="co-val-dsc">Same-day dispatch. FedEx 2-Day Air. Discreet packaging on every order.</div>
-                                </div>
-                            </div>
-                            <div class="co-val-card">
-                                <div class="co-val-img"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=85" alt="Customer support" loading="lazy" /></div>
-                                <div class="co-val-body">
-                                    <div class="co-val-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-                                    <div class="co-val-ttl">Real Human Support</div>
-                                    <div class="co-val-dsc">Our US-based team answers every question. Real people, fast replies — no bots.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
 
-                <!-- Commitment stats -->
-                <section style="background:linear-gradient(135deg,#080e1e,#0f2050,#080e1e);padding:clamp(50px,6vw,80px) clamp(1rem,4vw,2rem);position:relative;overflow:hidden">
-                    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(16,192,208,.07),transparent 65%);pointer-events:none"></div>
-                    <div style="max-width:1320px;margin:0 auto;text-align:center;position:relative;z-index:1">
-                        <h2 style="font-family:var(--font-d);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;color:#fff;margin-bottom:.75rem">Our Numbers Speak for Themselves</h2>
-                        <p style="color:rgba(255,255,255,.55);font-size:.9375rem;margin-bottom:3rem">Thousands of satisfied customers trust TOPeptides every month.</p>
-                        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;max-width:900px;margin:0 auto">
-                            <div style="text-align:center">
-                                <div style="font-family:var(--font-d);font-size:clamp(2rem,4vw,3rem);font-weight:800;background:linear-gradient(135deg,#fff,#10C0D0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">99%+</div>
-                                <div style="font-size:.76rem;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.08em;margin-top:8px">Purity Rate</div>
+                        <!-- Manufacturing and documentation -->
+                        <div style="background:#fff;border-radius:20px;padding:clamp(28px,4vw,44px);text-align:left;border:1px solid rgba(16,192,208,.12);box-shadow:0 4px 24px rgba(16,192,208,.07)">
+                            <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px">
+                                <div style="width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,rgba(16,192,208,.15),rgba(16,192,208,.05));display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                                    <svg width="20" height="20" fill="none" stroke="#10C0D0" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                </div>
+                                <h3 style="font-family:var(--font-d);font-size:1.15rem;font-weight:700;color:#0f1f3d;margin:0">Manufacturing and Documentation</h3>
                             </div>
-                            <div style="text-align:center">
-                                <div style="font-family:var(--font-d);font-size:clamp(2rem,4vw,3rem);font-weight:800;background:linear-gradient(135deg,#fff,#10C0D0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">5,000+</div>
-                                <div style="font-size:.76rem;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.08em;margin-top:8px">Happy Customers</div>
-                            </div>
-                            <div style="text-align:center">
-                                <div style="font-family:var(--font-d);font-size:clamp(2rem,4vw,3rem);font-weight:800;background:linear-gradient(135deg,#fff,#10C0D0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">12+</div>
-                                <div style="font-size:.76rem;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.08em;margin-top:8px">Products</div>
-                            </div>
-                            <div style="text-align:center">
-                                <div style="font-family:var(--font-d);font-size:clamp(2rem,4vw,3rem);font-weight:800;background:linear-gradient(135deg,#fff,#10C0D0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">2-Day</div>
-                                <div style="font-size:.76rem;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.08em;margin-top:8px">Delivery</div>
-                            </div>
+                            <p style="color:#4b6496;line-height:1.8;font-size:.9375rem;margin:0">Peptide labs manufactures this material in the United States under defined quality procedures and research-only labeling. COAs, raw-material provenance from vetted suppliers, and batch records are maintained to facilitate institutional
+                                procurement review and audit readiness.</p>
                         </div>
-                    </div>
-                </section>
 
-                <!-- FAQ -->
-                <section class="faq-sec">
-                    <div class="faq-layout" style="max-width:1320px;margin:0 auto">
-                        <div class="faq-left">
-                            <div style="display:inline-block;background:rgba(16,192,208,.1);border:1px solid rgba(16,192,208,.3);color:#10C0D0;padding:4px 16px;border-radius:999px;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px">FAQ</div>
-                            <h2>Got Questions?</h2>
-                            <p>Our team is ready to help with any product or order question.</p>
-                            <button class="btn-p" style="padding:10px 20px;font-size:.8rem;margin-top:1rem" onclick="nav('contact')">Contact Us &rarr;</button>
-                        </div>
-                        <div class="faq-right" id="faqListCo"></div>
                     </div>
-                </section>
+                </div>
+
                 <div id="ft-company"></div>
             </div>
 
@@ -5522,90 +5430,711 @@
 
             <script>
                 const PRODS = [{
-                    id: "1",
-                    slug: "bpc-157",
-                    name: "BPC-157",
-                    cat: "Recovery Peptides",
-                    price: 99.99,
-                    rating: 4.9,
-                    short: "Premium-grade BPC-157 — 99%+ purity, independently lab-tested and delivered fast.",
-                    long: "BPC-157 is one of our most popular premium peptides. Each batch is produced in our US cGMP-compliant facility and independently verified to 99%+ purity. Includes a Certificate of Analysis. Ships same day in discreet, temperature-controlled packaging.",
-                    img: "bpc157.png",
-                    purity: "99% HPLC verified",
-                    size: "10mg / vial",
-                    storage: "Store at -20°C",
-                    stock: 18
-                }, {
-                    id: "2",
-                    slug: "cjc-1295",
-                    name: "CJC-1295",
-                    cat: "Growth Peptides",
-                    price: 129.00,
-                    rating: 4.8,
-                    short: "High-purity CJC-1295 — independently verified, cGMP manufactured and shipped same day.",
-                    long: "CJC-1295 is a premium long-acting peptide, independently tested for purity and potency. Made in a US cGMP facility, provided as a lyophilized powder. Certificate of Analysis included. Ships same day via FedEx 2-Day.",
-                    img: "cjc1295.png",
-                    purity: "99% HPLC verified",
-                    size: "5mg / vial",
-                    storage: "Store at -20°C, lyophilized",
-                    stock: 24
-                }, {
-                    id: "3",
-                    slug: "ipamorelin",
-                    name: "Ipamorelin",
-                    cat: "Growth Peptides",
-                    price: 89.50,
-                    rating: 4.9,
-                    short: "Premium Ipamorelin — 99%+ purity, lab-verified and fast-shipped in discreet packaging.",
-                    long: "Ipamorelin is a highly selective, premium-grade peptide independently tested to 99%+ purity. Made in our US cGMP facility. Comes with a Certificate of Analysis. Fast, discreet shipping on every order.",
-                    img: "ipamorelin.png",
-                    purity: "99% HPLC verified",
-                    size: "5mg / vial",
-                    storage: "Store at -20°C",
-                    stock: 31
-                }, {
-                    id: "4",
-                    slug: "tb-500",
-                    name: "TB-500",
-                    cat: "Recovery Peptides",
-                    price: 145.00,
-                    rating: 4.7,
-                    short: "High-grade TB-500 — independently tested and shipped with a Certificate of Analysis.",
-                    long: "TB-500 is a premium synthetic peptide independently verified for purity and potency. Each batch is manufactured in a US cGMP-compliant facility and ships with a full Certificate of Analysis.",
-                    img: "tb500.png",
-                    purity: "99% HPLC verified",
-                    size: "10mg / vial",
-                    storage: "Store at -20°C",
-                    stock: 15
-                }, {
-                    id: "5",
-                    slug: "melanotan-ii",
-                    name: "Melanotan II",
-                    cat: "Wellness Peptides",
-                    price: 64.99,
-                    rating: 4.6,
-                    short: "Premium Melanotan II — 99%+ HPLC-verified purity, cGMP manufactured, discreetly shipped.",
-                    long: "Melanotan II is a premium-grade synthetic peptide, manufactured in a US cGMP facility and independently tested to 99%+ HPLC purity. Certificate of Analysis included. Ships in discreet packaging.",
-                    img: "melanotan.png",
-                    purity: "99% HPLC verified",
-                    size: "10mg / vial",
-                    storage: "Store at -20°C",
-                    stock: 22
-                }, {
-                    id: "6",
-                    slug: "hgh-fragment",
-                    name: "HGH Fragment 176-191",
-                    cat: "Fat Loss Peptides",
-                    price: 109.00,
-                    rating: 4.8,
-                    short: "High-purity HGH Fragment 176-191 — lab-tested, pharmaceutical-grade, fast-shipped.",
-                    long: "HGH Fragment 176-191 is a high-purity synthetic peptide independently verified by accredited labs. Manufactured in a US cGMP facility. Comes with a Certificate of Analysis, ships same day.",
-                    img: "hgh-frag.png",
-                    purity: "99% HPLC verified",
-                    size: "5mg / vial",
-                    storage: "Store at -20°C, lyophilized",
-                    stock: 19
-                }];
+                        id: "1",
+                        slug: "aod-9604",
+                        name: "AOD9604",
+                        cat: "Fat Loss Peptides",
+                        prices: [{
+                            mg: "10 mg",
+                            price: 80
+                        }],
+                        price: 80,
+                        rating: 4.8,
+                        short: "Premium AOD9604 — 99%+ purity, independently lab-tested, fast-shipped.",
+                        long: "AOD9604 is a premium fat loss peptide produced in our US cGMP-compliant facility. Every batch is independently tested to 99%+ purity. Ships with a full Certificate of Analysis.",
+                        img: "products/AOD9604.png",
+                        purity: "99% HPLC verified",
+                        size: "10mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 20
+                    }, {
+                        id: "2",
+                        slug: "ara-290",
+                        name: "ARA 290",
+                        cat: "Recovery Peptides",
+                        prices: [{
+                            mg: "10 mg",
+                            price: 60
+                        }, {
+                            mg: "5 mg",
+                            price: 45
+                        }],
+                        price: 60,
+                        rating: 4.8,
+                        short: "Premium ARA 290 — 99%+ purity, cGMP manufactured, fast-shipped.",
+                        long: "ARA 290 is a premium synthetic peptide independently tested to 99%+ purity. Manufactured in a US cGMP facility. Certificate of Analysis included.",
+                        img: "products/ARA290.png",
+                        purity: "99% HPLC verified",
+                        size: "10mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 18
+                    }, {
+                        id: "3",
+                        slug: "bpc-157",
+                        name: "BPC 157",
+                        cat: "Recovery Peptides",
+                        prices: [{
+                            mg: "10 mg",
+                            price: 85
+                        }, {
+                            mg: "15 mg",
+                            price: 120
+                        }],
+                        price: 85,
+                        rating: 4.9,
+                        short: "Premium-grade BPC-157 — 99%+ purity, independently lab-tested and delivered fast.",
+                        long: "BPC-157 is one of our most popular premium peptides. Each batch is produced in our US cGMP-compliant facility and independently verified to 99%+ purity. Includes a Certificate of Analysis. Ships same day in discreet, temperature-controlled packaging.",
+                        img: "products/BPC157.png",
+                        purity: "99% HPLC verified",
+                        size: "10mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 22
+                    }, {
+                        id: "4",
+                        slug: "cagrilintide",
+                        name: "Cagrilintide",
+                        cat: "Fat Loss Peptides",
+                        prices: [{
+                            mg: "10 mg",
+                            price: 145
+                        }],
+                        price: 145,
+                        rating: 4.7,
+                        short: "Premium Cagrilintide — 99%+ purity, cGMP manufactured, discreetly shipped.",
+                        long: "Cagrilintide is a premium long-acting amylin analogue peptide, independently tested for purity and potency. Made in a US cGMP facility. Certificate of Analysis included.",
+                        img: "products/Cagrilintide.png",
+                        purity: "99% HPLC verified",
+                        size: "10mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 15
+                    }, {
+                        id: "5",
+                        slug: "cjc-1295-wdac",
+                        name: "CJC‑1295 w/DAC",
+                        cat: "Growth Peptides",
+                        prices: [{
+                            mg: "5 mg",
+                            price: 75
+                        }],
+                        price: 75,
+                        rating: 4.9,
+                        short: "High-purity CJC-1295 w/DAC — long-acting GHRH analogue, independently verified.",
+                        long: "CJC-1295 with DAC is a premium long-acting growth hormone releasing hormone analogue. Independently tested to 99%+ purity, manufactured in a US cGMP facility. Ships with COA.",
+                        img: "products/CJC1295wDAC.png",
+                        purity: "99% HPLC verified",
+                        size: "5mg / vial",
+                        storage: "Store at -20°C, lyophilized",
+                        stock: 24
+                    }, {
+                        id: "6",
+                        slug: "cjc-1295-nodac",
+                        name: "CJC‑1295 no/DAC",
+                        cat: "Growth Peptides",
+                        prices: [{
+                            mg: "5 mg",
+                            price: 65
+                        }, {
+                            mg: "10 mg",
+                            price: 100
+                        }],
+                        price: 65,
+                        rating: 4.8,
+                        short: "High-purity CJC-1295 no/DAC — independently verified, cGMP manufactured and shipped same day.",
+                        long: "CJC-1295 without DAC (MOD-GRF 1-29) is a premium short-acting GHRH analogue, independently tested to 99%+ purity. Made in a US cGMP facility. Ships with full COA.",
+                        img: "products/CJC1295noDAC.png",
+                        purity: "99% HPLC verified",
+                        size: "5mg / vial",
+                        storage: "Store at -20°C, lyophilized",
+                        stock: 30
+                    }, {
+                        id: "7",
+                        slug: "dsip",
+                        name: "DSIP",
+                        cat: "Wellness Peptides",
+                        prices: [{
+                            mg: "5 mg",
+                            price: 45
+                        }, {
+                            mg: "10 mg",
+                            price: 70
+                        }],
+                        price: 45,
+                        rating: 4.7,
+                        short: "Premium DSIP — Delta Sleep Inducing Peptide, 99%+ purity, lab-verified.",
+                        long: "DSIP (Delta Sleep-Inducing Peptide) is a premium neuropeptide manufactured in a US cGMP facility and independently tested to 99%+ purity. Includes full Certificate of Analysis.",
+                        img: "products/DSIP.png",
+                        purity: "99% HPLC verified",
+                        size: "5mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 20
+                    }, {
+                        id: "8",
+                        slug: "epithalon",
+                        name: "Epithalon",
+                        cat: "Anti-Aging Peptides",
+                        prices: [{
+                            mg: "10mg",
+                            price: 45
+                        }, {
+                            mg: "30mg",
+                            price: 65
+                        }, {
+                            mg: "50 mg",
+                            price: 110
+                        }],
+                        price: 45,
+                        rating: 4.9,
+                        short: "Premium Epithalon — a leading anti-aging tetrapeptide, 99%+ purity verified.",
+                        long: "Epithalon is a leading anti-aging tetrapeptide manufactured in our US cGMP-compliant facility and independently verified to 99%+ purity. Comes with a Certificate of Analysis.",
+                        img: "products/Epithalon.png",
+                        purity: "99% HPLC verified",
+                        size: "10mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 28
+                    }, {
+                        id: "9",
+                        slug: "ghk-cu",
+                        name: "GHK‑Cu (Copper Peptide)",
+                        cat: "Anti-Aging Peptides",
+                        prices: [{
+                            mg: "50 mg",
+                            price: 50
+                        }, {
+                            mg: "100 mg",
+                            price: 90
+                        }],
+                        price: 50,
+                        rating: 4.8,
+                        short: "Premium GHK-Cu Copper Peptide — 99%+ purity, anti-aging and skin regeneration.",
+                        long: "GHK-Cu (Copper Peptide) is a premium bio-stimulating tripeptide, independently tested to 99%+ purity and manufactured in a US cGMP facility. Certificate of Analysis included.",
+                        img: "products/GHKCu.png",
+                        purity: "99% HPLC verified",
+                        size: "50mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 25
+                    }, {
+                        id: "10",
+                        slug: "igf-1-lr3",
+                        name: "IGF-1 LR3",
+                        cat: "Growth Peptides",
+                        prices: [{
+                            mg: "1 mg",
+                            price: 100
+                        }],
+                        price: 100,
+                        rating: 4.8,
+                        short: "Premium IGF-1 LR3 — long-acting insulin-like growth factor, lab-verified.",
+                        long: "IGF-1 LR3 is a long-acting analogue of IGF-1, manufactured in our US cGMP-compliant facility and independently tested for purity and potency. Ships with a Certificate of Analysis.",
+                        img: "products/IGF1LR3.png",
+                        purity: "99% HPLC verified",
+                        size: "1mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 16
+                    }, {
+                        id: "11",
+                        slug: "ipamorelin",
+                        name: "Ipamorelin",
+                        cat: "Growth Peptides",
+                        prices: [{
+                            mg: "10 mg",
+                            price: 80
+                        }],
+                        price: 80,
+                        rating: 4.9,
+                        short: "Premium Ipamorelin — 99%+ purity, lab-verified and fast-shipped in discreet packaging.",
+                        long: "Ipamorelin is a highly selective, premium-grade peptide independently tested to 99%+ purity. Made in our US cGMP facility. Comes with a Certificate of Analysis. Fast, discreet shipping on every order.",
+                        img: "products/Ipamorelin.png",
+                        purity: "99% HPLC verified",
+                        size: "10mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 31
+                    }, {
+                        id: "12",
+                        slug: "kisspeptin",
+                        name: "Kisspeptin",
+                        cat: "Wellness Peptides",
+                        prices: [{
+                            mg: "10 mg",
+                            price: 80
+                        }],
+                        price: 80,
+                        rating: 4.7,
+                        short: "Premium Kisspeptin — 99%+ purity, cGMP manufactured, lab-verified.",
+                        long: "Kisspeptin is a premium neuropeptide independently tested to 99%+ purity. Manufactured in a US cGMP-compliant facility. Certificate of Analysis included with every order.",
+                        img: "products/Kisspeptin.png",
+                        purity: "99% HPLC verified",
+                        size: "10mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 19
+                    }, {
+                        id: "13",
+                        slug: "kpv",
+                        name: "KPV",
+                        cat: "Anti-Aging Peptides",
+                        prices: [{
+                            mg: "10 mg",
+                            price: 80
+                        }],
+                        price: 80,
+                        rating: 4.8,
+                        short: "Premium KPV — anti-inflammatory tripeptide, 99%+ purity, lab-verified.",
+                        long: "KPV is a premium anti-inflammatory tripeptide independently tested to 99%+ purity. Manufactured in a US cGMP facility. Includes a full Certificate of Analysis.",
+                        img: "products/KPV.png",
+                        purity: "99% HPLC verified",
+                        size: "10mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 22
+                    }, {
+                        id: "14",
+                        slug: "ll-37",
+                        name: "LL-37",
+                        cat: "Recovery Peptides",
+                        prices: [{
+                            mg: "5mg",
+                            price: 85
+                        }],
+                        price: 85,
+                        rating: 4.7,
+                        short: "Premium LL-37 — 99%+ purity, host-defense peptide, cGMP manufactured.",
+                        long: "LL-37 is a premium host-defense peptide independently tested to 99%+ purity. Manufactured in a US cGMP facility. Ships with a full Certificate of Analysis.",
+                        img: "products/LL37.png",
+                        purity: "99% HPLC verified",
+                        size: "5mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 17
+                    }, {
+                        id: "15",
+                        slug: "melanotan-2",
+                        name: "Melanotan 2",
+                        cat: "Wellness Peptides",
+                        prices: [{
+                            mg: "10 mg",
+                            price: 50
+                        }],
+                        price: 50,
+                        rating: 4.6,
+                        short: "Premium Melanotan II — 99%+ HPLC-verified purity, cGMP manufactured, discreetly shipped.",
+                        long: "Melanotan II is a premium-grade synthetic peptide, manufactured in a US cGMP facility and independently tested to 99%+ HPLC purity. Certificate of Analysis included. Ships in discreet packaging.",
+                        img: "products/Melanotan2.png",
+                        purity: "99% HPLC verified",
+                        size: "10mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 22
+                    }, {
+                        id: "16",
+                        slug: "mots-c",
+                        name: "MOTS‑C",
+                        cat: "Anti-Aging Peptides",
+                        prices: [{
+                            mg: "10 mg",
+                            price: 70
+                        }],
+                        price: 70,
+                        rating: 4.8,
+                        short: "Premium MOTS-C — mitochondrial-derived peptide, 99%+ purity, lab-verified.",
+                        long: "MOTS-C is a premium mitochondrial-derived peptide independently tested to 99%+ purity. Manufactured in a US cGMP-compliant facility. Certificate of Analysis included.",
+                        img: "products/MOTSC.png",
+                        purity: "99% HPLC verified",
+                        size: "10mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 20
+                    }, {
+                        id: "17",
+                        slug: "nad-plus",
+                        name: "NAD+",
+                        cat: "Anti-Aging Peptides",
+                        prices: [{
+                            mg: "500 mg",
+                            price: 90
+                        }, {
+                            mg: "1000 mg",
+                            price: 160
+                        }],
+                        price: 90,
+                        rating: 4.9,
+                        short: "Premium NAD+ — 99%+ purity, cellular energy and anti-aging support.",
+                        long: "NAD+ is a premium coenzyme critical to cellular energy production and DNA repair. Manufactured in a US cGMP facility and independently verified to 99%+ purity. Ships with a Certificate of Analysis.",
+                        img: "products/NADplus.png",
+                        purity: "99% HPLC verified",
+                        size: "500mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 35
+                    }, {
+                        id: "18",
+                        slug: "pt-141",
+                        name: "PT‑141",
+                        cat: "Wellness Peptides",
+                        prices: [{
+                            mg: "10 mg",
+                            price: 55
+                        }],
+                        price: 55,
+                        rating: 4.7,
+                        short: "Premium PT-141 (Bremelanotide) — 99%+ purity, cGMP manufactured, fast-shipped.",
+                        long: "PT-141 (Bremelanotide) is a premium synthetic peptide independently tested to 99%+ purity. Manufactured in a US cGMP facility. Certificate of Analysis included. Ships discreetly.",
+                        img: "products/PT141.png",
+                        purity: "99% HPLC verified",
+                        size: "10mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 25
+                    }, {
+                        id: "19",
+                        slug: "retatrutide",
+                        name: "Retatrutide",
+                        cat: "Fat Loss Peptides",
+                        prices: [{
+                            mg: "10 mg",
+                            price: 120
+                        }, {
+                            mg: "20 mg",
+                            price: 210
+                        }, {
+                            mg: "30 mg",
+                            price: 275
+                        }, {
+                            mg: "60 mg",
+                            price: 500
+                        }],
+                        price: 120,
+                        rating: 4.9,
+                        short: "Premium Retatrutide — GLP-1/GIP/Glucagon triple agonist, 99%+ purity.",
+                        long: "Retatrutide is a triple agonist peptide independently tested to 99%+ purity. Manufactured in a US cGMP-compliant facility. Comes with a Certificate of Analysis. Ships same day.",
+                        img: "products/Retatrutide.png",
+                        purity: "99% HPLC verified",
+                        size: "10mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 20
+                    }, {
+                        id: "20",
+                        slug: "selank",
+                        name: "Selank",
+                        cat: "Wellness Peptides",
+                        prices: [{
+                            mg: "10 mg",
+                            price: 60
+                        }, {
+                            mg: "20 mg",
+                            price: 100
+                        }],
+                        price: 60,
+                        rating: 4.8,
+                        short: "Premium Selank — anxiolytic peptide, 99%+ purity, lab-verified, fast-shipped.",
+                        long: "Selank is a premium anxiolytic nootropic peptide independently tested to 99%+ purity. Manufactured in a US cGMP facility. Certificate of Analysis included with every order.",
+                        img: "products/Selank.png",
+                        purity: "99% HPLC verified",
+                        size: "10mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 23
+                    }, {
+                        id: "21",
+                        slug: "semaglutide",
+                        name: "Semaglutide",
+                        cat: "Fat Loss Peptides",
+                        prices: [{
+                            mg: "5 mg",
+                            price: 80
+                        }, {
+                            mg: "10 mg",
+                            price: 125
+                        }, {
+                            mg: "20 mg",
+                            price: 200
+                        }, {
+                            mg: "30 mg",
+                            price: 275
+                        }],
+                        price: 80,
+                        rating: 4.9,
+                        short: "Premium Semaglutide — GLP-1 receptor agonist, 99%+ purity, cGMP manufactured.",
+                        long: "Semaglutide is a premium GLP-1 receptor agonist peptide independently tested to 99%+ purity. Manufactured in a US cGMP-compliant facility. Includes Certificate of Analysis.",
+                        img: "products/Semaglutide.png",
+                        purity: "99% HPLC verified",
+                        size: "5mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 30
+                    }, {
+                        id: "22",
+                        slug: "semax",
+                        name: "Semax",
+                        cat: "Wellness Peptides",
+                        prices: [{
+                            mg: "10 mg",
+                            price: 55
+                        }, {
+                            mg: "20 mg",
+                            price: 90
+                        }],
+                        price: 55,
+                        rating: 4.8,
+                        short: "Premium Semax — nootropic peptide, 99%+ purity, independently lab-tested.",
+                        long: "Semax is a premium nootropic peptide independently tested to 99%+ purity. Manufactured in a US cGMP-compliant facility. Certificate of Analysis included. Ships same day.",
+                        img: "products/Semax.png",
+                        purity: "99% HPLC verified",
+                        size: "10mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 25
+                    }, {
+                        id: "23",
+                        slug: "sermorelin",
+                        name: "Sermorelin",
+                        cat: "Growth Peptides",
+                        prices: [{
+                            mg: "5 mg",
+                            price: 55
+                        }, {
+                            mg: "10 mg",
+                            price: 90
+                        }, {
+                            mg: "15 mg",
+                            price: 120
+                        }],
+                        price: 55,
+                        rating: 4.8,
+                        short: "Premium Sermorelin — GHRH analogue, 99%+ purity, cGMP manufactured.",
+                        long: "Sermorelin is a premium GHRH analogue peptide independently tested to 99%+ purity. Manufactured in a US cGMP-compliant facility. Certificate of Analysis included. Ships same day.",
+                        img: "products/Sermorelin.png",
+                        purity: "99% HPLC verified",
+                        size: "5mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 28
+                    }, {
+                        id: "24",
+                        slug: "ss-31",
+                        name: "SS-31",
+                        cat: "Anti-Aging Peptides",
+                        prices: [{
+                            mg: "10 mg",
+                            price: 65
+                        }, {
+                            mg: "50 mg",
+                            price: 225
+                        }],
+                        price: 65,
+                        rating: 4.8,
+                        short: "Premium SS-31 — mitochondria-targeting peptide, 99%+ purity, lab-verified.",
+                        long: "SS-31 (Elamipretide) is a premium mitochondria-targeting peptide independently tested to 99%+ purity. Manufactured in a US cGMP facility. Certificate of Analysis included.",
+                        img: "products/SS31.png",
+                        purity: "99% HPLC verified",
+                        size: "10mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 18
+                    }, {
+                        id: "25",
+                        slug: "tb-500",
+                        name: "TB-500 (Thymosin Beta-4)",
+                        cat: "Recovery Peptides",
+                        prices: [{
+                            mg: "10 mg",
+                            price: 90
+                        }],
+                        price: 90,
+                        rating: 4.7,
+                        short: "High-grade TB-500 (Thymosin Beta-4) — independently tested and shipped with COA.",
+                        long: "TB-500 is a premium synthetic peptide independently verified for purity and potency. Each batch is manufactured in a US cGMP-compliant facility and ships with a full Certificate of Analysis.",
+                        img: "products/TB500.png",
+                        purity: "99% HPLC verified",
+                        size: "10mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 15
+                    }, {
+                        id: "26",
+                        slug: "tesamorelin",
+                        name: "Tesamorelin",
+                        cat: "Growth Peptides",
+                        prices: [{
+                            mg: "10 mg",
+                            price: 100
+                        }],
+                        price: 100,
+                        rating: 4.8,
+                        short: "Premium Tesamorelin — GHRH analogue, 99%+ purity, fast-shipped.",
+                        long: "Tesamorelin is a premium GHRH analogue peptide independently tested to 99%+ purity. Manufactured in a US cGMP facility. Certificate of Analysis included with every order.",
+                        img: "products/Tesamorelin.png",
+                        purity: "99% HPLC verified",
+                        size: "10mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 20
+                    }, {
+                        id: "27",
+                        slug: "thymosin-alpha-1",
+                        name: "Thymosin Alpha-1",
+                        cat: "Recovery Peptides",
+                        prices: [{
+                            mg: "5 mg",
+                            price: 65
+                        }, {
+                            mg: "10 mg",
+                            price: 110
+                        }],
+                        price: 65,
+                        rating: 4.8,
+                        short: "Premium Thymosin Alpha-1 — immune-modulating peptide, 99%+ purity.",
+                        long: "Thymosin Alpha-1 is a premium immune-modulating peptide independently tested to 99%+ purity. Manufactured in a US cGMP-compliant facility. Ships with a Certificate of Analysis.",
+                        img: "products/ThymosinA1.png",
+                        purity: "99% HPLC verified",
+                        size: "5mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 22
+                    }, {
+                        id: "28",
+                        slug: "thymulin",
+                        name: "Thymulin",
+                        cat: "Recovery Peptides",
+                        prices: [{
+                            mg: "10mg",
+                            price: 55
+                        }],
+                        price: 55,
+                        rating: 4.7,
+                        short: "Premium Thymulin — 99%+ purity, immunomodulatory peptide, cGMP manufactured.",
+                        long: "Thymulin is a premium immunomodulatory peptide independently tested to 99%+ purity. Manufactured in a US cGMP facility. Includes a full Certificate of Analysis with every order.",
+                        img: "products/Thymulin.png",
+                        purity: "99% HPLC verified",
+                        size: "10mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 18
+                    }, {
+                        id: "29",
+                        slug: "tirzepatide",
+                        name: "Tirzepatide",
+                        cat: "Fat Loss Peptides",
+                        prices: [{
+                            mg: "10 mg",
+                            price: 125
+                        }, {
+                            mg: "20 mg",
+                            price: 200
+                        }, {
+                            mg: "30 mg",
+                            price: 275
+                        }, {
+                            mg: "60 mg",
+                            price: 500
+                        }],
+                        price: 125,
+                        rating: 4.9,
+                        short: "Premium Tirzepatide — dual GLP-1/GIP agonist, 99%+ purity, lab-verified.",
+                        long: "Tirzepatide is a premium dual GLP-1/GIP receptor agonist peptide independently tested to 99%+ purity. Manufactured in a US cGMP-compliant facility. Ships with full Certificate of Analysis.",
+                        img: "products/Tirzepatide.png",
+                        purity: "99% HPLC verified",
+                        size: "10mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 25
+                    },
+                    /* COMBOS */
+                    {
+                        id: "30",
+                        slug: "wolverine",
+                        name: "Wolverine BPC‑157/TB‑500",
+                        cat: "Recovery Peptides",
+                        prices: [{
+                            mg: "10/10 mg",
+                            price: 120
+                        }],
+                        price: 120,
+                        rating: 4.9,
+                        short: "Wolverine Combo — BPC-157 + TB-500 — dual recovery blend, 99%+ purity.",
+                        long: "The Wolverine combo pairs BPC-157 and TB-500 for a powerful dual-action recovery blend. Both peptides independently tested to 99%+ purity in our US cGMP facility. Certificate of Analysis included.",
+                        img: "products/Wolverine.png",
+                        purity: "99% HPLC verified",
+                        size: "10mg/10mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 18
+                    }, {
+                        id: "31",
+                        slug: "cjc-ndac-ipam",
+                        name: "CJC‑1295 No DAC/Ipamorelin",
+                        cat: "Growth Peptides",
+                        prices: [{
+                            mg: "5/5 mg",
+                            price: 75
+                        }],
+                        price: 75,
+                        rating: 4.9,
+                        short: "CJC-1295 No DAC + Ipamorelin combo — premium GH-releasing blend, lab-verified.",
+                        long: "This combo pairs CJC-1295 (no DAC) and Ipamorelin for synergistic GH release. Both peptides are independently tested to 99%+ purity and manufactured in a US cGMP facility.",
+                        img: "products/CJCNoDACIpam.png",
+                        purity: "99% HPLC verified",
+                        size: "5mg/5mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 20
+                    }, {
+                        id: "32",
+                        slug: "glow-ghk",
+                        name: "GLOW GHK-CU/TB-500/BPC-157",
+                        cat: "Anti-Aging Peptides",
+                        prices: [{
+                            mg: "50/10/10 mg",
+                            price: 140
+                        }, {
+                            mg: "70/10/10 mg",
+                            price: 160
+                        }],
+                        price: 140,
+                        rating: 4.9,
+                        short: "GLOW Combo — GHK-Cu + TB-500 + BPC-157 — anti-aging triple blend, lab-verified.",
+                        long: "The GLOW combo combines GHK-Cu, TB-500, and BPC-157 for a comprehensive anti-aging and recovery blend. All peptides independently tested to 99%+ purity in our US cGMP facility.",
+                        img: "products/GlowGHK.png",
+                        purity: "99% HPLC verified",
+                        size: "50mg/10mg/10mg",
+                        storage: "Store at -20°C",
+                        stock: 15
+                    }, {
+                        id: "33",
+                        slug: "klow-ghk",
+                        name: "KLOW GHK-CU/TB-500/BPC-157/KPV",
+                        cat: "Anti-Aging Peptides",
+                        prices: [{
+                            mg: "50/10/10/10 mg",
+                            price: 175
+                        }],
+                        price: 175,
+                        rating: 4.9,
+                        short: "KLOW Quad Combo — GHK-Cu + TB-500 + BPC-157 + KPV — ultimate recovery blend.",
+                        long: "The KLOW quad combo adds KPV to the GLOW formula for enhanced anti-inflammatory support. All peptides independently tested to 99%+ purity in our US cGMP-compliant facility.",
+                        img: "products/KlowGHK.png",
+                        purity: "99% HPLC verified",
+                        size: "50/10/10/10 mg",
+                        storage: "Store at -20°C",
+                        stock: 12
+                    }, {
+                        id: "34",
+                        slug: "selank-semax",
+                        name: "Selank/Semax",
+                        cat: "Wellness Peptides",
+                        prices: [{
+                            mg: "5/5 mg",
+                            price: 70
+                        }],
+                        price: 70,
+                        rating: 4.8,
+                        short: "Selank + Semax nootropic combo — 99%+ purity, anxiety and cognitive support.",
+                        long: "This nootropic combo pairs Selank and Semax for synergistic anxiolytic and cognitive effects. Both peptides independently tested to 99%+ purity in our US cGMP facility.",
+                        img: "products/SelankSemax.png",
+                        purity: "99% HPLC verified",
+                        size: "5mg/5mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 18
+                    }, {
+                        id: "35",
+                        slug: "tesamorelin-ipam",
+                        name: "Tesamorelin/Ipamorelin",
+                        cat: "Growth Peptides",
+                        prices: [{
+                            mg: "10/5 mg",
+                            price: 110
+                        }],
+                        price: 110,
+                        rating: 4.9,
+                        short: "Tesamorelin + Ipamorelin combo — synergistic GH-releasing blend, lab-verified.",
+                        long: "Tesamorelin and Ipamorelin combine for a synergistic GH-releasing effect. Both peptides are independently tested to 99%+ purity and manufactured in our US cGMP facility.",
+                        img: "products/TesamorelinIpam.png",
+                        purity: "99% HPLC verified",
+                        size: "10mg/5mg / vial",
+                        storage: "Store at -20°C",
+                        stock: 17
+                    }
+                ];
 
                 const CATS = ["Growth Peptides", "Recovery Peptides", "Fat Loss Peptides", "Anti-Aging Peptides", "Wellness Peptides"];
 
@@ -5837,7 +6366,7 @@
                 function buildProdStage() {
                     const track = document.getElementById("prodTrack");
                     const stars = n => '★'.repeat(Math.floor(n)) + (n % 1 >= 0.5 ? '½' : '');
-                    track.innerHTML = PRODS.map(p => `
+                    track.innerHTML = PRODS.slice(0, 6).map(p => `
                 <div class="stg-card" onclick="openDetail('${p.slug}')">
                     <div class="stg-card-img">
                         <span class="stg-card-badge">✓ 99% Pure</span>
@@ -5852,7 +6381,7 @@
                             <span class="stg-stars">★★★★★</span>
                             <span class="stg-rating-num">${p.rating.toFixed(1)}</span>
                         </div>
-                        <div class="stg-card-price">$${p.price.toFixed(2)}</div>
+                        <div class="stg-card-price">From $${p.price.toFixed(2)}</div>
                         <button class="stg-card-btn" onclick="event.stopPropagation();addCart('${p.id}')">
                             Add to Cart &nbsp;+
                         </button>
@@ -5886,9 +6415,10 @@
         <span><strong>Purity:</strong> ${p.purity}</span>
       </div>
       <div class="pc-price-row">
-        <div class="pc-price">$${p.price.toFixed(2)}</div>
-        <div class="pc-per">per vial</div>
+        <div class="pc-price">From $${p.price.toFixed(2)}</div>
+        <div class="pc-per">${p.prices && p.prices.length > 1 ? p.prices.length + ' sizes' : 'per vial'}</div>
       </div>
+      ${p.prices && p.prices.length > 1 ? '<div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:8px">' + p.prices.map(v => '<span style="font-size:.62rem;font-weight:700;padding:2px 8px;border-radius:4px;background:rgba(37,99,235,.08);color:#2563b8;border:1px solid rgba(37,99,235,.18)">' + v.mg + ' — $' + v.price + '</span>').join('') + '</div>' : ''}
       <div class="pc-btns">
         <button class="btn-add" onclick="addCart('${p.id}');event.stopPropagation()">
           <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
@@ -5946,7 +6476,7 @@
       <!-- Brand col -->
       <div>
         <div class="ft-logo">
-          <img src="logo.png" alt="TOPeptides" style="height:90px;width:auto;object-fit:contain;margin-bottom:4px"
+          <img src="logo-dark-1.png" alt="TOPeptides" style="height:90px;width:auto;object-fit:contain;margin-bottom:4px"
                onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
           <span class="ft-logo-txt" style="display:none;font-size:1.6rem;font-weight:800;letter-spacing:-0.03em;color:#fff">TOP<em style="color:#10C0D0">eptides</em></span>
         </div>
@@ -5970,10 +6500,10 @@
         <h4>Shop</h4>
         <ul>
           <li><a href="#" onclick="nav('products');return false;">All Products</a></li>
-          <li><a href="#" onclick="nav('products');return false;">BPC-157</a></li>
-          <li><a href="#" onclick="nav('products');return false;">CJC-1295</a></li>
-          <li><a href="#" onclick="nav('products');return false;">Ipamorelin</a></li>
-          <li><a href="#" onclick="nav('products');return false;">TB-500</a></li>
+          <li><a href="#" onclick="openDetail('bpc-157');return false;">BPC-157</a></li>
+          <li><a href="#" onclick="openDetail('cjc-1295-wdac');return false;">CJC-1295</a></li>
+          <li><a href="#" onclick="openDetail('ipamorelin');return false;">Ipamorelin</a></li>
+          <li><a href="#" onclick="openDetail('tb-500');return false;">TB-500</a></li>
           <li><a href="#" onclick="nav('cart');return false;">View Cart</a></li>
         </ul>
       </div>
@@ -6058,16 +6588,46 @@
                 }
 
                 /* ─── CART ─── */
+                /* tracks selected variant index per product id */
+                const selectedVariants = {};
+
+                function selectVariant(prodId, idx, btn) {
+                    const p = PRODS.find(x => x.id === prodId);
+                    if (!p || !p.prices) return;
+                    selectedVariants[prodId] = idx;
+                    const v = p.prices[idx];
+                    const priceEl = document.getElementById('det-price-' + prodId);
+                    if (priceEl) priceEl.textContent = 'From $' + v.price.toFixed(2);
+                    const sizeEl = document.getElementById('det-size-' + prodId);
+                    if (sizeEl) sizeEl.textContent = v.mg + ' / vial';
+                    const container = btn.closest('div');
+                    container.querySelectorAll('.variant-sel-btn').forEach(b => {
+                        b.classList.remove('on');
+                        b.style.background = 'rgba(37,99,235,.06)';
+                        b.style.fontWeight = '600';
+                    });
+                    btn.classList.add('on');
+                    btn.style.background = 'rgba(37,99,235,.22)';
+                    btn.style.fontWeight = '800';
+                }
+
                 function addCart(id) {
                     const p = PRODS.find(x => x.id === id);
-                    const ex = cart.find(x => x.p.id === id);
+                    const vidx = (selectedVariants[id] !== undefined) ? selectedVariants[id] : 0;
+                    const variant = (p.prices && p.prices[vidx]) ? p.prices[vidx] : null;
+                    const effectivePrice = variant ? variant.price : p.price;
+                    const variantLabel = variant ? variant.mg : null;
+                    const ex = cart.find(x => x.p.id === id && x.variantIdx === vidx);
                     if (ex) ex.qty++;
                     else cart.push({
                         p,
-                        qty: 1
+                        qty: 1,
+                        variantIdx: vidx,
+                        price: effectivePrice,
+                        variantLabel
                     });
                     updateBadge();
-                    toast(p.name + " added to cart!");
+                    toast(p.name + (variantLabel ? ' (' + variantLabel + ')' : '') + ' added to cart!');
                 }
 
                 function updateBadge() {
@@ -6095,7 +6655,7 @@
     </div>`;
                         return;
                     }
-                    const sub = cart.reduce((s, i) => s + i.p.price * i.qty, 0);
+                    const sub = cart.reduce((s, i) => s + (i.price !== undefined ? i.price : i.p.price) * i.qty, 0);
                     const ship = sub > 150 ? 0 : 9.99;
                     const total = sub + ship;
                     el.innerHTML = `
@@ -6106,8 +6666,8 @@
                onerror="this.src='https://images.unsplash.com/photo-1576671081837-49000212a370?w=100&q=80'"/>
           <div class="cart-info">
             <div class="cart-nm">${it.p.name}</div>
-            <div class="cart-cat">${it.p.cat}</div>
-            <div class="cart-pr">$${it.p.price.toFixed(2)}</div>
+            <div class="cart-cat">${it.p.cat}${it.variantLabel ? " · " + it.variantLabel : ""}</div>
+            <div class="cart-pr">$${(it.price !== undefined ? it.price : it.p.price).toFixed(2)}</div>
           </div>
           <div class="qty-ctrl">
             <button class="qty-btn" onclick="changeQty(${i},-1)">&#8722;</button>
@@ -6182,12 +6742,13 @@ function openDetail(slug) {
     <div>
       <div class="det-eye">${p.cat}</div>
       <div class="det-name">${p.name} Research Peptide</div>
-      <div class="det-price">$${p.price.toFixed(2)}</div>
+      <div class="det-price" id="det-price-${p.id}">From $${(p.prices && p.prices[0] ? p.prices[0].price : p.price).toFixed(2)}</div>
+      ${p.prices && p.prices.length > 1 ? '<div style="display:flex;gap:7px;flex-wrap:wrap;margin-top:8px">' + p.prices.map((v, i) => '<button class="bulk-btn variant-sel-btn' + (i === 0 ? ' on' : '') + '" style="border:1.5px solid rgba(37,99,235,.25);background:' + (i === 0 ? 'rgba(37,99,235,.18)' : 'rgba(37,99,235,.06)') + ';color:#1a3a8f;font-size:.72rem" onclick="selectVariant(\'' + p.id + '\',' + i + ',this)">' + v.mg + ' — $' + v.price + '</button>').join('') + '</div>' : ''}
       <div class="det-stock">In stock (${p.stock} available)</div>
       <p class="det-desc">${p.long}</p>
       <div class="det-specs">
         <div class="det-spec"><strong>Purity</strong><span>${p.purity}</span></div>
-        <div class="det-spec"><strong>Size</strong><span>${p.size}</span></div>
+        <div class="det-spec"><strong>Size</strong><span id="det-size-${p.id}">${p.prices && p.prices[0] ? p.prices[0].mg + " / vial" : p.size}</span></div>
         <div class="det-spec"><strong>Storage</strong><span>${p.storage}</span></div>
       </div>
       <div class="qty-row">
@@ -6440,7 +7001,7 @@ function renderCheckout() {
         <div style="font-size:.84rem;font-weight:600;color:#0f1f3d">${it.p.name}</div>
         <div style="font-size:.73rem;color:#556070">Qty: ${it.qty}</div>
       </div>
-      <span style="font-weight:700;font-size:.855rem;color:var(--green)">$${(it.p.price * it.qty).toFixed(2)}</span>
+      <span style="font-weight:700;font-size:.855rem;color:var(--green)">$${((it.price !== undefined ? it.price : it.p.price) * it.qty).toFixed(2)}</span>
     </div>`).join("");
   const set = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
   set("coSub",   "$" + sub.toFixed(2));
@@ -6495,6 +7056,21 @@ function init() {
 }
 
 init();
+
+// Logo switching: scrolled header = dark bg needs light logo; normal = light bg needs dark logo
+(function(){
+  var header = document.querySelector('.header');
+  var logo = document.getElementById('headerLogo');
+  if (!header || !logo) return;
+  var observer = new MutationObserver(function(){
+    if (header.classList.contains('scrolled')) {
+      logo.src = 'logo-dark-1.png';
+    } else {
+      logo.src = 'logo-light-1.png';
+    }
+  });
+  observer.observe(header, {attributes: true, attributeFilter: ['class']});
+})();
 
 
 /* ═══ WOW FACTOR JS ═══ */
