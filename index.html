@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>TOPeptides &mdash; Premium Peptides</title>
-    <link rel="icon" type="image/png" href="logo-light.png" />
-    <link rel="apple-touch-icon" href="logo-light.png" />
+    <link rel="icon" type="image/png" href="logo-dark-1.png" />
+    <link rel="apple-touch-icon" href="logo-dark-1.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <style>
@@ -164,7 +164,7 @@
         }
         
         .logo-wrap img {
-            height: 70px;
+            height: 75px;
             width: auto;
             object-fit: contain;
         }
@@ -4817,11 +4817,19 @@
                             </div>
                             <select class="fil-sel" id="catFilter" onchange="filterProds()">
           <option value="all">All Categories</option>
-          <option>Growth Peptides</option>
-          <option>Recovery Peptides</option>
-          <option>Fat Loss Peptides</option>
-          <option>Anti-Aging Peptides</option>
-          <option>Research Chemicals</option>
+          <option value="Cardiovascular Research">Cardiovascular Research</option>
+          <option value="Cellular Longevity Research">Cellular Longevity Research</option>
+          <option value="Circadian Research">Circadian Research</option>
+          <option value="Cognitive Research">Cognitive Research</option>
+          <option value="Dermatological Research">Dermatological Research</option>
+          <option value="Gastrointestinal Research">Gastrointestinal Research</option>
+          <option value="Hormonal Research">Hormonal Research</option>
+          <option value="Immune Research">Immune Research</option>
+          <option value="Metabolic Research">Metabolic Research</option>
+          <option value="Mitochondrial Research">Mitochondrial Research</option>
+          <option value="Musculoskeletal Research">Musculoskeletal Research</option>
+          <option value="Reproductive Health Research">Reproductive Health Research</option>
+          <option value="Tissue Regeneration Research">Tissue Regeneration Research</option>
         </select>
                             <div class="range-row">
                                 <span id="priceLabel">Max $500</span>
@@ -4850,7 +4858,7 @@
                     <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(16,192,208,.08),transparent 65%);pointer-events:none"></div>
                     <div style="position:relative;z-index:1;max-width:680px;margin:0 auto">
                         <div style="display:inline-block;background:rgba(16,192,208,.12);border:1px solid rgba(16,192,208,.35);color:#10C0D0;padding:5px 18px;border-radius:999px;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;margin-bottom:22px">About Us</div>
-                        <h1 style="color:#fff;font-size:clamp(2rem,5vw,3rem);font-family:var(--font-d);font-weight:700;line-height:1.15;margin-bottom:20px">Welcome to <span style="color:#10C0D0">TOPeptides.</span></h1>
+                        <h1 style="color:#fff;font-size:clamp(2rem,5vw,3rem);font-family:var(--font-d);font-weight:700;line-height:1.15;margin-bottom:20px">Welcome to <span style="color:#10C0D0">TOPeptides</span></h1>
                         <p style="color:rgba(255,255,255,.68);font-size:clamp(.92rem,1.5vw,1.05rem);line-height:1.8;margin-bottom:14px">We are a leading provider of high-quality peptides for laboratories, researchers, and academic institutions across the globe. All our products are synthesized and lyophilized in the United States, with purity levels exceeding 99%+.</p>
                         <p style="color:rgba(255,255,255,.55);font-size:.95rem;line-height:1.75;margin-bottom:32px">Our mission is to support the scientific community with reliable, research-grade materials that advance discovery and innovation.</p>
                         <button class="btn-p" onclick="nav('products')" style="padding:13px 34px;font-size:.92rem">Shop Peptides</button>
@@ -5042,16 +5050,16 @@
                                     </div>
                                     <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:0.75rem">
                                         <div>
-                                            <div class="ck-lbl">First Name</div><input class="ck-in" type="text" placeholder="John" style="width:100%;background:#f5f8fc;color:#101828" /></div>
+                                            <div class="ck-lbl">First Name</div><input class="ck-in" id="signupFirst" type="text" placeholder="John" style="width:100%;background:#f5f8fc;color:#101828" /></div>
                                         <div>
-                                            <div class="ck-lbl">Last Name</div><input class="ck-in" type="text" placeholder="Researcher" style="width:100%;background:#f5f8fc;color:#101828" /></div>
+                                            <div class="ck-lbl">Last Name</div><input class="ck-in" id="signupLast" type="text" placeholder="Researcher" style="width:100%;background:#f5f8fc;color:#101828" /></div>
                                     </div>
                                     <div style="margin-bottom:0.75rem">
                                         <div class="ck-lbl">Email</div><input class="ck-in" id="signupEmail" type="email" placeholder="john@research.edu" style="width:100%;background:#f5f8fc;color:#101828" /></div>
                                     <div style="margin-bottom:0.75rem">
-                                        <div class="ck-lbl">Password</div><input class="ck-in" type="password" placeholder="At least 8 characters" style="width:100%;background:#f5f8fc;color:#101828" /></div>
+                                        <div class="ck-lbl">Password</div><input class="ck-in" id="signupPass" type="password" placeholder="At least 8 characters" style="width:100%;background:#f5f8fc;color:#101828" /></div>
                                     <div style="margin-bottom:1.25rem">
-                                        <div class="ck-lbl">Confirm Password</div><input class="ck-in" type="password" placeholder="••••••••" style="width:100%;background:#f5f8fc;color:#101828" /></div>
+                                        <div class="ck-lbl">Confirm Password</div><input class="ck-in" id="signupPass2" type="password" placeholder="Confirm your password" style="width:100%;background:#f5f8fc;color:#101828" /></div>
                                     <button class="btn-signin" onclick="doSignup()">Create Account</button>
                                     <p style="text-align:center;margin-top:1rem;font-size:0.8rem;color:#667085">Have an account? <a href="#" style="color:var(--green);font-weight:600" onclick="showLogin();return false;">Sign In</a></p>
                                 </div>
@@ -5100,19 +5108,21 @@
                                             <div class="prof-sec-ttl">Default Shipping Address</div>
                                             <div class="prof-grid" style="margin-bottom:0.75rem">
                                                 <div>
-                                                    <div class="ck-lbl">First Name</div><input class="ck-in" value="John" type="text" /></div>
+                                                    <div class="ck-lbl">First Name</div><input class="ck-in" id="addrFirst" type="text" placeholder="e.g. John" /></div>
                                                 <div>
-                                                    <div class="ck-lbl">Last Name</div><input class="ck-in" value="Researcher" type="text" /></div>
+                                                    <div class="ck-lbl">Last Name</div><input class="ck-in" id="addrLast" type="text" placeholder="e.g. Smith" /></div>
                                             </div>
                                             <div style="margin-bottom:0.75rem">
-                                                <div class="ck-lbl">Street Address</div><input class="ck-in" value="4200 Research Park Dr" type="text" style="width:100%" /></div>
-                                            <div class="prof-grid" style="margin-bottom:1rem">
+                                                <div class="ck-lbl">Street Address</div><input class="ck-in" id="addrStreet" type="text" placeholder="e.g. 123 Research Lane" style="width:100%" /></div>
+                                            <div class="prof-grid" style="margin-bottom:0.75rem">
                                                 <div>
-                                                    <div class="ck-lbl">City</div><input class="ck-in" value="Houston" type="text" /></div>
+                                                    <div class="ck-lbl">City</div><input class="ck-in" id="addrCity" type="text" placeholder="e.g. Houston" /></div>
                                                 <div>
-                                                    <div class="ck-lbl">State / ZIP</div><input class="ck-in" value="TX 77005" type="text" /></div>
+                                                    <div class="ck-lbl">State</div><input class="ck-in" id="addrState" type="text" placeholder="e.g. TX" /></div>
                                             </div>
-                                            <button class="btn-save" onclick="toast('Address saved!')">Save Address</button>
+                                            <div style="margin-bottom:1rem">
+                                                <div class="ck-lbl">ZIP Code</div><input class="ck-in" id="addrZip" type="text" placeholder="e.g. 77005" style="width:100%" /></div>
+                                            <button class="btn-save" onclick="saveAddress()">Save Address</button>
                                         </div>
                                     </div>
                                     <div class="acct-panel" id="panel-profile">
@@ -5121,15 +5131,15 @@
                                             <div class="prof-sec-ttl">Personal Information</div>
                                             <div class="prof-grid" style="margin-bottom:0.75rem">
                                                 <div>
-                                                    <div class="ck-lbl">First Name</div><input class="ck-in" value="John" type="text" /></div>
+                                                    <div class="ck-lbl">First Name</div><input class="ck-in" id="profFirst" type="text" placeholder="Your first name" /></div>
                                                 <div>
-                                                    <div class="ck-lbl">Last Name</div><input class="ck-in" value="Researcher" type="text" /></div>
+                                                    <div class="ck-lbl">Last Name</div><input class="ck-in" id="profLast" type="text" placeholder="Your last name" /></div>
                                             </div>
                                             <div style="margin-bottom:0.75rem">
-                                                <div class="ck-lbl">Email</div><input class="ck-in" value="john@research.edu" type="email" style="width:100%" /></div>
+                                                <div class="ck-lbl">Email</div><input class="ck-in" id="profEmail" type="email" placeholder="your@email.com" style="width:100%" /></div>
                                             <div style="margin-bottom:1rem">
-                                                <div class="ck-lbl">Phone</div><input class="ck-in" value="+1 (713) 555-0192" type="tel" style="width:100%" /></div>
-                                            <button class="btn-save" onclick="toast('Profile updated!')">Save Changes</button>
+                                                <div class="ck-lbl">Phone</div><input class="ck-in" id="profPhone" type="tel" placeholder="+1 (555) 000-0000" style="width:100%" /></div>
+                                            <button class="btn-save" onclick="saveProfile()">Save Changes</button>
                                         </div>
                                         <div class="prof-card">
                                             <div class="prof-sec-ttl">Change Password</div>
@@ -5170,30 +5180,30 @@
                                         <div class="co-card-ttl">Contact Information</div>
                                         <div class="co-grid" style="margin-bottom:0.75rem">
                                             <div>
-                                                <div class="ck-lbl">First Name</div><input class="ck-in" type="text" placeholder="John" /></div>
+                                                <div class="ck-lbl">First Name <span style="color:#ef4444">*</span></div><input class="ck-in" id="coFirst" type="text" placeholder="e.g. John" /></div>
                                             <div>
-                                                <div class="ck-lbl">Last Name</div><input class="ck-in" type="text" placeholder="Researcher" /></div>
+                                                <div class="ck-lbl">Last Name <span style="color:#ef4444">*</span></div><input class="ck-in" id="coLast" type="text" placeholder="e.g. Smith" /></div>
                                         </div>
                                         <div style="margin-bottom:0.75rem">
-                                            <div class="ck-lbl">Email</div><input class="ck-in" type="email" placeholder="john@research.edu" style="width:100%" /></div>
+                                            <div class="ck-lbl">Email <span style="color:#ef4444">*</span></div><input class="ck-in" id="coEmail" type="email" placeholder="e.g. john@email.com" style="width:100%" /></div>
                                         <div>
-                                            <div class="ck-lbl">Phone</div><input class="ck-in" type="tel" placeholder="+1 (555) 000-0000" style="width:100%" /></div>
+                                            <div class="ck-lbl">Phone <span style="color:#ef4444">*</span></div><input class="ck-in" id="coPhone" type="tel" placeholder="e.g. +1 (555) 000-0000" style="width:100%" /></div>
                                     </div>
                                     <div class="co-card">
                                         <div class="co-card-ttl">Shipping Address</div>
                                         <div style="margin-bottom:0.75rem">
-                                            <div class="ck-lbl">Street Address</div><input class="ck-in" type="text" placeholder="123 Research Lane" style="width:100%" /></div>
+                                            <div class="ck-lbl">Street Address <span style="color:#ef4444">*</span></div><input class="ck-in" id="coStreet" type="text" placeholder="e.g. 123 Research Lane" style="width:100%" /></div>
                                         <div class="co-grid" style="margin-bottom:0.75rem">
                                             <div>
-                                                <div class="ck-lbl">City</div><input class="ck-in" type="text" placeholder="Houston" /></div>
+                                                <div class="ck-lbl">City <span style="color:#ef4444">*</span></div><input class="ck-in" id="coCity" type="text" placeholder="e.g. Houston" /></div>
                                             <div>
-                                                <div class="ck-lbl">State</div><input class="ck-in" type="text" placeholder="TX" /></div>
+                                                <div class="ck-lbl">State <span style="color:#ef4444">*</span></div><input class="ck-in" id="coState" type="text" placeholder="e.g. TX" /></div>
                                         </div>
                                         <div class="co-grid">
                                             <div>
-                                                <div class="ck-lbl">ZIP</div><input class="ck-in" type="text" placeholder="77005" /></div>
+                                                <div class="ck-lbl">ZIP <span style="color:#ef4444">*</span></div><input class="ck-in" id="coZip" type="text" placeholder="e.g. 77005" /></div>
                                             <div>
-                                                <div class="ck-lbl">Country</div><input class="ck-in" type="text" value="United States" /></div>
+                                                <div class="ck-lbl">Country</div><input class="ck-in" id="coCountry" type="text" placeholder="e.g. United States" /></div>
                                         </div>
                                     </div>
                                     <div class="co-card">
@@ -5204,14 +5214,14 @@
                                             <div class="pay-opt" onclick="selPay(this)"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg><span>Crypto</span></div>
                                         </div>
                                         <div style="margin-bottom:0.75rem">
-                                            <div class="ck-lbl">Card Number</div><input class="ck-in" type="text" placeholder="1234 5678 9012 3456" style="width:100%" maxlength="19" /></div>
+                                            <div class="ck-lbl">Card Number <span style="color:#ef4444">*</span></div><input class="ck-in" id="coCardNum" type="text" placeholder="1234 5678 9012 3456" style="width:100%" maxlength="19" /></div>
                                         <div class="co-grid-3">
                                             <div>
-                                                <div class="ck-lbl">Cardholder</div><input class="ck-in" type="text" placeholder="John Researcher" /></div>
+                                                <div class="ck-lbl">Cardholder <span style="color:#ef4444">*</span></div><input class="ck-in" id="coCardName" type="text" placeholder="e.g. John Smith" /></div>
                                             <div>
-                                                <div class="ck-lbl">Expiry</div><input class="ck-in" type="text" placeholder="MM/YY" maxlength="5" /></div>
+                                                <div class="ck-lbl">Expiry <span style="color:#ef4444">*</span></div><input class="ck-in" id="coExpiry" type="text" placeholder="MM/YY" maxlength="5" /></div>
                                             <div>
-                                                <div class="ck-lbl">CVV</div><input class="ck-in" type="text" placeholder="123" maxlength="4" /></div>
+                                                <div class="ck-lbl">CVV <span style="color:#ef4444">*</span></div><input class="ck-in" id="coCVV" type="text" placeholder="123" maxlength="4" /></div>
                                         </div>
                                     </div>
                                 </div>
@@ -5220,8 +5230,26 @@
                                         <div class="co-card-ttl">Order Summary</div>
                                         <div id="coSumItems"></div>
                                         <div class="co-sum-row"><span>Subtotal</span><span id="coSub"></span></div>
+                                        <div class="co-sum-row" style="align-items:flex-start;flex-direction:column;gap:8px">
+                                            <span style="font-weight:600;color:#0f1f3d;font-size:.88rem">Delivery Speed</span>
+                                            <div style="display:flex;flex-direction:column;gap:6px;width:100%">
+                                                <label style="display:flex;align-items:center;gap:8px;cursor:pointer;padding:9px 12px;border-radius:10px;border:1.5px solid rgba(16,192,208,.35);background:rgba(16,192,208,.06);transition:border-color .15s" id="ship-fast-lbl">
+                                              <input type="radio" name="deliverySpeed" value="fast" onchange="updateShipping()" checked style="accent-color:#10C0D0;width:15px;height:15px"/>
+                                              <div>
+                                                <div style="font-size:.84rem;font-weight:600;color:#0f1f3d">2–3 Day Delivery</div>
+                                                <div style="font-size:.75rem;color:#667085">Early arrival — <strong style="color:#10C0D0">$15.00</strong></div>
+                                              </div>
+                                            </label>
+                                                <label style="display:flex;align-items:center;gap:8px;cursor:pointer;padding:9px 12px;border-radius:10px;border:1.5px solid rgba(16,192,208,.2);background:transparent;transition:border-color .15s" id="ship-std-lbl">
+                                              <input type="radio" name="deliverySpeed" value="standard" onchange="updateShipping()" style="accent-color:#10C0D0;width:15px;height:15px"/>
+                                              <div>
+                                                <div style="font-size:.84rem;font-weight:600;color:#0f1f3d">Standard Delivery (3+ Days)</div>
+                                                <div style="font-size:.75rem;color:#667085">Regular shipping — <strong style="color:#27ae60">FREE</strong></div>
+                                              </div>
+                                            </label>
+                                            </div>
+                                        </div>
                                         <div class="co-sum-row"><span>Shipping</span><span id="coShip"></span></div>
-                                        <div class="co-sum-row"><span>Tax (8%)</span><span id="coTax"></span></div>
                                         <div class="co-sum-row tot"><span>Total</span><span id="coTotal"></span></div>
                                         <button class="btn-place" onclick="placeOrder()">Place Order</button>
                                         <div class="sec-badge"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Secured with 256-bit SSL</div>
@@ -5370,7 +5398,8 @@
                             <h2 style="font-family:var(--font-d);font-size:1.4rem;font-weight:700;color:#0f1f3d;margin:2rem 0 .75rem">Processing Times</h2>
                             <p>All orders placed before 3:00 PM EST on Monday through Friday are dispatched the same business day. Orders placed after 3:00 PM EST, on weekends, or on public holidays will be dispatched the next business day.</p>
                             <h2 style="font-family:var(--font-d);font-size:1.4rem;font-weight:700;color:#0f1f3d;margin:2rem 0 .75rem">Shipping Methods &amp; Costs</h2>
-                            <p><strong>Standard Shipping (FedEx 2-Day Air):</strong> $12.99 flat rate. <strong>Free shipping</strong> on all orders over $150.</p>
+                            <p><strong>2–3 Day Early Delivery:</strong> $15.00 flat rate — your order arrives within 2–3 business days.</p>
+                            <p><strong>Standard Delivery (3+ Days):</strong> <strong>FREE</strong> — no minimum required. Orders arrive within 4–7 business days.</p>
                             <p>All orders are shipped via FedEx 2-Day Air and are fully tracked. You will receive a tracking number via email as soon as your order ships.</p>
                             <h2 style="font-family:var(--font-d);font-size:1.4rem;font-weight:700;color:#0f1f3d;margin:2rem 0 .75rem">Packaging</h2>
                             <p>All orders are packaged in plain, discreet outer boxes with no product identification visible on the outside. Products are packed in temperature-controlled, leak-proof, tamper-evident inner packaging to preserve product integrity
@@ -5433,7 +5462,8 @@
                         id: "1",
                         slug: "aod-9604",
                         name: "AOD9604",
-                        cat: "Fat Loss Peptides",
+                        cat: "Hormonal Research",
+                        cats: ["Hormonal Research", "Metabolic Research"],
                         prices: [{
                             mg: "10 mg",
                             price: 80
@@ -5451,7 +5481,8 @@
                         id: "2",
                         slug: "ara-290",
                         name: "ARA 290",
-                        cat: "Recovery Peptides",
+                        cat: "Cardiovascular Research",
+                        cats: ["Cardiovascular Research", "Tissue Regeneration Research"],
                         prices: [{
                             mg: "10 mg",
                             price: 60
@@ -5472,7 +5503,8 @@
                         id: "3",
                         slug: "bpc-157",
                         name: "BPC 157",
-                        cat: "Recovery Peptides",
+                        cat: "Gastrointestinal Research",
+                        cats: ["Gastrointestinal Research", "Musculoskeletal Research", "Tissue Regeneration Research"],
                         prices: [{
                             mg: "10 mg",
                             price: 85
@@ -5493,7 +5525,8 @@
                         id: "4",
                         slug: "cagrilintide",
                         name: "Cagrilintide",
-                        cat: "Fat Loss Peptides",
+                        cat: "Metabolic Research",
+                        cats: ["Metabolic Research"],
                         prices: [{
                             mg: "10 mg",
                             price: 145
@@ -5511,7 +5544,8 @@
                         id: "5",
                         slug: "cjc-1295-wdac",
                         name: "CJC‑1295 w/DAC",
-                        cat: "Growth Peptides",
+                        cat: "Hormonal Research",
+                        cats: ["Hormonal Research", "Metabolic Research", "Musculoskeletal Research"],
                         prices: [{
                             mg: "5 mg",
                             price: 75
@@ -5529,7 +5563,8 @@
                         id: "6",
                         slug: "cjc-1295-nodac",
                         name: "CJC‑1295 no/DAC",
-                        cat: "Growth Peptides",
+                        cat: "Hormonal Research",
+                        cats: ["Hormonal Research", "Metabolic Research", "Musculoskeletal Research"],
                         prices: [{
                             mg: "5 mg",
                             price: 65
@@ -5550,7 +5585,8 @@
                         id: "7",
                         slug: "dsip",
                         name: "DSIP",
-                        cat: "Wellness Peptides",
+                        cat: "Circadian Research",
+                        cats: ["Circadian Research", "Cognitive Research"],
                         prices: [{
                             mg: "5 mg",
                             price: 45
@@ -5571,7 +5607,8 @@
                         id: "8",
                         slug: "epithalon",
                         name: "Epithalon",
-                        cat: "Anti-Aging Peptides",
+                        cat: "Cellular Longevity Research",
+                        cats: ["Cellular Longevity Research", "Circadian Research"],
                         prices: [{
                             mg: "10mg",
                             price: 45
@@ -5595,7 +5632,8 @@
                         id: "9",
                         slug: "ghk-cu",
                         name: "GHK‑Cu (Copper Peptide)",
-                        cat: "Anti-Aging Peptides",
+                        cat: "Dermatological Research",
+                        cats: ["Dermatological Research", "Tissue Regeneration Research"],
                         prices: [{
                             mg: "50 mg",
                             price: 50
@@ -5616,7 +5654,8 @@
                         id: "10",
                         slug: "igf-1-lr3",
                         name: "IGF-1 LR3",
-                        cat: "Growth Peptides",
+                        cat: "Hormonal Research",
+                        cats: ["Hormonal Research", "Musculoskeletal Research", "Tissue Regeneration Research"],
                         prices: [{
                             mg: "1 mg",
                             price: 100
@@ -5634,7 +5673,8 @@
                         id: "11",
                         slug: "ipamorelin",
                         name: "Ipamorelin",
-                        cat: "Growth Peptides",
+                        cat: "Hormonal Research",
+                        cats: ["Hormonal Research", "Metabolic Research", "Musculoskeletal Research"],
                         prices: [{
                             mg: "10 mg",
                             price: 80
@@ -5652,7 +5692,8 @@
                         id: "12",
                         slug: "kisspeptin",
                         name: "Kisspeptin",
-                        cat: "Wellness Peptides",
+                        cat: "Hormonal Research",
+                        cats: ["Hormonal Research", "Reproductive Health Research"],
                         prices: [{
                             mg: "10 mg",
                             price: 80
@@ -5670,7 +5711,8 @@
                         id: "13",
                         slug: "kpv",
                         name: "KPV",
-                        cat: "Anti-Aging Peptides",
+                        cat: "Dermatological Research",
+                        cats: ["Dermatological Research", "Gastrointestinal Research", "Immune Research"],
                         prices: [{
                             mg: "10 mg",
                             price: 80
@@ -5688,7 +5730,8 @@
                         id: "14",
                         slug: "ll-37",
                         name: "LL-37",
-                        cat: "Recovery Peptides",
+                        cat: "Immune Research",
+                        cats: ["Immune Research"],
                         prices: [{
                             mg: "5mg",
                             price: 85
@@ -5706,7 +5749,8 @@
                         id: "15",
                         slug: "melanotan-2",
                         name: "Melanotan 2",
-                        cat: "Wellness Peptides",
+                        cat: "Dermatological Research",
+                        cats: ["Dermatological Research", "Hormonal Research", "Reproductive Health Research"],
                         prices: [{
                             mg: "10 mg",
                             price: 50
@@ -5724,7 +5768,8 @@
                         id: "16",
                         slug: "mots-c",
                         name: "MOTS‑C",
-                        cat: "Anti-Aging Peptides",
+                        cat: "Cellular Longevity Research",
+                        cats: ["Cellular Longevity Research", "Metabolic Research", "Mitochondrial Research"],
                         prices: [{
                             mg: "10 mg",
                             price: 70
@@ -5742,7 +5787,8 @@
                         id: "17",
                         slug: "nad-plus",
                         name: "NAD+",
-                        cat: "Anti-Aging Peptides",
+                        cat: "Cellular Longevity Research",
+                        cats: ["Cellular Longevity Research", "Cognitive Research", "Mitochondrial Research"],
                         prices: [{
                             mg: "500 mg",
                             price: 90
@@ -5763,7 +5809,8 @@
                         id: "18",
                         slug: "pt-141",
                         name: "PT‑141",
-                        cat: "Wellness Peptides",
+                        cat: "Hormonal Research",
+                        cats: ["Hormonal Research", "Reproductive Health Research"],
                         prices: [{
                             mg: "10 mg",
                             price: 55
@@ -5781,7 +5828,8 @@
                         id: "19",
                         slug: "retatrutide",
                         name: "Retatrutide",
-                        cat: "Fat Loss Peptides",
+                        cat: "Metabolic Research",
+                        cats: ["Metabolic Research"],
                         prices: [{
                             mg: "10 mg",
                             price: 120
@@ -5808,7 +5856,8 @@
                         id: "20",
                         slug: "selank",
                         name: "Selank",
-                        cat: "Wellness Peptides",
+                        cat: "Cognitive Research",
+                        cats: ["Cognitive Research"],
                         prices: [{
                             mg: "10 mg",
                             price: 60
@@ -5829,7 +5878,8 @@
                         id: "21",
                         slug: "semaglutide",
                         name: "Semaglutide",
-                        cat: "Fat Loss Peptides",
+                        cat: "Metabolic Research",
+                        cats: ["Metabolic Research"],
                         prices: [{
                             mg: "5 mg",
                             price: 80
@@ -5856,7 +5906,8 @@
                         id: "22",
                         slug: "semax",
                         name: "Semax",
-                        cat: "Wellness Peptides",
+                        cat: "Cognitive Research",
+                        cats: ["Cognitive Research"],
                         prices: [{
                             mg: "10 mg",
                             price: 55
@@ -5877,7 +5928,8 @@
                         id: "23",
                         slug: "sermorelin",
                         name: "Sermorelin",
-                        cat: "Growth Peptides",
+                        cat: "Hormonal Research",
+                        cats: ["Hormonal Research"],
                         prices: [{
                             mg: "5 mg",
                             price: 55
@@ -5901,7 +5953,8 @@
                         id: "24",
                         slug: "ss-31",
                         name: "SS-31",
-                        cat: "Anti-Aging Peptides",
+                        cat: "Cellular Longevity Research",
+                        cats: ["Cellular Longevity Research", "Mitochondrial Research", "Tissue Regeneration Research"],
                         prices: [{
                             mg: "10 mg",
                             price: 65
@@ -5922,7 +5975,8 @@
                         id: "25",
                         slug: "tb-500",
                         name: "TB-500 (Thymosin Beta-4)",
-                        cat: "Recovery Peptides",
+                        cat: "Cardiovascular Research",
+                        cats: ["Cardiovascular Research", "Immune Research", "Musculoskeletal Research", "Tissue Regeneration Research"],
                         prices: [{
                             mg: "10 mg",
                             price: 90
@@ -5940,7 +5994,8 @@
                         id: "26",
                         slug: "tesamorelin",
                         name: "Tesamorelin",
-                        cat: "Growth Peptides",
+                        cat: "Hormonal Research",
+                        cats: ["Hormonal Research", "Metabolic Research", "Musculoskeletal Research"],
                         prices: [{
                             mg: "10 mg",
                             price: 100
@@ -5958,7 +6013,8 @@
                         id: "27",
                         slug: "thymosin-alpha-1",
                         name: "Thymosin Alpha-1",
-                        cat: "Recovery Peptides",
+                        cat: "Immune Research",
+                        cats: ["Immune Research"],
                         prices: [{
                             mg: "5 mg",
                             price: 65
@@ -5979,7 +6035,8 @@
                         id: "28",
                         slug: "thymulin",
                         name: "Thymulin",
-                        cat: "Recovery Peptides",
+                        cat: "Cellular Longevity Research",
+                        cats: ["Cellular Longevity Research", "Immune Research"],
                         prices: [{
                             mg: "10mg",
                             price: 55
@@ -5997,7 +6054,8 @@
                         id: "29",
                         slug: "tirzepatide",
                         name: "Tirzepatide",
-                        cat: "Fat Loss Peptides",
+                        cat: "Metabolic Research",
+                        cats: ["Metabolic Research"],
                         prices: [{
                             mg: "10 mg",
                             price: 125
@@ -6026,7 +6084,8 @@
                         id: "30",
                         slug: "wolverine",
                         name: "Wolverine BPC‑157/TB‑500",
-                        cat: "Recovery Peptides",
+                        cat: "Gastrointestinal Research",
+                        cats: ["Gastrointestinal Research", "Musculoskeletal Research", "Tissue Regeneration Research"],
                         prices: [{
                             mg: "10/10 mg",
                             price: 120
@@ -6044,7 +6103,8 @@
                         id: "31",
                         slug: "cjc-ndac-ipam",
                         name: "CJC‑1295 No DAC/Ipamorelin",
-                        cat: "Growth Peptides",
+                        cat: "Hormonal Research",
+                        cats: ["Hormonal Research", "Metabolic Research", "Musculoskeletal Research"],
                         prices: [{
                             mg: "5/5 mg",
                             price: 75
@@ -6062,7 +6122,8 @@
                         id: "32",
                         slug: "glow-ghk",
                         name: "GLOW GHK-CU/TB-500/BPC-157",
-                        cat: "Anti-Aging Peptides",
+                        cat: "Dermatological Research",
+                        cats: ["Dermatological Research", "Gastrointestinal Research", "Musculoskeletal Research", "Tissue Regeneration Research"],
                         prices: [{
                             mg: "50/10/10 mg",
                             price: 140
@@ -6083,7 +6144,8 @@
                         id: "33",
                         slug: "klow-ghk",
                         name: "KLOW GHK-CU/TB-500/BPC-157/KPV",
-                        cat: "Anti-Aging Peptides",
+                        cat: "Dermatological Research",
+                        cats: ["Dermatological Research", "Gastrointestinal Research", "Immune Research", "Tissue Regeneration Research"],
                         prices: [{
                             mg: "50/10/10/10 mg",
                             price: 175
@@ -6101,7 +6163,8 @@
                         id: "34",
                         slug: "selank-semax",
                         name: "Selank/Semax",
-                        cat: "Wellness Peptides",
+                        cat: "Cognitive Research",
+                        cats: ["Cognitive Research"],
                         prices: [{
                             mg: "5/5 mg",
                             price: 70
@@ -6119,7 +6182,8 @@
                         id: "35",
                         slug: "tesamorelin-ipam",
                         name: "Tesamorelin/Ipamorelin",
-                        cat: "Growth Peptides",
+                        cat: "Hormonal Research",
+                        cats: ["Hormonal Research", "Metabolic Research", "Musculoskeletal Research"],
                         prices: [{
                             mg: "10/5 mg",
                             price: 110
@@ -6136,7 +6200,7 @@
                     }
                 ];
 
-                const CATS = ["Growth Peptides", "Recovery Peptides", "Fat Loss Peptides", "Anti-Aging Peptides", "Wellness Peptides"];
+                const CATS = ["Immune Research", "Cognitive Research", "Hormonal Research", "Metabolic Research", "Musculoskeletal Research"];
 
                 const TICKS = [
                     "99% HPLC Purity Verified", "cGMP Manufactured", "Same-Day Dispatch", "Third-Party Lab Tested",
@@ -6170,7 +6234,7 @@
                     a: "Every product is independently tested by accredited US labs and achieves 99%+ purity. We include a batch-specific Certificate of Analysis with every order — you can verify it yourself."
                 }, {
                     q: "What is your shipping and delivery policy?",
-                    a: "Orders placed before 3PM EST ship same business day via FedEx 2-Day Air. All orders are packaged in temperature-controlled, discreet packaging. We ship nationwide across the USA."
+                    a: "Choose your delivery speed at checkout: 2–3 Day Early Delivery for $15, or Standard Delivery (3+ days) for FREE. All orders are packaged in temperature-controlled, discreet packaging and ship nationwide across the USA."
                 }, {
                     q: "What is your return and satisfaction policy?",
                     a: "We stand behind every product with a 30-day satisfaction guarantee. If you're not completely happy with your order, contact us and we'll make it right — no hassle."
@@ -6217,53 +6281,16 @@
                     img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
                 }];
 
-                const MOCK_ORDERS = [{
-                    id: "TP-20260512-1042",
-                    date: "May 12, 2026",
-                    status: "shipped",
-                    items: [{
-                        name: "BPC-157",
-                        qty: 2,
-                        img: PRODS[0].img
-                    }, {
-                        name: "CJC-1295",
-                        qty: 1,
-                        img: PRODS[1].img
-                    }],
-                    total: 328.98,
-                    tracking: "FX9284710293"
-                }, {
-                    id: "TP-20260428-8831",
-                    date: "Apr 28, 2026",
-                    status: "delivered",
-                    items: [{
-                        name: "TB-500",
-                        qty: 1,
-                        img: PRODS[3].img
-                    }],
-                    total: 145.00,
-                    tracking: "FX8192837461"
-                }, {
-                    id: "TP-20260410-2294",
-                    date: "Apr 10, 2026",
-                    status: "delivered",
-                    items: [{
-                        name: "Ipamorelin",
-                        qty: 3,
-                        img: PRODS[2].img
-                    }],
-                    total: 268.50,
-                    tracking: "FX7293847562"
-                }];
+                // User accounts stored in memory (keyed by email)
+                const USER_DB = {};
+                // Orders stored per user email
+                const USER_ORDERS = {};
 
                 let cart = [],
                     activeCat = "all",
                     menuOpen = false,
                     isLoggedIn = false;
-                let currentUser = {
-                    name: "John Smith",
-                    email: "john@research.edu"
-                };
+                let currentUser = null; // null until logged in
                 let prodIdx = 0;
 
                 /* ─── NAVIGATION ─── */
@@ -6580,7 +6607,7 @@
         <a href="#" onclick="nav('returns');return false;">Refunds &amp; Returns</a>
       </div>
       <div style="margin-top:8px;opacity:.4;font-size:.7rem">
-        All products manufactured in a US cGMP-compliant facility and independently lab-tested &bull; Free shipping over $150 &bull; 30-day satisfaction guarantee
+        All products manufactured in a US cGMP-compliant facility and independently lab-tested &bull; $15 for 2-3 day shipping &bull; Free shipping over $150 &bull; 30-day satisfaction guarantee
       </div>
     </div>
 
@@ -6656,8 +6683,7 @@
                         return;
                     }
                     const sub = cart.reduce((s, i) => s + (i.price !== undefined ? i.price : i.p.price) * i.qty, 0);
-                    const ship = sub > 150 ? 0 : 9.99;
-                    const total = sub + ship;
+                    const total = sub;
                     el.innerHTML = `
     <div class="cart-layout">
       <div>${cart.map((it, i) => `
@@ -6686,9 +6712,9 @@
         <div class="os-box">
           <div class="os-ttl">Order Summary</div>
           <div class="os-row"><span class="os-lbl">Subtotal</span><span>$${sub.toFixed(2)}</span></div>
-          <div class="os-row"><span class="os-lbl">Shipping</span><span>${ship === 0 ? "Free" : "$" + ship.toFixed(2)}</span></div>
-          <div class="os-total"><span>Total</span><span>$${total.toFixed(2)}</span></div>
-          <button class="btn-co" onclick="reqLogin()">Checkout</button>
+          <div class="os-row" style="font-size:.8rem;color:#667085"><span>Shipping &amp; delivery</span><span>Calculated at checkout</span></div>
+          <div class="os-total"><span>Total</span><span>$${sub.toFixed(2)}</span></div>
+          <button class="btn-co" onclick="reqLogin()">Proceed to Checkout</button>
         </div>
       </div>
     </div>`;
@@ -6704,7 +6730,7 @@ function filterProds() {
   renderChips();
   let list = PRODS.filter(p =>
     p.name.toLowerCase().includes(q) &&
-    (cat === "all" || p.cat === cat) &&
+    (cat === "all" || p.cat === cat || (p.cats && p.cats.includes(cat))) &&
     p.price <= max
   );
   if      (sort === "asc")  list.sort((a, b) => a.price - b.price);
@@ -6818,21 +6844,60 @@ function authState() {
   const gate = document.getElementById("loginGate");
   const dash = document.getElementById("acctDash");
   if (!gate || !dash) return;
-  if (isLoggedIn) {
+  if (isLoggedIn && currentUser) {
     gate.style.display = "none";
     dash.style.display = "block";
     const av = document.getElementById("acctAv");
     const nm = document.getElementById("acctNm");
     const em = document.getElementById("acctEm");
-    if (av) av.textContent = currentUser.name.charAt(0).toUpperCase();
-    if (nm) nm.textContent = currentUser.name;
+    if (av) av.textContent = currentUser.firstName.charAt(0).toUpperCase();
+    if (nm) nm.textContent = currentUser.firstName + " " + currentUser.lastName;
     if (em) em.textContent = currentUser.email;
+    // Populate profile fields
+    const pf = document.getElementById("profFirst");  if (pf) pf.value = currentUser.firstName || "";
+    const pl = document.getElementById("profLast");   if (pl) pl.value = currentUser.lastName  || "";
+    const pe = document.getElementById("profEmail");  if (pe) pe.value = currentUser.email     || "";
+    const pp = document.getElementById("profPhone");  if (pp) pp.value = currentUser.phone     || "";
+    // Populate address fields
+    const addr = currentUser.address || {};
+    const af = document.getElementById("addrFirst");  if (af) af.value = addr.first  || "";
+    const al = document.getElementById("addrLast");   if (al) al.value = addr.last   || "";
+    const as = document.getElementById("addrStreet"); if (as) as.value = addr.street || "";
+    const ac = document.getElementById("addrCity");   if (ac) ac.value = addr.city   || "";
+    const at = document.getElementById("addrState");  if (at) at.value = addr.state  || "";
+    const az = document.getElementById("addrZip");    if (az) az.value = addr.zip    || "";
     renderOrders();
   } else {
     gate.style.display = "block";
     dash.style.display = "none";
     showLogin();
   }
+}
+
+function saveProfile() {
+  if (!currentUser) return;
+  currentUser.firstName = document.getElementById("profFirst").value.trim() || currentUser.firstName;
+  currentUser.lastName  = document.getElementById("profLast").value.trim()  || currentUser.lastName;
+  currentUser.name      = currentUser.firstName + " " + currentUser.lastName;
+  currentUser.phone     = document.getElementById("profPhone").value.trim();
+  USER_DB[currentUser.email.toLowerCase()] = currentUser;
+  document.getElementById("acctNm").textContent = currentUser.name;
+  document.getElementById("acctAv").textContent = currentUser.firstName.charAt(0).toUpperCase();
+  toast("Profile updated!");
+}
+
+function saveAddress() {
+  if (!currentUser) return;
+  currentUser.address = {
+    first:  document.getElementById("addrFirst").value.trim(),
+    last:   document.getElementById("addrLast").value.trim(),
+    street: document.getElementById("addrStreet").value.trim(),
+    city:   document.getElementById("addrCity").value.trim(),
+    state:  document.getElementById("addrState").value.trim(),
+    zip:    document.getElementById("addrZip").value.trim()
+  };
+  USER_DB[currentUser.email.toLowerCase()] = currentUser;
+  toast("Address saved!");
 }
 
 function showLogin() {
@@ -6872,6 +6937,7 @@ function doSignup() {
 
 function doLogout() {
   isLoggedIn = false;
+  currentUser = null;
   toast("You have been signed out.");
   authState();
 }
@@ -6897,7 +6963,17 @@ function showPanel(name) {
 function renderOrders() {
   const el = document.getElementById("ordersEl");
   if (!el) return;
-  el.innerHTML = MOCK_ORDERS.map(o => `
+  const orders = (currentUser && USER_ORDERS[currentUser.email.toLowerCase()]) || [];
+  if (!orders.length) {
+    el.innerHTML = `<div style="text-align:center;padding:3rem 1rem">
+      <svg width="56" height="56" fill="none" stroke="#c5d4e8" stroke-width="1.5" viewBox="0 0 24 24" style="margin:0 auto 1rem;display:block"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="11" y2="17"/></svg>
+      <div style="font-weight:700;color:#0f1f3d;font-size:1.05rem;margin-bottom:.5rem">No orders yet</div>
+      <p style="color:#667085;font-size:.875rem;margin-bottom:1.25rem">When you place your first order, it will appear here.</p>
+      <button class="btn-p" onclick="nav('products')">Shop Now</button>
+    </div>`;
+    return;
+  }
+  el.innerHTML = orders.slice().reverse().map(o => `
     <div class="ord-card">
       <div class="ord-head">
         <div>
@@ -6928,7 +7004,8 @@ function renderOrders() {
 /* ─── ORDER TRACKING ─── */
 function trackLookup() {
   const val = document.getElementById("trackInput").value.trim();
-  const o   = MOCK_ORDERS.find(x => x.id.toLowerCase() === val.toLowerCase());
+  const orders = (currentUser && USER_ORDERS[currentUser.email.toLowerCase()]) || [];
+  const o   = orders.find(x => x.id.toLowerCase() === val.toLowerCase());
   const el  = document.getElementById("trackResult");
   el.style.display = "block";
   el.innerHTML = o
@@ -6937,7 +7014,8 @@ function trackLookup() {
 }
 
 function openTrack(id, status) {
-  const o = MOCK_ORDERS.find(x => x.id === id);
+  const orders = (currentUser && USER_ORDERS[currentUser.email.toLowerCase()]) || [];
+  const o = orders.find(x => x.id === id);
   if (!o) return;
   document.getElementById("trackInput").value = id;
   showPanel("track");
@@ -6986,11 +7064,31 @@ function buildTrackHTML(orderId, status, tracking) {
 }
 
 /* ─── CHECKOUT ─── */
+function getShipCost() {
+  const sel = document.querySelector('input[name="deliverySpeed"]:checked');
+  return sel && sel.value === "fast" ? 15 : 0;
+}
+function updateShipping() {
+  // highlight selected label
+  const fast = document.getElementById("ship-fast-lbl");
+  const std  = document.getElementById("ship-std-lbl");
+  const isFast = document.querySelector('input[name="deliverySpeed"]:checked')?.value === "fast";
+  if (fast) fast.style.borderColor = isFast ? "rgba(16,192,208,.7)" : "rgba(16,192,208,.2)";
+  if (fast) fast.style.background  = isFast ? "rgba(16,192,208,.06)" : "transparent";
+  if (std)  std.style.borderColor  = isFast ? "rgba(16,192,208,.2)" : "rgba(16,192,208,.7)";
+  if (std)  std.style.background   = isFast ? "transparent" : "rgba(16,192,208,.06)";
+  // recalc totals
+  const sub   = cart.reduce((s, i) => s + i.p.price * i.qty, 0);
+  const ship  = getShipCost();
+  const total = sub + ship;
+  const set = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
+  set("coShip",  ship === 0 ? "Free" : "$" + ship.toFixed(2));
+  set("coTotal", "$" + total.toFixed(2));
+}
 function renderCheckout() {
   const sub   = cart.reduce((s, i) => s + i.p.price * i.qty, 0);
-  const ship  = sub > 150 ? 0 : 9.99;
-  const tax   = sub * 0.08;
-  const total = sub + ship + tax;
+  const ship  = getShipCost();
+  const total = sub + ship;
   const el    = document.getElementById("coSumItems");
   if (el) el.innerHTML = cart.map(it => `
     <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem;padding-bottom:.75rem;border-bottom:1px solid rgba(37,99,235,0.15)">
@@ -7006,7 +7104,6 @@ function renderCheckout() {
   const set = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
   set("coSub",   "$" + sub.toFixed(2));
   set("coShip",  ship === 0 ? "Free" : "$" + ship.toFixed(2));
-  set("coTax",   "$" + tax.toFixed(2));
   set("coTotal", "$" + total.toFixed(2));
   const form = document.getElementById("coFormEl");
   const suc  = document.getElementById("orderSuccess");
@@ -7020,6 +7117,62 @@ function selPay(el) {
 }
 
 function placeOrder() {
+  // ── Validation ──────────────────────────────────────────────────────────
+  const fields = [
+    { id: "coFirst",   label: "First Name" },
+    { id: "coLast",    label: "Last Name" },
+    { id: "coEmail",   label: "Email" },
+    { id: "coPhone",   label: "Phone" },
+    { id: "coStreet",  label: "Street Address" },
+    { id: "coCity",    label: "City" },
+    { id: "coState",   label: "State" },
+    { id: "coZip",     label: "ZIP Code" },
+    { id: "coCardNum", label: "Card Number" },
+    { id: "coCardName",label: "Cardholder Name" },
+    { id: "coExpiry",  label: "Expiry Date" },
+    { id: "coCVV",     label: "CVV" }
+  ];
+  let missingFields = [];
+  fields.forEach(f => {
+    const el = document.getElementById(f.id);
+    if (!el) return;
+    if (!el.value.trim()) {
+      missingFields.push(f.label);
+      el.style.borderColor = "#ef4444";
+      el.style.background  = "rgba(239,68,68,.06)";
+      el.addEventListener("input", function fix() {
+        el.style.borderColor = "";
+        el.style.background  = "";
+        el.removeEventListener("input", fix);
+      });
+    }
+  });
+  if (missingFields.length) {
+    toast("Please fill in: " + missingFields.slice(0, 3).join(", ") + (missingFields.length > 3 ? " & more" : ""));
+    // Scroll to first empty field
+    const firstEmpty = fields.find(f => { const el = document.getElementById(f.id); return el && !el.value.trim(); });
+    if (firstEmpty) document.getElementById(firstEmpty.id).scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+  // ── Save order to user account ───────────────────────────────────────────
+  if (currentUser) {
+    const sub   = cart.reduce((s, i) => s + i.p.price * i.qty, 0);
+    const ship  = getShipCost();
+    const total = sub + ship;
+    const ordId = "TP-" + new Date().toISOString().slice(0,10).replace(/-/g,"") + "-" + Math.floor(1000 + Math.random() * 9000);
+    const order = {
+      id: ordId,
+      date: new Date().toLocaleDateString("en-US", { year:"numeric", month:"long", day:"numeric" }),
+      status: "processing",
+      items: cart.map(it => ({ name: it.p.name, qty: it.qty, img: it.p.img })),
+      total: total,
+      tracking: "FX" + Math.floor(1000000000 + Math.random() * 9000000000)
+    };
+    const key = currentUser.email.toLowerCase();
+    if (!USER_ORDERS[key]) USER_ORDERS[key] = [];
+    USER_ORDERS[key].push(order);
+  }
+  // ── Complete checkout ────────────────────────────────────────────────────
   const f = document.getElementById("coFormEl");
   const s = document.getElementById("orderSuccess");
   if (f) f.style.display = "none";
