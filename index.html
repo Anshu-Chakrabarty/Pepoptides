@@ -181,6 +181,41 @@
             color: var(--green)
         }
         
+
+        /* ── Black Label Vial Effect ── */
+        .pc-img.black-label img {
+            filter: invert(1) hue-rotate(180deg) saturate(0) brightness(0.2) contrast(1.4);
+        }
+        .pc-img.black-label::before {
+            content: '⬛ BLACK LABEL';
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            background: #111;
+            color: #fff;
+            font-size: .58rem;
+            font-weight: 800;
+            letter-spacing: .08em;
+            padding: 3px 8px;
+            border-radius: 4px;
+            z-index: 10;
+            text-transform: uppercase;
+        }
+        .pc.black-label-card .pc-img-bg {
+            background: radial-gradient(circle at 50% 60%, rgba(0,0,0,.35) 0%, transparent 75%);
+        }
+        /* Hero slide 3 - black label style */
+        .hero-slide.black-label-hero {
+            background-image: url('hero-vials.jpg');
+        }
+        .hero-slide.black-label-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.72);
+            z-index: 1;
+        }
+
         .nav {
             display: flex;
             align-items: center;
@@ -324,7 +359,12 @@
             content: "";
             position: absolute;
             inset: 0;
-            background: linear-gradient(105deg, rgba(13, 20, 40, .93) 0%, rgba(13, 20, 40, .78) 50%, rgba(13, 20, 40, .45) 100%)
+           background: linear-gradient(
+  105deg,
+  rgba(13, 20, 40, 0.75) 0%,
+  rgba(13, 20, 40, 0.45) 50%,
+  rgba(13, 20, 40, 0.20) 100%
+);
         }
         
         .hero-glow {
@@ -2827,7 +2867,6 @@
         .qty-lbl {
             font-size: .78rem;
             font-weight: 700;
-            color: rgba(255, 255, 255, .7);
             text-transform: uppercase;
             letter-spacing: .05em
         }
@@ -4362,6 +4401,8 @@
                 <div class="hero-slides">
                     <div class="hero-slide active" style="background-image:url('hero-vials.jpg')"></div>
                     <div class="hero-slide" style="background-image:url('hero-2.png')"></div>
+                    <div class="hero-slide" style="background-image:url('hero-3.png')"></div>
+                    <div class="hero-slide black-label-hero" style="background-image:url('hero-vials.jpg')"></div>
                 </div>
                 <canvas id="heroCanvas"></canvas>
                 <div class="h-orb h-orb-1"></div>
@@ -4432,7 +4473,7 @@
                     <div class="trust-item"><span class="trust-dot"></span>FedEx 2-Day Air</div>
                     <div class="trust-item"><span class="trust-dot"></span>Certificate of Analysis Included</div>
                     <div class="trust-item"><span class="trust-dot"></span>30-Day Satisfaction Guarantee</div>
-                    <div class="trust-item"><span class="trust-dot"></span>Free Shipping Over $150</div>
+                    <div class="trust-item"><span class="trust-dot"></span>Free Shipping Over $200</div>
                     <div class="trust-item"><span class="trust-dot"></span>Discreet Packaging</div>
                     <div class="trust-item"><span class="trust-dot"></span>US-Based Manufacturing</div>
                     <div class="trust-item"><span class="trust-dot"></span>99%+ Purity Verified</div>
@@ -4441,7 +4482,7 @@
                     <div class="trust-item"><span class="trust-dot"></span>FedEx 2-Day Air</div>
                     <div class="trust-item"><span class="trust-dot"></span>Certificate of Analysis Included</div>
                     <div class="trust-item"><span class="trust-dot"></span>30-Day Satisfaction Guarantee</div>
-                    <div class="trust-item"><span class="trust-dot"></span>Free Shipping Over $150</div>
+                    <div class="trust-item"><span class="trust-dot"></span>Free Shipping Over $200</div>
                     <div class="trust-item"><span class="trust-dot"></span>Discreet Packaging</div>
                 </div>
             </div>
@@ -4879,8 +4920,7 @@
                                 </div>
                                 <h3 style="font-family:var(--font-d);font-size:1.15rem;font-weight:700;color:#0f1f3d;margin:0">Analytical Verification</h3>
                             </div>
-                            <p style="color:#4b6496;line-height:1.8;font-size:.9375rem;margin:0">Each lot is qualified at 99%+ purity by high-performance liquid chromatography; identity is confirmed by mass spectrometry; and independent third-party laboratories corroborate in-house analytics to maintain traceable quality
-                                metrics appropriate for research use.</p>
+                            <p style="color:#4b6496;line-height:1.8;font-size:.9375rem;margin:0">Each lot is qualified at 99%+ purity by high-performance liquid chromatography; identity is confirmed by mass spectrometry; and independent third-party laboratories corroborate in-house analytics to maintain traceable quality metrics appropriate for research use.</p>
                         </div>
 
                         <!-- Manufacturing and documentation -->
@@ -4891,8 +4931,7 @@
                                 </div>
                                 <h3 style="font-family:var(--font-d);font-size:1.15rem;font-weight:700;color:#0f1f3d;margin:0">Manufacturing and Documentation</h3>
                             </div>
-                            <p style="color:#4b6496;line-height:1.8;font-size:.9375rem;margin:0">Peptide labs manufactures this material in the United States under defined quality procedures and research-only labeling. COAs, raw-material provenance from vetted suppliers, and batch records are maintained to facilitate institutional
-                                procurement review and audit readiness.</p>
+                            <p style="color:#4b6496;line-height:1.8;font-size:.9375rem;margin:0">Peptide labs manufactures this material in the United States under defined quality procedures and research-only labeling. COAs, raw-material provenance from vetted suppliers, and batch records are maintained to facilitate institutional procurement review and audit readiness.</p>
                         </div>
 
                     </div>
@@ -5231,23 +5270,23 @@
                                         <div id="coSumItems"></div>
                                         <div class="co-sum-row"><span>Subtotal</span><span id="coSub"></span></div>
                                         <div class="co-sum-row" style="align-items:flex-start;flex-direction:column;gap:8px">
-                                            <span style="font-weight:600;color:#0f1f3d;font-size:.88rem">Delivery Speed</span>
-                                            <div style="display:flex;flex-direction:column;gap:6px;width:100%">
-                                                <label style="display:flex;align-items:center;gap:8px;cursor:pointer;padding:9px 12px;border-radius:10px;border:1.5px solid rgba(16,192,208,.35);background:rgba(16,192,208,.06);transition:border-color .15s" id="ship-fast-lbl">
+                                          <span style="font-weight:600;color:#0f1f3d;font-size:.88rem">Delivery Speed</span>
+                                          <div style="display:flex;flex-direction:column;gap:6px;width:100%">
+                                            <label style="display:flex;align-items:center;gap:8px;cursor:pointer;padding:9px 12px;border-radius:10px;border:1.5px solid rgba(16,192,208,.35);background:rgba(16,192,208,.06);transition:border-color .15s" id="ship-fast-lbl">
                                               <input type="radio" name="deliverySpeed" value="fast" onchange="updateShipping()" checked style="accent-color:#10C0D0;width:15px;height:15px"/>
                                               <div>
                                                 <div style="font-size:.84rem;font-weight:600;color:#0f1f3d">2–3 Day Delivery</div>
                                                 <div style="font-size:.75rem;color:#667085">Early arrival — <strong style="color:#10C0D0">$15.00</strong></div>
                                               </div>
                                             </label>
-                                                <label style="display:flex;align-items:center;gap:8px;cursor:pointer;padding:9px 12px;border-radius:10px;border:1.5px solid rgba(16,192,208,.2);background:transparent;transition:border-color .15s" id="ship-std-lbl">
+                                            <label style="display:flex;align-items:center;gap:8px;cursor:pointer;padding:9px 12px;border-radius:10px;border:1.5px solid rgba(16,192,208,.2);background:transparent;transition:border-color .15s" id="ship-std-lbl">
                                               <input type="radio" name="deliverySpeed" value="standard" onchange="updateShipping()" style="accent-color:#10C0D0;width:15px;height:15px"/>
                                               <div>
                                                 <div style="font-size:.84rem;font-weight:600;color:#0f1f3d">Standard Delivery (3+ Days)</div>
                                                 <div style="font-size:.75rem;color:#667085">Regular shipping — <strong style="color:#27ae60">FREE</strong></div>
                                               </div>
                                             </label>
-                                            </div>
+                                          </div>
                                         </div>
                                         <div class="co-sum-row"><span>Shipping</span><span id="coShip"></span></div>
                                         <div class="co-sum-row tot"><span>Total</span><span id="coTotal"></span></div>
@@ -5458,753 +5497,225 @@
 
 
             <script>
-                const PRODS = [{
-                        id: "1",
-                        slug: "aod-9604",
-                        name: "AOD9604",
-                        cat: "Hormonal Research",
-                        cats: ["Hormonal Research", "Metabolic Research"],
-                        prices: [{
-                            mg: "10 mg",
-                            price: 80
-                        }],
-                        price: 80,
-                        rating: 4.8,
-                        short: "Premium AOD9604 — 99%+ purity, independently lab-tested, fast-shipped.",
-                        long: "AOD9604 is a premium fat loss peptide produced in our US cGMP-compliant facility. Every batch is independently tested to 99%+ purity. Ships with a full Certificate of Analysis.",
-                        img: "products/AOD9604.png",
-                        purity: "99% HPLC verified",
-                        size: "10mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 20
-                    }, {
-                        id: "2",
-                        slug: "ara-290",
-                        name: "ARA 290",
-                        cat: "Cardiovascular Research",
-                        cats: ["Cardiovascular Research", "Tissue Regeneration Research"],
-                        prices: [{
-                            mg: "10 mg",
-                            price: 60
-                        }, {
-                            mg: "5 mg",
-                            price: 45
-                        }],
-                        price: 60,
-                        rating: 4.8,
-                        short: "Premium ARA 290 — 99%+ purity, cGMP manufactured, fast-shipped.",
-                        long: "ARA 290 is a premium synthetic peptide independently tested to 99%+ purity. Manufactured in a US cGMP facility. Certificate of Analysis included.",
-                        img: "products/ARA290.png",
-                        purity: "99% HPLC verified",
-                        size: "10mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 18
-                    }, {
-                        id: "3",
-                        slug: "bpc-157",
-                        name: "BPC 157",
-                        cat: "Gastrointestinal Research",
-                        cats: ["Gastrointestinal Research", "Musculoskeletal Research", "Tissue Regeneration Research"],
-                        prices: [{
-                            mg: "10 mg",
-                            price: 85
-                        }, {
-                            mg: "15 mg",
-                            price: 120
-                        }],
-                        price: 85,
-                        rating: 4.9,
-                        short: "Premium-grade BPC-157 — 99%+ purity, independently lab-tested and delivered fast.",
-                        long: "BPC-157 is one of our most popular premium peptides. Each batch is produced in our US cGMP-compliant facility and independently verified to 99%+ purity. Includes a Certificate of Analysis. Ships same day in discreet, temperature-controlled packaging.",
-                        img: "products/BPC157.png",
-                        purity: "99% HPLC verified",
-                        size: "10mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 22
-                    }, {
-                        id: "4",
-                        slug: "cagrilintide",
-                        name: "Cagrilintide",
-                        cat: "Metabolic Research",
-                        cats: ["Metabolic Research"],
-                        prices: [{
-                            mg: "10 mg",
-                            price: 145
-                        }],
-                        price: 145,
-                        rating: 4.7,
-                        short: "Premium Cagrilintide — 99%+ purity, cGMP manufactured, discreetly shipped.",
-                        long: "Cagrilintide is a premium long-acting amylin analogue peptide, independently tested for purity and potency. Made in a US cGMP facility. Certificate of Analysis included.",
-                        img: "products/Cagrilintide.png",
-                        purity: "99% HPLC verified",
-                        size: "10mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 15
-                    }, {
-                        id: "5",
-                        slug: "cjc-1295-wdac",
-                        name: "CJC‑1295 w/DAC",
-                        cat: "Hormonal Research",
-                        cats: ["Hormonal Research", "Metabolic Research", "Musculoskeletal Research"],
-                        prices: [{
-                            mg: "5 mg",
-                            price: 75
-                        }],
-                        price: 75,
-                        rating: 4.9,
-                        short: "High-purity CJC-1295 w/DAC — long-acting GHRH analogue, independently verified.",
-                        long: "CJC-1295 with DAC is a premium long-acting growth hormone releasing hormone analogue. Independently tested to 99%+ purity, manufactured in a US cGMP facility. Ships with COA.",
-                        img: "products/CJC1295wDAC.png",
-                        purity: "99% HPLC verified",
-                        size: "5mg / vial",
-                        storage: "Store at -20°C, lyophilized",
-                        stock: 24
-                    }, {
-                        id: "6",
-                        slug: "cjc-1295-nodac",
-                        name: "CJC‑1295 no/DAC",
-                        cat: "Hormonal Research",
-                        cats: ["Hormonal Research", "Metabolic Research", "Musculoskeletal Research"],
-                        prices: [{
-                            mg: "5 mg",
-                            price: 65
-                        }, {
-                            mg: "10 mg",
-                            price: 100
-                        }],
-                        price: 65,
-                        rating: 4.8,
-                        short: "High-purity CJC-1295 no/DAC — independently verified, cGMP manufactured and shipped same day.",
-                        long: "CJC-1295 without DAC (MOD-GRF 1-29) is a premium short-acting GHRH analogue, independently tested to 99%+ purity. Made in a US cGMP facility. Ships with full COA.",
-                        img: "products/CJC1295noDAC.png",
-                        purity: "99% HPLC verified",
-                        size: "5mg / vial",
-                        storage: "Store at -20°C, lyophilized",
-                        stock: 30
-                    }, {
-                        id: "7",
-                        slug: "dsip",
-                        name: "DSIP",
-                        cat: "Circadian Research",
-                        cats: ["Circadian Research", "Cognitive Research"],
-                        prices: [{
-                            mg: "5 mg",
-                            price: 45
-                        }, {
-                            mg: "10 mg",
-                            price: 70
-                        }],
-                        price: 45,
-                        rating: 4.7,
-                        short: "Premium DSIP — Delta Sleep Inducing Peptide, 99%+ purity, lab-verified.",
-                        long: "DSIP (Delta Sleep-Inducing Peptide) is a premium neuropeptide manufactured in a US cGMP facility and independently tested to 99%+ purity. Includes full Certificate of Analysis.",
-                        img: "products/DSIP.png",
-                        purity: "99% HPLC verified",
-                        size: "5mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 20
-                    }, {
-                        id: "8",
-                        slug: "epithalon",
-                        name: "Epithalon",
-                        cat: "Cellular Longevity Research",
-                        cats: ["Cellular Longevity Research", "Circadian Research"],
-                        prices: [{
-                            mg: "10mg",
-                            price: 45
-                        }, {
-                            mg: "30mg",
-                            price: 65
-                        }, {
-                            mg: "50 mg",
-                            price: 110
-                        }],
-                        price: 45,
-                        rating: 4.9,
-                        short: "Premium Epithalon — a leading anti-aging tetrapeptide, 99%+ purity verified.",
-                        long: "Epithalon is a leading anti-aging tetrapeptide manufactured in our US cGMP-compliant facility and independently verified to 99%+ purity. Comes with a Certificate of Analysis.",
-                        img: "products/Epithalon.png",
-                        purity: "99% HPLC verified",
-                        size: "10mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 28
-                    }, {
-                        id: "9",
-                        slug: "ghk-cu",
-                        name: "GHK‑Cu (Copper Peptide)",
-                        cat: "Dermatological Research",
-                        cats: ["Dermatological Research", "Tissue Regeneration Research"],
-                        prices: [{
-                            mg: "50 mg",
-                            price: 50
-                        }, {
-                            mg: "100 mg",
-                            price: 90
-                        }],
-                        price: 50,
-                        rating: 4.8,
-                        short: "Premium GHK-Cu Copper Peptide — 99%+ purity, anti-aging and skin regeneration.",
-                        long: "GHK-Cu (Copper Peptide) is a premium bio-stimulating tripeptide, independently tested to 99%+ purity and manufactured in a US cGMP facility. Certificate of Analysis included.",
-                        img: "products/GHKCu.png",
-                        purity: "99% HPLC verified",
-                        size: "50mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 25
-                    }, {
-                        id: "10",
-                        slug: "igf-1-lr3",
-                        name: "IGF-1 LR3",
-                        cat: "Hormonal Research",
-                        cats: ["Hormonal Research", "Musculoskeletal Research", "Tissue Regeneration Research"],
-                        prices: [{
-                            mg: "1 mg",
-                            price: 100
-                        }],
-                        price: 100,
-                        rating: 4.8,
-                        short: "Premium IGF-1 LR3 — long-acting insulin-like growth factor, lab-verified.",
-                        long: "IGF-1 LR3 is a long-acting analogue of IGF-1, manufactured in our US cGMP-compliant facility and independently tested for purity and potency. Ships with a Certificate of Analysis.",
-                        img: "products/IGF1LR3.png",
-                        purity: "99% HPLC verified",
-                        size: "1mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 16
-                    }, {
-                        id: "11",
-                        slug: "ipamorelin",
-                        name: "Ipamorelin",
-                        cat: "Hormonal Research",
-                        cats: ["Hormonal Research", "Metabolic Research", "Musculoskeletal Research"],
-                        prices: [{
-                            mg: "10 mg",
-                            price: 80
-                        }],
-                        price: 80,
-                        rating: 4.9,
-                        short: "Premium Ipamorelin — 99%+ purity, lab-verified and fast-shipped in discreet packaging.",
-                        long: "Ipamorelin is a highly selective, premium-grade peptide independently tested to 99%+ purity. Made in our US cGMP facility. Comes with a Certificate of Analysis. Fast, discreet shipping on every order.",
-                        img: "products/Ipamorelin.png",
-                        purity: "99% HPLC verified",
-                        size: "10mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 31
-                    }, {
-                        id: "12",
-                        slug: "kisspeptin",
-                        name: "Kisspeptin",
-                        cat: "Hormonal Research",
-                        cats: ["Hormonal Research", "Reproductive Health Research"],
-                        prices: [{
-                            mg: "10 mg",
-                            price: 80
-                        }],
-                        price: 80,
-                        rating: 4.7,
-                        short: "Premium Kisspeptin — 99%+ purity, cGMP manufactured, lab-verified.",
-                        long: "Kisspeptin is a premium neuropeptide independently tested to 99%+ purity. Manufactured in a US cGMP-compliant facility. Certificate of Analysis included with every order.",
-                        img: "products/Kisspeptin.png",
-                        purity: "99% HPLC verified",
-                        size: "10mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 19
-                    }, {
-                        id: "13",
-                        slug: "kpv",
-                        name: "KPV",
-                        cat: "Dermatological Research",
-                        cats: ["Dermatological Research", "Gastrointestinal Research", "Immune Research"],
-                        prices: [{
-                            mg: "10 mg",
-                            price: 80
-                        }],
-                        price: 80,
-                        rating: 4.8,
-                        short: "Premium KPV — anti-inflammatory tripeptide, 99%+ purity, lab-verified.",
-                        long: "KPV is a premium anti-inflammatory tripeptide independently tested to 99%+ purity. Manufactured in a US cGMP facility. Includes a full Certificate of Analysis.",
-                        img: "products/KPV.png",
-                        purity: "99% HPLC verified",
-                        size: "10mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 22
-                    }, {
-                        id: "14",
-                        slug: "ll-37",
-                        name: "LL-37",
-                        cat: "Immune Research",
-                        cats: ["Immune Research"],
-                        prices: [{
-                            mg: "5mg",
-                            price: 85
-                        }],
-                        price: 85,
-                        rating: 4.7,
-                        short: "Premium LL-37 — 99%+ purity, host-defense peptide, cGMP manufactured.",
-                        long: "LL-37 is a premium host-defense peptide independently tested to 99%+ purity. Manufactured in a US cGMP facility. Ships with a full Certificate of Analysis.",
-                        img: "products/LL37.png",
-                        purity: "99% HPLC verified",
-                        size: "5mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 17
-                    }, {
-                        id: "15",
-                        slug: "melanotan-2",
-                        name: "Melanotan 2",
-                        cat: "Dermatological Research",
-                        cats: ["Dermatological Research", "Hormonal Research", "Reproductive Health Research"],
-                        prices: [{
-                            mg: "10 mg",
-                            price: 50
-                        }],
-                        price: 50,
-                        rating: 4.6,
-                        short: "Premium Melanotan II — 99%+ HPLC-verified purity, cGMP manufactured, discreetly shipped.",
-                        long: "Melanotan II is a premium-grade synthetic peptide, manufactured in a US cGMP facility and independently tested to 99%+ HPLC purity. Certificate of Analysis included. Ships in discreet packaging.",
-                        img: "products/Melanotan2.png",
-                        purity: "99% HPLC verified",
-                        size: "10mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 22
-                    }, {
-                        id: "16",
-                        slug: "mots-c",
-                        name: "MOTS‑C",
-                        cat: "Cellular Longevity Research",
-                        cats: ["Cellular Longevity Research", "Metabolic Research", "Mitochondrial Research"],
-                        prices: [{
-                            mg: "10 mg",
-                            price: 70
-                        }],
-                        price: 70,
-                        rating: 4.8,
-                        short: "Premium MOTS-C — mitochondrial-derived peptide, 99%+ purity, lab-verified.",
-                        long: "MOTS-C is a premium mitochondrial-derived peptide independently tested to 99%+ purity. Manufactured in a US cGMP-compliant facility. Certificate of Analysis included.",
-                        img: "products/MOTSC.png",
-                        purity: "99% HPLC verified",
-                        size: "10mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 20
-                    }, {
-                        id: "17",
-                        slug: "nad-plus",
-                        name: "NAD+",
-                        cat: "Cellular Longevity Research",
-                        cats: ["Cellular Longevity Research", "Cognitive Research", "Mitochondrial Research"],
-                        prices: [{
-                            mg: "500 mg",
-                            price: 90
-                        }, {
-                            mg: "1000 mg",
-                            price: 160
-                        }],
-                        price: 90,
-                        rating: 4.9,
-                        short: "Premium NAD+ — 99%+ purity, cellular energy and anti-aging support.",
-                        long: "NAD+ is a premium coenzyme critical to cellular energy production and DNA repair. Manufactured in a US cGMP facility and independently verified to 99%+ purity. Ships with a Certificate of Analysis.",
-                        img: "products/NADplus.png",
-                        purity: "99% HPLC verified",
-                        size: "500mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 35
-                    }, {
-                        id: "18",
-                        slug: "pt-141",
-                        name: "PT‑141",
-                        cat: "Hormonal Research",
-                        cats: ["Hormonal Research", "Reproductive Health Research"],
-                        prices: [{
-                            mg: "10 mg",
-                            price: 55
-                        }],
-                        price: 55,
-                        rating: 4.7,
-                        short: "Premium PT-141 (Bremelanotide) — 99%+ purity, cGMP manufactured, fast-shipped.",
-                        long: "PT-141 (Bremelanotide) is a premium synthetic peptide independently tested to 99%+ purity. Manufactured in a US cGMP facility. Certificate of Analysis included. Ships discreetly.",
-                        img: "products/PT141.png",
-                        purity: "99% HPLC verified",
-                        size: "10mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 25
-                    }, {
-                        id: "19",
-                        slug: "retatrutide",
-                        name: "Retatrutide",
-                        cat: "Metabolic Research",
-                        cats: ["Metabolic Research"],
-                        prices: [{
-                            mg: "10 mg",
-                            price: 120
-                        }, {
-                            mg: "20 mg",
-                            price: 210
-                        }, {
-                            mg: "30 mg",
-                            price: 275
-                        }, {
-                            mg: "60 mg",
-                            price: 500
-                        }],
-                        price: 120,
-                        rating: 4.9,
-                        short: "Premium Retatrutide — GLP-1/GIP/Glucagon triple agonist, 99%+ purity.",
-                        long: "Retatrutide is a triple agonist peptide independently tested to 99%+ purity. Manufactured in a US cGMP-compliant facility. Comes with a Certificate of Analysis. Ships same day.",
-                        img: "products/Retatrutide.png",
-                        purity: "99% HPLC verified",
-                        size: "10mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 20
-                    }, {
-                        id: "20",
-                        slug: "selank",
-                        name: "Selank",
-                        cat: "Cognitive Research",
-                        cats: ["Cognitive Research"],
-                        prices: [{
-                            mg: "10 mg",
-                            price: 60
-                        }, {
-                            mg: "20 mg",
-                            price: 100
-                        }],
-                        price: 60,
-                        rating: 4.8,
-                        short: "Premium Selank — anxiolytic peptide, 99%+ purity, lab-verified, fast-shipped.",
-                        long: "Selank is a premium anxiolytic nootropic peptide independently tested to 99%+ purity. Manufactured in a US cGMP facility. Certificate of Analysis included with every order.",
-                        img: "products/Selank.png",
-                        purity: "99% HPLC verified",
-                        size: "10mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 23
-                    }, {
-                        id: "21",
-                        slug: "semaglutide",
-                        name: "Semaglutide",
-                        cat: "Metabolic Research",
-                        cats: ["Metabolic Research"],
-                        prices: [{
-                            mg: "5 mg",
-                            price: 80
-                        }, {
-                            mg: "10 mg",
-                            price: 125
-                        }, {
-                            mg: "20 mg",
-                            price: 200
-                        }, {
-                            mg: "30 mg",
-                            price: 275
-                        }],
-                        price: 80,
-                        rating: 4.9,
-                        short: "Premium Semaglutide — GLP-1 receptor agonist, 99%+ purity, cGMP manufactured.",
-                        long: "Semaglutide is a premium GLP-1 receptor agonist peptide independently tested to 99%+ purity. Manufactured in a US cGMP-compliant facility. Includes Certificate of Analysis.",
-                        img: "products/Semaglutide.png",
-                        purity: "99% HPLC verified",
-                        size: "5mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 30
-                    }, {
-                        id: "22",
-                        slug: "semax",
-                        name: "Semax",
-                        cat: "Cognitive Research",
-                        cats: ["Cognitive Research"],
-                        prices: [{
-                            mg: "10 mg",
-                            price: 55
-                        }, {
-                            mg: "20 mg",
-                            price: 90
-                        }],
-                        price: 55,
-                        rating: 4.8,
-                        short: "Premium Semax — nootropic peptide, 99%+ purity, independently lab-tested.",
-                        long: "Semax is a premium nootropic peptide independently tested to 99%+ purity. Manufactured in a US cGMP-compliant facility. Certificate of Analysis included. Ships same day.",
-                        img: "products/Semax.png",
-                        purity: "99% HPLC verified",
-                        size: "10mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 25
-                    }, {
-                        id: "23",
-                        slug: "sermorelin",
-                        name: "Sermorelin",
-                        cat: "Hormonal Research",
-                        cats: ["Hormonal Research"],
-                        prices: [{
-                            mg: "5 mg",
-                            price: 55
-                        }, {
-                            mg: "10 mg",
-                            price: 90
-                        }, {
-                            mg: "15 mg",
-                            price: 120
-                        }],
-                        price: 55,
-                        rating: 4.8,
-                        short: "Premium Sermorelin — GHRH analogue, 99%+ purity, cGMP manufactured.",
-                        long: "Sermorelin is a premium GHRH analogue peptide independently tested to 99%+ purity. Manufactured in a US cGMP-compliant facility. Certificate of Analysis included. Ships same day.",
-                        img: "products/Sermorelin.png",
-                        purity: "99% HPLC verified",
-                        size: "5mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 28
-                    }, {
-                        id: "24",
-                        slug: "ss-31",
-                        name: "SS-31",
-                        cat: "Cellular Longevity Research",
-                        cats: ["Cellular Longevity Research", "Mitochondrial Research", "Tissue Regeneration Research"],
-                        prices: [{
-                            mg: "10 mg",
-                            price: 65
-                        }, {
-                            mg: "50 mg",
-                            price: 225
-                        }],
-                        price: 65,
-                        rating: 4.8,
-                        short: "Premium SS-31 — mitochondria-targeting peptide, 99%+ purity, lab-verified.",
-                        long: "SS-31 (Elamipretide) is a premium mitochondria-targeting peptide independently tested to 99%+ purity. Manufactured in a US cGMP facility. Certificate of Analysis included.",
-                        img: "products/SS31.png",
-                        purity: "99% HPLC verified",
-                        size: "10mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 18
-                    }, {
-                        id: "25",
-                        slug: "tb-500",
-                        name: "TB-500 (Thymosin Beta-4)",
-                        cat: "Cardiovascular Research",
-                        cats: ["Cardiovascular Research", "Immune Research", "Musculoskeletal Research", "Tissue Regeneration Research"],
-                        prices: [{
-                            mg: "10 mg",
-                            price: 90
-                        }],
-                        price: 90,
-                        rating: 4.7,
-                        short: "High-grade TB-500 (Thymosin Beta-4) — independently tested and shipped with COA.",
-                        long: "TB-500 is a premium synthetic peptide independently verified for purity and potency. Each batch is manufactured in a US cGMP-compliant facility and ships with a full Certificate of Analysis.",
-                        img: "products/TB500.png",
-                        purity: "99% HPLC verified",
-                        size: "10mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 15
-                    }, {
-                        id: "26",
-                        slug: "tesamorelin",
-                        name: "Tesamorelin",
-                        cat: "Hormonal Research",
-                        cats: ["Hormonal Research", "Metabolic Research", "Musculoskeletal Research"],
-                        prices: [{
-                            mg: "10 mg",
-                            price: 100
-                        }],
-                        price: 100,
-                        rating: 4.8,
-                        short: "Premium Tesamorelin — GHRH analogue, 99%+ purity, fast-shipped.",
-                        long: "Tesamorelin is a premium GHRH analogue peptide independently tested to 99%+ purity. Manufactured in a US cGMP facility. Certificate of Analysis included with every order.",
-                        img: "products/Tesamorelin.png",
-                        purity: "99% HPLC verified",
-                        size: "10mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 20
-                    }, {
-                        id: "27",
-                        slug: "thymosin-alpha-1",
-                        name: "Thymosin Alpha-1",
-                        cat: "Immune Research",
-                        cats: ["Immune Research"],
-                        prices: [{
-                            mg: "5 mg",
-                            price: 65
-                        }, {
-                            mg: "10 mg",
-                            price: 110
-                        }],
-                        price: 65,
-                        rating: 4.8,
-                        short: "Premium Thymosin Alpha-1 — immune-modulating peptide, 99%+ purity.",
-                        long: "Thymosin Alpha-1 is a premium immune-modulating peptide independently tested to 99%+ purity. Manufactured in a US cGMP-compliant facility. Ships with a Certificate of Analysis.",
-                        img: "products/ThymosinA1.png",
-                        purity: "99% HPLC verified",
-                        size: "5mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 22
-                    }, {
-                        id: "28",
-                        slug: "thymulin",
-                        name: "Thymulin",
-                        cat: "Cellular Longevity Research",
-                        cats: ["Cellular Longevity Research", "Immune Research"],
-                        prices: [{
-                            mg: "10mg",
-                            price: 55
-                        }],
-                        price: 55,
-                        rating: 4.7,
-                        short: "Premium Thymulin — 99%+ purity, immunomodulatory peptide, cGMP manufactured.",
-                        long: "Thymulin is a premium immunomodulatory peptide independently tested to 99%+ purity. Manufactured in a US cGMP facility. Includes a full Certificate of Analysis with every order.",
-                        img: "products/Thymulin.png",
-                        purity: "99% HPLC verified",
-                        size: "10mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 18
-                    }, {
-                        id: "29",
-                        slug: "tirzepatide",
-                        name: "Tirzepatide",
-                        cat: "Metabolic Research",
-                        cats: ["Metabolic Research"],
-                        prices: [{
-                            mg: "10 mg",
-                            price: 125
-                        }, {
-                            mg: "20 mg",
-                            price: 200
-                        }, {
-                            mg: "30 mg",
-                            price: 275
-                        }, {
-                            mg: "60 mg",
-                            price: 500
-                        }],
-                        price: 125,
-                        rating: 4.9,
-                        short: "Premium Tirzepatide — dual GLP-1/GIP agonist, 99%+ purity, lab-verified.",
-                        long: "Tirzepatide is a premium dual GLP-1/GIP receptor agonist peptide independently tested to 99%+ purity. Manufactured in a US cGMP-compliant facility. Ships with full Certificate of Analysis.",
-                        img: "products/Tirzepatide.png",
-                        purity: "99% HPLC verified",
-                        size: "10mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 25
-                    },
-                    /* COMBOS */
-                    {
-                        id: "30",
-                        slug: "wolverine",
-                        name: "Wolverine BPC‑157/TB‑500",
-                        cat: "Gastrointestinal Research",
-                        cats: ["Gastrointestinal Research", "Musculoskeletal Research", "Tissue Regeneration Research"],
-                        prices: [{
-                            mg: "10/10 mg",
-                            price: 120
-                        }],
-                        price: 120,
-                        rating: 4.9,
-                        short: "Wolverine Combo — BPC-157 + TB-500 — dual recovery blend, 99%+ purity.",
-                        long: "The Wolverine combo pairs BPC-157 and TB-500 for a powerful dual-action recovery blend. Both peptides independently tested to 99%+ purity in our US cGMP facility. Certificate of Analysis included.",
-                        img: "products/Wolverine.png",
-                        purity: "99% HPLC verified",
-                        size: "10mg/10mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 18
-                    }, {
-                        id: "31",
-                        slug: "cjc-ndac-ipam",
-                        name: "CJC‑1295 No DAC/Ipamorelin",
-                        cat: "Hormonal Research",
-                        cats: ["Hormonal Research", "Metabolic Research", "Musculoskeletal Research"],
-                        prices: [{
-                            mg: "5/5 mg",
-                            price: 75
-                        }],
-                        price: 75,
-                        rating: 4.9,
-                        short: "CJC-1295 No DAC + Ipamorelin combo — premium GH-releasing blend, lab-verified.",
-                        long: "This combo pairs CJC-1295 (no DAC) and Ipamorelin for synergistic GH release. Both peptides are independently tested to 99%+ purity and manufactured in a US cGMP facility.",
-                        img: "products/CJCNoDACIpam.png",
-                        purity: "99% HPLC verified",
-                        size: "5mg/5mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 20
-                    }, {
-                        id: "32",
-                        slug: "glow-ghk",
-                        name: "GLOW GHK-CU/TB-500/BPC-157",
-                        cat: "Dermatological Research",
-                        cats: ["Dermatological Research", "Gastrointestinal Research", "Musculoskeletal Research", "Tissue Regeneration Research"],
-                        prices: [{
-                            mg: "50/10/10 mg",
-                            price: 140
-                        }, {
-                            mg: "70/10/10 mg",
-                            price: 160
-                        }],
-                        price: 140,
-                        rating: 4.9,
-                        short: "GLOW Combo — GHK-Cu + TB-500 + BPC-157 — anti-aging triple blend, lab-verified.",
-                        long: "The GLOW combo combines GHK-Cu, TB-500, and BPC-157 for a comprehensive anti-aging and recovery blend. All peptides independently tested to 99%+ purity in our US cGMP facility.",
-                        img: "products/GlowGHK.png",
-                        purity: "99% HPLC verified",
-                        size: "50mg/10mg/10mg",
-                        storage: "Store at -20°C",
-                        stock: 15
-                    }, {
-                        id: "33",
-                        slug: "klow-ghk",
-                        name: "KLOW GHK-CU/TB-500/BPC-157/KPV",
-                        cat: "Dermatological Research",
-                        cats: ["Dermatological Research", "Gastrointestinal Research", "Immune Research", "Tissue Regeneration Research"],
-                        prices: [{
-                            mg: "50/10/10/10 mg",
-                            price: 175
-                        }],
-                        price: 175,
-                        rating: 4.9,
-                        short: "KLOW Quad Combo — GHK-Cu + TB-500 + BPC-157 + KPV — ultimate recovery blend.",
-                        long: "The KLOW quad combo adds KPV to the GLOW formula for enhanced anti-inflammatory support. All peptides independently tested to 99%+ purity in our US cGMP-compliant facility.",
-                        img: "products/KlowGHK.png",
-                        purity: "99% HPLC verified",
-                        size: "50/10/10/10 mg",
-                        storage: "Store at -20°C",
-                        stock: 12
-                    }, {
-                        id: "34",
-                        slug: "selank-semax",
-                        name: "Selank/Semax",
-                        cat: "Cognitive Research",
-                        cats: ["Cognitive Research"],
-                        prices: [{
-                            mg: "5/5 mg",
-                            price: 70
-                        }],
-                        price: 70,
-                        rating: 4.8,
-                        short: "Selank + Semax nootropic combo — 99%+ purity, anxiety and cognitive support.",
-                        long: "This nootropic combo pairs Selank and Semax for synergistic anxiolytic and cognitive effects. Both peptides independently tested to 99%+ purity in our US cGMP facility.",
-                        img: "products/SelankSemax.png",
-                        purity: "99% HPLC verified",
-                        size: "5mg/5mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 18
-                    }, {
-                        id: "35",
-                        slug: "tesamorelin-ipam",
-                        name: "Tesamorelin/Ipamorelin",
-                        cat: "Hormonal Research",
-                        cats: ["Hormonal Research", "Metabolic Research", "Musculoskeletal Research"],
-                        prices: [{
-                            mg: "10/5 mg",
-                            price: 110
-                        }],
-                        price: 110,
-                        rating: 4.9,
-                        short: "Tesamorelin + Ipamorelin combo — synergistic GH-releasing blend, lab-verified.",
-                        long: "Tesamorelin and Ipamorelin combine for a synergistic GH-releasing effect. Both peptides are independently tested to 99%+ purity and manufactured in our US cGMP facility.",
-                        img: "products/TesamorelinIpam.png",
-                        purity: "99% HPLC verified",
-                        size: "10mg/5mg / vial",
-                        storage: "Store at -20°C",
-                        stock: 17
-                    }
-                ];
+                const PRODS = [
+  {id:"1",slug:"aod-9604",name:"AOD9604",cat:"Hormonal Research",cats:["Hormonal Research","Metabolic Research"],
+   prices:[{mg:"10 mg",price:80}],
+   price:80,rating:4.8,
+   short:"Premium AOD9604 — 99%+ purity, independently lab-tested, fast-shipped.",
+   long:"AOD9604 is a premium fat loss peptide produced in our US cGMP-compliant facility. Every batch is independently tested to 99%+ purity. Ships with a full Certificate of Analysis.",
+   img:"products/AOD9604.png",purity:"99% HPLC verified",size:"10mg / vial",storage:"Store at -20°C",stock:20},
+  {id:"2",slug:"ara-290",name:"ARA 290",cat:"Cardiovascular Research",cats:["Cardiovascular Research","Tissue Regeneration Research"],
+   prices:[{mg:"10 mg",price:60},{mg:"5 mg",price:45}],
+   price:60,rating:4.8,
+   short:"Premium ARA 290 — 99%+ purity, cGMP manufactured, fast-shipped.",
+   long:"ARA 290 is a premium synthetic peptide independently tested to 99%+ purity. Manufactured in a US cGMP facility. Certificate of Analysis included.",
+   img:"products/ARA290.png",purity:"99% HPLC verified",size:"10mg / vial",storage:"Store at -20°C",stock:18},
+  {id:"3",slug:"bpc-157",name:"BPC 157",cat:"Gastrointestinal Research",cats:["Gastrointestinal Research","Musculoskeletal Research","Tissue Regeneration Research"],
+   prices:[{mg:"10 mg",price:85},{mg:"15 mg",price:120}],
+   price:85,rating:4.9,
+   short:"Premium-grade BPC-157 — 99%+ purity, independently lab-tested and delivered fast.",
+   long:"BPC-157 is one of our most popular premium peptides. Each batch is produced in our US cGMP-compliant facility and independently verified to 99%+ purity. Includes a Certificate of Analysis. Ships same day in discreet, temperature-controlled packaging.",
+   img:"products/BPC157.png",purity:"99% HPLC verified",size:"10mg / vial",storage:"Store at -20°C",stock:22},
+  {id:"4",slug:"cagrilintide",name:"Cagrilintide",cat:"Metabolic Research",cats:["Metabolic Research"],
+   prices:[{mg:"10 mg",price:145}],
+   price:145,rating:4.7,
+   short:"Premium Cagrilintide — 99%+ purity, cGMP manufactured, discreetly shipped.",
+   long:"Cagrilintide is a premium long-acting amylin analogue peptide, independently tested for purity and potency. Made in a US cGMP facility. Certificate of Analysis included.",
+   img:"products/Cagrilintide.png",purity:"99% HPLC verified",size:"10mg / vial",storage:"Store at -20°C",stock:15},
+  {id:"5",slug:"cjc-1295-wdac",name:"CJC‑1295 w/DAC",cat:"Hormonal Research",cats:["Hormonal Research","Metabolic Research","Musculoskeletal Research"],
+   prices:[{mg:"5 mg",price:75}],
+   price:75,rating:4.9,
+   short:"High-purity CJC-1295 w/DAC — long-acting GHRH analogue, independently verified.",
+   long:"CJC-1295 with DAC is a premium long-acting growth hormone releasing hormone analogue. Independently tested to 99%+ purity, manufactured in a US cGMP facility. Ships with COA.",
+   img:"products/CJC1295wDAC.png",purity:"99% HPLC verified",size:"5mg / vial",storage:"Store at -20°C, lyophilized",stock:24},
+  {id:"6",slug:"cjc-1295-nodac",name:"CJC‑1295 no/DAC",cat:"Hormonal Research",cats:["Hormonal Research","Metabolic Research","Musculoskeletal Research"],
+   prices:[{mg:"5 mg",price:65},{mg:"10 mg",price:100}],
+   price:65,rating:4.8,
+   short:"High-purity CJC-1295 no/DAC — independently verified, cGMP manufactured and shipped same day.",
+   long:"CJC-1295 without DAC (MOD-GRF 1-29) is a premium short-acting GHRH analogue, independently tested to 99%+ purity. Made in a US cGMP facility. Ships with full COA.",
+   img:"products/CJC1295noDAC.png",purity:"99% HPLC verified",size:"5mg / vial",storage:"Store at -20°C, lyophilized",stock:30},
+  {id:"7",slug:"dsip",name:"DSIP",cat:"Circadian Research",cats:["Circadian Research","Cognitive Research"],
+   prices:[{mg:"5 mg",price:45},{mg:"10 mg",price:70}],
+   price:45,rating:4.7,
+   short:"Premium DSIP — Delta Sleep Inducing Peptide, 99%+ purity, lab-verified.",
+   long:"DSIP (Delta Sleep-Inducing Peptide) is a premium neuropeptide manufactured in a US cGMP facility and independently tested to 99%+ purity. Includes full Certificate of Analysis.",
+   img:"products/DSIP.png",purity:"99% HPLC verified",size:"5mg / vial",storage:"Store at -20°C",stock:20},
+  {id:"8",slug:"epithalon",name:"Epithalon",cat:"Cellular Longevity Research",cats:["Cellular Longevity Research","Circadian Research"],
+   prices:[{mg:"10mg",price:45},{mg:"30mg",price:65},{mg:"50 mg",price:110}],
+   price:45,rating:4.9,
+   short:"Premium Epithalon — a leading anti-aging tetrapeptide, 99%+ purity verified.",
+   long:"Epithalon is a leading anti-aging tetrapeptide manufactured in our US cGMP-compliant facility and independently verified to 99%+ purity. Comes with a Certificate of Analysis.",
+   img:"products/Epithalon.png",purity:"99% HPLC verified",size:"10mg / vial",storage:"Store at -20°C",stock:28},
+  {id:"9",slug:"ghk-cu",name:"GHK‑Cu (Copper Peptide)",cat:"Dermatological Research",cats:["Dermatological Research","Tissue Regeneration Research"],
+   prices:[{mg:"50 mg",price:50},{mg:"100 mg",price:90}],
+   price:50,rating:4.8,
+   short:"Premium GHK-Cu Copper Peptide — 99%+ purity, anti-aging and skin regeneration.",
+   long:"GHK-Cu (Copper Peptide) is a premium bio-stimulating tripeptide, independently tested to 99%+ purity and manufactured in a US cGMP facility. Certificate of Analysis included.",
+   img:"products/GHKCu.png",purity:"99% HPLC verified",size:"50mg / vial",storage:"Store at -20°C",stock:25},
+  {id:"10",slug:"igf-1-lr3",name:"IGF-1 LR3",cat:"Hormonal Research",cats:["Hormonal Research","Musculoskeletal Research","Tissue Regeneration Research"],
+   prices:[{mg:"1 mg",price:100}],
+   price:100,rating:4.8,
+   short:"Premium IGF-1 LR3 — long-acting insulin-like growth factor, lab-verified.",
+   long:"IGF-1 LR3 is a long-acting analogue of IGF-1, manufactured in our US cGMP-compliant facility and independently tested for purity and potency. Ships with a Certificate of Analysis.",
+   img:"products/IGF1LR3.png",purity:"99% HPLC verified",size:"1mg / vial",storage:"Store at -20°C",stock:16},
+  {id:"11",slug:"ipamorelin",name:"Ipamorelin",cat:"Hormonal Research",cats:["Hormonal Research","Metabolic Research","Musculoskeletal Research"],
+   prices:[{mg:"10 mg",price:80}],
+   price:80,rating:4.9,
+   short:"Premium Ipamorelin — 99%+ purity, lab-verified and fast-shipped in discreet packaging.",
+   long:"Ipamorelin is a highly selective, premium-grade peptide independently tested to 99%+ purity. Made in our US cGMP facility. Comes with a Certificate of Analysis. Fast, discreet shipping on every order.",
+   img:"products/Ipamorelin.png",purity:"99% HPLC verified",size:"10mg / vial",storage:"Store at -20°C",stock:31},
+  {id:"12",slug:"kisspeptin",name:"Kisspeptin",cat:"Hormonal Research",cats:["Hormonal Research","Reproductive Health Research"],
+   prices:[{mg:"10 mg",price:80}],
+   price:80,rating:4.7,
+   short:"Premium Kisspeptin — 99%+ purity, cGMP manufactured, lab-verified.",
+   long:"Kisspeptin is a premium neuropeptide independently tested to 99%+ purity. Manufactured in a US cGMP-compliant facility. Certificate of Analysis included with every order.",
+   img:"products/Kisspeptin.png",purity:"99% HPLC verified",size:"10mg / vial",storage:"Store at -20°C",stock:19},
+  {id:"13",slug:"kpv",name:"KPV",cat:"Dermatological Research",cats:["Dermatological Research","Gastrointestinal Research","Immune Research"],
+   prices:[{mg:"10 mg",price:80}],
+   price:80,rating:4.8,
+   short:"Premium KPV — anti-inflammatory tripeptide, 99%+ purity, lab-verified.",
+   long:"KPV is a premium anti-inflammatory tripeptide independently tested to 99%+ purity. Manufactured in a US cGMP facility. Includes a full Certificate of Analysis.",
+   img:"products/KPV.png",purity:"99% HPLC verified",size:"10mg / vial",storage:"Store at -20°C",stock:22},
+  {id:"14",slug:"ll-37",name:"LL-37",cat:"Immune Research",cats:["Immune Research"],
+   prices:[{mg:"5mg",price:85}],
+   price:85,rating:4.7,
+   short:"Premium LL-37 — 99%+ purity, host-defense peptide, cGMP manufactured.",
+   long:"LL-37 is a premium host-defense peptide independently tested to 99%+ purity. Manufactured in a US cGMP facility. Ships with a full Certificate of Analysis.",
+   img:"products/LL37.png",purity:"99% HPLC verified",size:"5mg / vial",storage:"Store at -20°C",stock:17},
+  {id:"15",slug:"melanotan-2",name:"Melanotan 2",cat:"Dermatological Research",cats:["Dermatological Research","Hormonal Research","Reproductive Health Research"],
+   prices:[{mg:"10 mg",price:50}],
+   price:50,rating:4.6,
+   short:"Premium Melanotan II — 99%+ HPLC-verified purity, cGMP manufactured, discreetly shipped.",
+   long:"Melanotan II is a premium-grade synthetic peptide, manufactured in a US cGMP facility and independently tested to 99%+ HPLC purity. Certificate of Analysis included. Ships in discreet packaging.",
+   img:"products/Melanotan2.png",purity:"99% HPLC verified",size:"10mg / vial",storage:"Store at -20°C",stock:22},
+  {id:"16",slug:"mots-c",name:"MOTS‑C",cat:"Cellular Longevity Research",cats:["Cellular Longevity Research","Metabolic Research","Mitochondrial Research"],
+   prices:[{mg:"10 mg",price:70}],
+   price:70,rating:4.8,
+   short:"Premium MOTS-C — mitochondrial-derived peptide, 99%+ purity, lab-verified.",
+   long:"MOTS-C is a premium mitochondrial-derived peptide independently tested to 99%+ purity. Manufactured in a US cGMP-compliant facility. Certificate of Analysis included.",
+   img:"products/MOTSC.png",purity:"99% HPLC verified",size:"10mg / vial",storage:"Store at -20°C",stock:20},
+  {id:"17",slug:"nad-plus",name:"NAD+",cat:"Cellular Longevity Research",cats:["Cellular Longevity Research","Cognitive Research","Mitochondrial Research"],
+   prices:[{mg:"500 mg",price:90},{mg:"1000 mg",price:160}],
+   price:90,rating:4.9,
+   short:"Premium NAD+ — 99%+ purity, cellular energy and anti-aging support.",
+   long:"NAD+ is a premium coenzyme critical to cellular energy production and DNA repair. Manufactured in a US cGMP facility and independently verified to 99%+ purity. Ships with a Certificate of Analysis.",
+   img:"products/NADplus.png",purity:"99% HPLC verified",size:"500mg / vial",storage:"Store at -20°C",stock:35},
+  {id:"18",slug:"pt-141",name:"PT‑141",cat:"Hormonal Research",cats:["Hormonal Research","Reproductive Health Research"],
+   prices:[{mg:"10 mg",price:55}],
+   price:55,rating:4.7,
+   short:"Premium PT-141 (Bremelanotide) — 99%+ purity, cGMP manufactured, fast-shipped.",
+   long:"PT-141 (Bremelanotide) is a premium synthetic peptide independently tested to 99%+ purity. Manufactured in a US cGMP facility. Certificate of Analysis included. Ships discreetly.",
+   img:"products/PT141.png",purity:"99% HPLC verified",size:"10mg / vial",storage:"Store at -20°C",stock:25},
+  {id:"19",slug:"retatrutide",name:"Retatrutide",cat:"Metabolic Research",cats:["Metabolic Research"],
+   prices:[{mg:"10 mg",price:120},{mg:"20 mg",price:210},{mg:"30 mg",price:275},{mg:"60 mg",price:500}],
+   price:120,rating:4.9,
+   short:"Premium Retatrutide — GLP-1/GIP/Glucagon triple agonist, 99%+ purity.",
+   long:"Retatrutide is a triple agonist peptide independently tested to 99%+ purity. Manufactured in a US cGMP-compliant facility. Comes with a Certificate of Analysis. Ships same day.",
+   img:"products/Retatrutide.png",purity:"99% HPLC verified",size:"10mg / vial",storage:"Store at -20°C",stock:20},
+  {id:"20",slug:"selank",name:"Selank",cat:"Cognitive Research",cats:["Cognitive Research"],
+   prices:[{mg:"10 mg",price:60},{mg:"20 mg",price:100}],
+   price:60,rating:4.8,
+   short:"Premium Selank — anxiolytic peptide, 99%+ purity, lab-verified, fast-shipped.",
+   long:"Selank is a premium anxiolytic nootropic peptide independently tested to 99%+ purity. Manufactured in a US cGMP facility. Certificate of Analysis included with every order.",
+   img:"products/Selank.png",purity:"99% HPLC verified",size:"10mg / vial",storage:"Store at -20°C",stock:23},
+  {id:"21",slug:"semaglutide",name:"Semaglutide",cat:"Metabolic Research",cats:["Metabolic Research"],
+   prices:[{mg:"5 mg",price:80},{mg:"10 mg",price:125},{mg:"20 mg",price:200},{mg:"30 mg",price:275}],
+   price:80,rating:4.9,
+   short:"Premium Semaglutide — GLP-1 receptor agonist, 99%+ purity, cGMP manufactured.",
+   long:"Semaglutide is a premium GLP-1 receptor agonist peptide independently tested to 99%+ purity. Manufactured in a US cGMP-compliant facility. Includes Certificate of Analysis.",
+   img:"products/Semaglutide.png",purity:"99% HPLC verified",size:"5mg / vial",storage:"Store at -20°C",stock:30},
+  {id:"22",slug:"semax",name:"Semax",cat:"Cognitive Research",cats:["Cognitive Research"],
+   prices:[{mg:"10 mg",price:55},{mg:"20 mg",price:90}],
+   price:55,rating:4.8,
+   short:"Premium Semax — nootropic peptide, 99%+ purity, independently lab-tested.",
+   long:"Semax is a premium nootropic peptide independently tested to 99%+ purity. Manufactured in a US cGMP-compliant facility. Certificate of Analysis included. Ships same day.",
+   img:"products/Semax.png",purity:"99% HPLC verified",size:"10mg / vial",storage:"Store at -20°C",stock:25},
+  {id:"23",slug:"sermorelin",name:"Sermorelin",cat:"Hormonal Research",cats:["Hormonal Research"],
+   prices:[{mg:"5 mg",price:55},{mg:"10 mg",price:90},{mg:"15 mg",price:120}],
+   price:55,rating:4.8,
+   short:"Premium Sermorelin — GHRH analogue, 99%+ purity, cGMP manufactured.",
+   long:"Sermorelin is a premium GHRH analogue peptide independently tested to 99%+ purity. Manufactured in a US cGMP-compliant facility. Certificate of Analysis included. Ships same day.",
+   img:"products/Sermorelin.png",purity:"99% HPLC verified",size:"5mg / vial",storage:"Store at -20°C",stock:28},
+  {id:"24",slug:"ss-31",name:"SS-31",cat:"Cellular Longevity Research",cats:["Cellular Longevity Research","Mitochondrial Research","Tissue Regeneration Research"],
+   prices:[{mg:"10 mg",price:65},{mg:"50 mg",price:225}],
+   price:65,rating:4.8,
+   short:"Premium SS-31 — mitochondria-targeting peptide, 99%+ purity, lab-verified.",
+   long:"SS-31 (Elamipretide) is a premium mitochondria-targeting peptide independently tested to 99%+ purity. Manufactured in a US cGMP facility. Certificate of Analysis included.",
+   img:"products/SS31.png",purity:"99% HPLC verified",size:"10mg / vial",storage:"Store at -20°C",stock:18},
+  {id:"25",slug:"tb-500",name:"TB-500 (Thymosin Beta-4)",cat:"Cardiovascular Research",cats:["Cardiovascular Research","Immune Research","Musculoskeletal Research","Tissue Regeneration Research"],
+   prices:[{mg:"10 mg",price:90}],
+   price:90,rating:4.7,
+   short:"High-grade TB-500 (Thymosin Beta-4) — independently tested and shipped with COA.",
+   long:"TB-500 is a premium synthetic peptide independently verified for purity and potency. Each batch is manufactured in a US cGMP-compliant facility and ships with a full Certificate of Analysis.",
+   img:"products/TB500.png",purity:"99% HPLC verified",size:"10mg / vial",storage:"Store at -20°C",stock:15},
+  {id:"26",slug:"tesamorelin",name:"Tesamorelin",cat:"Hormonal Research",cats:["Hormonal Research","Metabolic Research","Musculoskeletal Research"],
+   prices:[{mg:"10 mg",price:100}],
+   price:100,rating:4.8,
+   short:"Premium Tesamorelin — GHRH analogue, 99%+ purity, fast-shipped.",
+   long:"Tesamorelin is a premium GHRH analogue peptide independently tested to 99%+ purity. Manufactured in a US cGMP facility. Certificate of Analysis included with every order.",
+   img:"products/Tesamorelin.png",purity:"99% HPLC verified",size:"10mg / vial",storage:"Store at -20°C",stock:20},
+  {id:"27",slug:"thymosin-alpha-1",name:"Thymosin Alpha-1",cat:"Immune Research",cats:["Immune Research"],
+   prices:[{mg:"5 mg",price:65},{mg:"10 mg",price:110}],
+   price:65,rating:4.8,
+   short:"Premium Thymosin Alpha-1 — immune-modulating peptide, 99%+ purity.",
+   long:"Thymosin Alpha-1 is a premium immune-modulating peptide independently tested to 99%+ purity. Manufactured in a US cGMP-compliant facility. Ships with a Certificate of Analysis.",
+   img:"products/ThymosinA1.png",purity:"99% HPLC verified",size:"5mg / vial",storage:"Store at -20°C",stock:22},
+  {id:"28",slug:"thymulin",name:"Thymulin",cat:"Cellular Longevity Research",cats:["Cellular Longevity Research","Immune Research"],
+   prices:[{mg:"10mg",price:55}],
+   price:55,rating:4.7,
+   short:"Premium Thymulin — 99%+ purity, immunomodulatory peptide, cGMP manufactured.",
+   long:"Thymulin is a premium immunomodulatory peptide independently tested to 99%+ purity. Manufactured in a US cGMP facility. Includes a full Certificate of Analysis with every order.",
+   img:"products/Thymulin.png",purity:"99% HPLC verified",size:"10mg / vial",storage:"Store at -20°C",stock:18},
+  {id:"29",slug:"tirzepatide",name:"Tirzepatide",cat:"Metabolic Research",cats:["Metabolic Research"],
+   prices:[{mg:"10 mg",price:125},{mg:"20 mg",price:200},{mg:"30 mg",price:275},{mg:"60 mg",price:500}],
+   price:125,rating:4.9,
+   short:"Premium Tirzepatide — dual GLP-1/GIP agonist, 99%+ purity, lab-verified.",
+   long:"Tirzepatide is a premium dual GLP-1/GIP receptor agonist peptide independently tested to 99%+ purity. Manufactured in a US cGMP-compliant facility. Ships with full Certificate of Analysis.",
+   img:"products/Tirzepatide.png",purity:"99% HPLC verified",size:"10mg / vial",storage:"Store at -20°C",stock:25},
+  /* COMBOS */
+  {id:"30",slug:"wolverine",name:"Wolverine BPC‑157/TB‑500",cat:"Gastrointestinal Research",cats:["Gastrointestinal Research","Musculoskeletal Research","Tissue Regeneration Research"],
+   prices:[{mg:"10/10 mg",price:120}],
+   price:120,rating:4.9,
+   short:"Wolverine Combo — BPC-157 + TB-500 — dual recovery blend, 99%+ purity.",
+   long:"The Wolverine combo pairs BPC-157 and TB-500 for a powerful dual-action recovery blend. Both peptides independently tested to 99%+ purity in our US cGMP facility. Certificate of Analysis included.",
+   img:"products/Wolverine.png",purity:"99% HPLC verified",size:"10mg/10mg / vial",storage:"Store at -20°C",stock:18},
+  {id:"31",slug:"cjc-ndac-ipam",name:"CJC‑1295 No DAC/Ipamorelin",cat:"Hormonal Research",cats:["Hormonal Research","Metabolic Research","Musculoskeletal Research"],
+   prices:[{mg:"5/5 mg",price:75}],
+   price:75,rating:4.9,
+   short:"CJC-1295 No DAC + Ipamorelin combo — premium GH-releasing blend, lab-verified.",
+   long:"This combo pairs CJC-1295 (no DAC) and Ipamorelin for synergistic GH release. Both peptides are independently tested to 99%+ purity and manufactured in a US cGMP facility.",
+   img:"products/CJCNoDACIpam.png",purity:"99% HPLC verified",size:"5mg/5mg / vial",storage:"Store at -20°C",stock:20},
+  {id:"32",slug:"glow-ghk",name:"GLOW GHK-CU/TB-500/BPC-157",cat:"Dermatological Research",cats:["Dermatological Research","Gastrointestinal Research","Musculoskeletal Research","Tissue Regeneration Research"],
+   prices:[{mg:"50/10/10 mg",price:140},{mg:"70/10/10 mg",price:160}],
+   price:140,rating:4.9,
+   short:"GLOW Combo — GHK-Cu + TB-500 + BPC-157 — anti-aging triple blend, lab-verified.",
+   long:"The GLOW combo combines GHK-Cu, TB-500, and BPC-157 for a comprehensive anti-aging and recovery blend. All peptides independently tested to 99%+ purity in our US cGMP facility.",
+   img:"products/GlowGHK.png",purity:"99% HPLC verified",size:"50mg/10mg/10mg",storage:"Store at -20°C",stock:15},
+  {id:"33",slug:"klow-ghk",name:"KLOW GHK-CU/TB-500/BPC-157/KPV",cat:"Dermatological Research",cats:["Dermatological Research","Gastrointestinal Research","Immune Research","Tissue Regeneration Research"],
+   prices:[{mg:"50/10/10/10 mg",price:175}],
+   price:175,rating:4.9,
+   short:"KLOW Quad Combo — GHK-Cu + TB-500 + BPC-157 + KPV — ultimate recovery blend.",
+   long:"The KLOW quad combo adds KPV to the GLOW formula for enhanced anti-inflammatory support. All peptides independently tested to 99%+ purity in our US cGMP-compliant facility.",
+   img:"products/KlowGHK.png",purity:"99% HPLC verified",size:"50/10/10/10 mg",storage:"Store at -20°C",stock:12},
+  {id:"34",slug:"selank-semax",name:"Selank/Semax",cat:"Cognitive Research",cats:["Cognitive Research"],
+   prices:[{mg:"5/5 mg",price:70}],
+   price:70,rating:4.8,
+   short:"Selank + Semax nootropic combo — 99%+ purity, anxiety and cognitive support.",
+   long:"This nootropic combo pairs Selank and Semax for synergistic anxiolytic and cognitive effects. Both peptides independently tested to 99%+ purity in our US cGMP facility.",
+   img:"products/SelankSemax.png",purity:"99% HPLC verified",size:"5mg/5mg / vial",storage:"Store at -20°C",stock:18},
+  {id:"35",slug:"tesamorelin-ipam",name:"Tesamorelin/Ipamorelin",cat:"Hormonal Research",cats:["Hormonal Research","Metabolic Research","Musculoskeletal Research"],
+   prices:[{mg:"10/5 mg",price:110}],
+   price:110,rating:4.9,
+   short:"Tesamorelin + Ipamorelin combo — synergistic GH-releasing blend, lab-verified.",
+   long:"Tesamorelin and Ipamorelin combine for a synergistic GH-releasing effect. Both peptides are independently tested to 99%+ purity and manufactured in our US cGMP facility.",
+   img:"products/TesamorelinIpam.png",purity:"99% HPLC verified",size:"10mg/5mg / vial",storage:"Store at -20°C",stock:17}
+];
 
                 const CATS = ["Immune Research", "Cognitive Research", "Hormonal Research", "Metabolic Research", "Musculoskeletal Research"];
 
                 const TICKS = [
                     "99% HPLC Purity Verified", "cGMP Manufactured", "Same-Day Dispatch", "Third-Party Lab Tested",
-                    "US-Based Manufacturing", "Free Shipping Over $150", "Batch-Specific COAs", "Free Shipping Over $150",
+                    "US-Based Manufacturing", "Free Shipping Over $200", "Batch-Specific COAs", "Free Shipping Over $200",
                     "No Hidden Fees", "24/7 Customer Support", "Secure Checkout", "FedEx 2-Day Air"
                 ];
 
@@ -6214,9 +5725,9 @@
                     "Same-Day Dispatch": `<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
                     "Third-Party Lab Tested": `<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v11m0 0a3 3 0 1 0 6 0M9 14h6"/></svg>`,
                     "US-Based Manufacturing": `<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
-                    "Free Shipping Over $150": `<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>`,
+                    "Free Shipping Over $200": `<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>`,
                     "Batch-Specific COAs": `<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>`,
-                    "Free Shipping Over $150": `<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>`,
+                    "Free Shipping Over $200": `<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>`,
                     "No Hidden Fees": `<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>`,
                     "24/7 Customer Support": `<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`,
                     "Secure Checkout": `<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`,
@@ -6244,40 +5755,40 @@
                 }];
 
                 const BLOGS = [{
-                    title: "BPC-157: Benefits, Results & What Customers Are Saying",
-                    tag: "Guide",
+                    title: "Understanding HPLC Purity Testing in Peptide Research",
+                    tag: "Science",
                     date: "May 10, 2026",
-                    excerpt: "Everything you need to know about BPC-157 — our best-selling peptide, its reported benefits, and why thousands of customers keep coming back.",
+                    excerpt: "High-performance liquid chromatography (HPLC) is the gold standard for verifying peptide purity. This article explains how the technique works and why purity percentage matters in preclinical research settings.",
                     img: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80"
                 }, {
-                    title: "Why Lab Testing Matters: How We Verify Every Product We Sell",
+                    title: "Certificate of Analysis: How to Read and Interpret Your COA",
                     tag: "Quality",
                     date: "Apr 28, 2026",
-                    excerpt: "Not all peptides are created equal. Here's exactly how we verify the purity and quality of every single product before it ships to you.",
+                    excerpt: "A Certificate of Analysis is the primary quality document accompanying every research-grade peptide. This guide walks through each field — purity, identity confirmation, mass spectrometry data — and explains what it means for your research.",
                     img: "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80"
                 }, {
-                    title: "What cGMP Manufacturing Means for You as a Customer",
+                    title: "What cGMP Compliance Means for Research-Grade Peptide Manufacturing",
                     tag: "Quality",
                     date: "Apr 15, 2026",
-                    excerpt: "When we say pharmaceutical-grade manufacturing, what does that actually mean? We break it down so you can shop with total confidence.",
+                    excerpt: "Current Good Manufacturing Practice (cGMP) guidelines set strict controls on raw materials, environmental conditions, and batch documentation. We outline how these standards apply to research peptide synthesis.",
                     img: "https://images.unsplash.com/photo-1563213126-a4273aed2016?w=800&q=80"
                 }, {
-                    title: "Growth Peptides Explained: CJC-1295, Ipamorelin & More",
-                    tag: "Guide",
+                    title: "Lyophilization in Peptide Preservation: A Technical Overview",
+                    tag: "Science",
                     date: "Mar 30, 2026",
-                    excerpt: "A complete guide to our growth peptide range — what each product does, how they compare, and how to find the right one for your goals.",
+                    excerpt: "Freeze-drying (lyophilization) is the preferred method for long-term peptide stability in research applications. This article covers the science behind the process, moisture content thresholds, and storage temperature requirements.",
                     img: "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?w=800&q=80"
                 }, {
-                    title: "How to Store Your Peptides: A Complete Customer Guide",
-                    tag: "Guide",
+                    title: "Peptide Storage Protocols for Laboratory Research",
+                    tag: "Science",
                     date: "Mar 18, 2026",
-                    excerpt: "Getting the most from your peptides starts with proper storage. Follow our simple step-by-step guide to keep your products fresh and effective.",
+                    excerpt: "Proper storage conditions are critical to maintaining peptide integrity for in vitro and in vivo research. This article reviews temperature, light exposure, and reconstitution best practices as they apply to lyophilized peptide samples.",
                     img: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80"
                 }, {
-                    title: "Third-Party Lab Testing: Why We Do It and Why It Matters for You",
+                    title: "Mass Spectrometry Identity Confirmation in Peptide QC",
                     tag: "Quality",
                     date: "Mar 5, 2026",
-                    excerpt: "We send every product to independent labs before it ships. Here's what the testing covers, what the results mean, and why it matters for you.",
+                    excerpt: "Beyond purity testing, mass spectrometry confirms the molecular identity of each peptide batch. This article explains how MS data is generated, what researchers should look for, and how it complements HPLC analysis in a full QC workflow.",
                     img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
                 }];
 
@@ -6363,7 +5874,7 @@
 
                 /* ─── HERO SLIDER ─── */
                 let hIdx = 0,
-                    hTotal = 2,
+                    hTotal = 3,
                     hTimer;
 
                 function buildHeroDots() {
@@ -6393,7 +5904,7 @@
                 function buildProdStage() {
                     const track = document.getElementById("prodTrack");
                     const stars = n => '★'.repeat(Math.floor(n)) + (n % 1 >= 0.5 ? '½' : '');
-                    track.innerHTML = PRODS.slice(0, 6).map(p => `
+                    track.innerHTML = PRODS.slice(0,6).map(p => `
                 <div class="stg-card" onclick="openDetail('${p.slug}')">
                     <div class="stg-card-img">
                         <span class="stg-card-badge">✓ 99% Pure</span>
@@ -6420,8 +5931,8 @@
                 /* ─── PRODUCT CARD ─── */
                 function prodCard(p) {
                     const stars = Math.round(p.rating);
-                    return `<div class="pc" onclick="openDetail('${p.slug}')">
-    <div class="pc-img">
+                    return `<div class="pc ${p.blackLabel ? 'black-label-card' : ''}" onclick="openDetail('${p.slug}')">
+    <div class="pc-img ${p.blackLabel ? 'black-label' : ''}">
       <div class="pc-img-bg"></div>
       <img src="${p.img}" alt="${p.name}" loading="lazy"
            onerror="this.src='https://images.unsplash.com/photo-1576671081837-49000212a370?w=300&q=80'"/>
@@ -6607,7 +6118,7 @@
         <a href="#" onclick="nav('returns');return false;">Refunds &amp; Returns</a>
       </div>
       <div style="margin-top:8px;opacity:.4;font-size:.7rem">
-        All products manufactured in a US cGMP-compliant facility and independently lab-tested &bull; $15 for 2-3 day shipping &bull; Free shipping over $150 &bull; 30-day satisfaction guarantee
+        All products manufactured in a US cGMP-compliant facility and independently lab-tested &bull; $15 for 2-3 day shipping &bull; Free shipping over $200 &bull; 30-day satisfaction guarantee
       </div>
     </div>
 
@@ -6646,13 +6157,7 @@
                     const variantLabel = variant ? variant.mg : null;
                     const ex = cart.find(x => x.p.id === id && x.variantIdx === vidx);
                     if (ex) ex.qty++;
-                    else cart.push({
-                        p,
-                        qty: 1,
-                        variantIdx: vidx,
-                        price: effectivePrice,
-                        variantLabel
-                    });
+                    else cart.push({ p, qty: 1, variantIdx: vidx, price: effectivePrice, variantLabel });
                     updateBadge();
                     toast(p.name + (variantLabel ? ' (' + variantLabel + ')' : '') + ' added to cart!');
                 }
@@ -6781,11 +6286,7 @@ function openDetail(slug) {
         <span class="qty-lbl">Qty:</span>
         <input class="qty-in" type="number" value="1" min="1" max="99" id="detQty-${p.id}"/>
       </div>
-      <div class="bulk-row">
-        <button class="bulk-btn" onclick="setBulk('${p.id}',3,5,this)">Buy 3 — save 5%</button>
-        <button class="bulk-btn" onclick="setBulk('${p.id}',5,7,this)">Buy 5 — save 7%</button>
-        <button class="bulk-btn" onclick="setBulk('${p.id}',10,11,this)">Buy 10 — save 11%</button>
-      </div>
+
       <button class="det-add" onclick="addCart('${p.id}')">ADD TO CART</button>
       <div class="det-tabs">
         <div class="det-tab on" onclick="switchTab(this,'dt-desc-${p.id}')">DESCRIPTION</div>
@@ -6800,8 +6301,8 @@ function openDetail(slug) {
       </div>
       <div class="det-panel" id="dt-ship-${p.id}">
         <div class="det-check">
-          <div class="det-ck"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Packed and shipped within 3 business days.</div>
-          <div class="det-ck"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Delivers within 2 weeks.</div>
+          <div class="det-ck"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Packed and shipped within 1 business day.</div>
+          <div class="det-ck"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Delivers within 3 business days.</div>
           <div class="det-ck"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Temperature-controlled packaging.</div>
           <div class="det-ck"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Leak and crack proof.</div>
         </div>
